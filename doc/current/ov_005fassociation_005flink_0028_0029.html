@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>LibOV API Reference: ov_association_link()</title>
+
+<meta name="description" content="LibOV API Reference: ov_association_link()">
+<meta name="keywords" content="LibOV API Reference: ov_association_link()">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Association.html#Association" rel="up" title="Association">
+<link href="ov_005fassociation_005funlink_0028_0029.html#ov_005fassociation_005funlink_0028_0029" rel="next" title="ov_association_unlink()">
+<link href="ov_005fassociation_005fsearchchild_0028_0029.html#ov_005fassociation_005fsearchchild_0028_0029" rel="prev" title="ov_association_searchchild()">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="ov_005fassociation_005flink_0028_0029"></a>
+<div class="header">
+<p>
+Next: <a href="ov_005fassociation_005funlink_0028_0029.html#ov_005fassociation_005funlink_0028_0029" accesskey="n" rel="next">ov_association_unlink()</a>, Previous: <a href="ov_005fassociation_005fsearchchild_0028_0029.html#ov_005fassociation_005fsearchchild_0028_0029" accesskey="p" rel="prev">ov_association_searchchild()</a>, Up: <a href="Association.html#Association" accesskey="u" rel="up">Association</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<a name="Create-a-link-between-a-child-and-a-parent-object"></a>
+<h3 class="section">8.19 Create a link between a child and a parent object</h3>
+
+<p>The <code>ov_association_link()</code> function creates a link between a child and 
+a parent object. 
+</p>
+<p>The link can not be created, if the child object already has a parent object of the 
+type given by the association or if the link is namebinding and a the child object 
+has the same identifier as another child object of the parent object.
+</p>
+<p><strong>Header file</strong>
+</p>
+<p><code>#include &quot;libov/ov_association.h&quot;</code>
+</p>
+<p><strong>Declaration</strong>
+</p>
+<div class="format">
+<pre class="format"><tt>OV_DLLFNCEXPORT OV_RESULT ov_association_link(
+    const OV_INSTPTR_ov_association passoc,
+    const OV_INSTPTR_ov_object      pparent,
+    const OV_INSTPTR_ov_object      pchild,
+    const OV_PLACEMENT_HINT         hint,
+    const OV_INSTPTR_ov_object      prelchild
+);</tt>
+</pre></div>
+
+<p><strong>Parameters</strong>
+</p>
+<dl compact="compact">
+<dt><code><code>passoc</code></code></dt>
+<dd><p>Pointer to the association object defining the link.
+</p></dd>
+<dt><code><code>pparent</code></code></dt>
+<dd><p>Pointer to the object which will be the parent object of the new link.
+</p></dd>
+<dt><code><code>pchild</code></code></dt>
+<dd><p>Pointer to the object which will be the child object of the new link.
+</p></dd>
+<dt><code><code>hint</code></code></dt>
+<dd><p>Placement hint indicating the position of the child object compared to other
+child objects of the parent of the new link.
+</p></dd>
+<dt><code><code>prelchild</code></code></dt>
+<dd><p>If <code>hint == OV_PMH_BEFORE</code> or <code>hint == OV_PMH_AFTER</code>, this parameter is
+a pointer to a child object before/after which the child object of the new
+link will be placed; otherwise this parameter is ignored. The child object pointed 
+to by <code>prelchild</code> must alreay be a child of the parent object.
+</p></dd>
+</dl>
+
+<p><strong>Return value</strong>
+</p>
+<p>The function returns <code>OV_ERR_OK</code> if it succeeds or the error code otherwise.
+</p>
+<p><strong>Remarks</strong>
+</p>
+<p>This generic function is <strong>not type safe</strong>. Whenever possible, use the macro
+<code>Ov_Link()</code> instead!
+</p>
+
+
+
+
+</body>
+</html>

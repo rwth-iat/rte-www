@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>LibOV API Reference: ov_association_searchchild()</title>
+
+<meta name="description" content="LibOV API Reference: ov_association_searchchild()">
+<meta name="keywords" content="LibOV API Reference: ov_association_searchchild()">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Association.html#Association" rel="up" title="Association">
+<link href="ov_005fassociation_005flink_0028_0029.html#ov_005fassociation_005flink_0028_0029" rel="next" title="ov_association_link()">
+<link href="Ov_005fAssociation_005fForEachParentNM_0028_0029.html#Ov_005fAssociation_005fForEachParentNM_0028_0029" rel="prev" title="Ov_Association_ForEachParentNM()">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="ov_005fassociation_005fsearchchild_0028_0029"></a>
+<div class="header">
+<p>
+Next: <a href="ov_005fassociation_005flink_0028_0029.html#ov_005fassociation_005flink_0028_0029" accesskey="n" rel="next">ov_association_link()</a>, Previous: <a href="Ov_005fAssociation_005fForEachParentNM_0028_0029.html#Ov_005fAssociation_005fForEachParentNM_0028_0029" accesskey="p" rel="prev">Ov_Association_ForEachParentNM()</a>, Up: <a href="Association.html#Association" accesskey="u" rel="up">Association</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<a name="Search-for-a-child-object-with-a-given-identifier-in-a-1_003an-association"></a>
+<h3 class="section">8.18 Search for a child object with a given identifier in a 1:n association</h3>
+
+<p>The <code>ov_association_searchchild()</code> function returns a pointer to the child
+object of a namebinding link with a given identifier.
+</p>
+<p><strong>Header file</strong>
+</p>
+<p><code>#include &quot;libov/ov_association.h&quot;</code>
+</p>
+<p><strong>Declaration</strong>
+</p>
+<div class="format">
+<pre class="format"><tt>OV_DLLFNCEXPORT OV_INSTPTR_ov_object ov_association_searchchild(
+    const OV_INSTPTR_ov_association passoc,
+    const OV_INSTPTR_ov_object      pparent,
+    const OV_STRING                 identifier
+);</tt>
+</pre></div>
+
+<p><strong>Parameters</strong>
+</p>
+<dl compact="compact">
+<dt><code><code>passoc</code></code></dt>
+<dd><p>Pointer to the association object defining the link. Note, that the association
+must be namebinding; a <code>NULL</code> pointer is returned otherwise.
+</p></dd>
+<dt><code><code>pparent</code></code></dt>
+<dd><p>Pointer to the parent object of the link.
+</p></dd>
+<dt><code><code>identifier</code></code></dt>
+<dd><p>Pointer to a string which must match the identifier of the child object.
+</p></dd>
+</dl>
+
+<p><strong>Return value</strong>
+</p>
+<p>The function returns a pointer to the child object or <code>NULL</code> no child is found or
+the association is not namebinding.
+</p>
+<p><strong>Remarks</strong>
+</p>
+<p>This generic function is <strong>not type safe</strong>. Whenever possible, use the macro
+<code>Ov_SearchChild()</code> instead!
+</p>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>LibOV API Reference: ov_database_realloc()</title>
+
+<meta name="description" content="LibOV API Reference: ov_database_realloc()">
+<meta name="keywords" content="LibOV API Reference: ov_database_realloc()">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Database.html#Database" rel="up" title="Database">
+<link href="ov_005fdatabase_005ffree_0028_0029.html#ov_005fdatabase_005ffree_0028_0029" rel="next" title="ov_database_free()">
+<link href="ov_005fdatabase_005fmalloc_0028_0029.html#ov_005fdatabase_005fmalloc_0028_0029" rel="prev" title="ov_database_malloc()">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="ov_005fdatabase_005frealloc_0028_0029"></a>
+<div class="header">
+<p>
+Next: <a href="ov_005fdatabase_005ffree_0028_0029.html#ov_005fdatabase_005ffree_0028_0029" accesskey="n" rel="next">ov_database_free()</a>, Previous: <a href="ov_005fdatabase_005fmalloc_0028_0029.html#ov_005fdatabase_005fmalloc_0028_0029" accesskey="p" rel="prev">ov_database_malloc()</a>, Up: <a href="Database.html#Database" accesskey="u" rel="up">Database</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<a name="Reallocate-persistent-database-memory"></a>
+<h3 class="section">10.8 Reallocate persistent database memory</h3>
+
+<p>Similar to the ANSI C <code>realloc()</code> function, <code>ov_database_realloc()</code>
+reallocates a memory block previously allocated using <code>ov_database_malloc()</code>
+or <code>ov_database_realloc()</code> of a given size and returns its pointer. While
+<code>realloc()</code> reallocates the memory on the system heap, 
+<code>ov_database_realloc()</code> reallocates the memory in the persistent database.
+</p>
+<p>If the new memory block is at least as large as the old block, the full contents 
+of the old block is copied to the new block; if it is smaller than the old block,
+only the <code>size</code> first bytes from the old block are copied to the new block.
+</p>
+<p>If there&rsquo;s no memory block available in the database, the system tries to
+increase the database file and map the new part of the file to memory. If
+does not succeed, the function fails.
+</p>
+<p><strong>Header file</strong>
+</p>
+<p><code>#include &quot;libov/ov_database.h&quot;</code>
+</p>
+<p><strong>Declaration</strong>
+</p>
+<div class="format">
+<pre class="format"><tt>OV_DLLFNCEXPORT OV_POINTER ov_database_realloc(
+    OV_POINTER ptr,
+    OV_UINT    size
+);</tt>
+</pre></div>
+
+<p><strong>Parameters</strong>
+</p>
+<dl compact="compact">
+<dt><code>ptr</code></dt>
+<dd><p>Pointer to the memory block previously allocated in the database. If 
+<code>ptr</code> is <code>NULL</code>, this function is equivalent to 
+<code>ov_database_malloc(size)</code>.
+</p></dd>
+<dt><code>size</code></dt>
+<dd><p>The amount of persistent memory to reallocate in the database (in bytes).
+</p></dd>
+</dl>
+
+<p><strong>Return value</strong>
+</p>
+<p>The function returns a pointer to the reallocated memory block if it succeeds 
+or <code>NULL</code> otherwise.
+</p>
+<p><strong>Remarks</strong>
+</p>
+<p>Even if <code>ov_database_getfree()</code> returns a value greater than 
+<code>size</code> the function may return <code>NULL</code> if no block of the
+given size is available due to fragmentation.
+</p>
+<p>If no database is mapped, the function always returns <code>NULL</code>.
+</p>
+
+
+
+
+</body>
+</html>

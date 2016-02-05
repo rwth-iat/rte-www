@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>LibOV API Reference</title>
+
+<meta name="description" content="LibOV API Reference">
+<meta name="keywords" content="LibOV API Reference">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Index.html#Index" rel="next" title="Index">
+<link href="index.html#Top" rel="prev" title="Top">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<div class="header">
+<p>
+ &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<a name="LibOV-API-Reference-_0028Version-1_002e2_002e1_0029"></a>
+<h1 class="top">LibOV API Reference (Version 1.2.1)</h1>
+<p>Christian Poensgen <code>&lt;christian@plt.rwth-aachen.de&gt;</code>
+</p>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="Preprocessor-symbols.html#Preprocessor-symbols" accesskey="1">Preprocessor symbols</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Preprocessor symbols used in the library.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Import_002fExport.html#Import_002fExport" accesskey="2">Import/Export</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Import and Export of functions and global variables.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Debugging-macros.html#Debugging-macros" accesskey="3">Debugging macros</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Debugging macros used in the library.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Useful-macros.html#Useful-macros" accesskey="4">Useful macros</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Useful macros easing the use of the library.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Fundamental-datatypes.html#Fundamental-datatypes" accesskey="5">Fundamental datatypes</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Fundamental datatypes used in the library.
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Index.html#Index" accesskey="6">Index</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Index
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="License.html#License" accesskey="7">License</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Legal terms and conditions.
+</td></tr>
+<tr><th colspan="3" align="left" valign="top"><pre class="menu-comment">
+</pre></th></tr><tr><td align="left" valign="top">&bull; <a href="Association.html#Association" accesskey="8">Association</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Functions and macros associated with associations.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Class.html#Class" accesskey="9">Class</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Datatypes and functions associated with classes.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Database.html#Database">Database</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Functions associated with the database.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Element.html#Element">Element</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Datatypes and functions associated with elements.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Library.html#Library">Library</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Functions associated with libraries.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Logfile.html#Logfile">Logfile</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Functions associated with logfiles.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Malloc.html#Malloc">Malloc</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Memory management functions for the system heap memory.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Memstack.html#Memstack">Memstack</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Memory management functions for the memory stack.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Object.html#Object">Object</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Datatypes and functions associated with objects (top level class).
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Operation.html#Operation">Operation</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Functions associated with operations.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Part.html#Part">Part</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Functions associated with parts.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Path.html#Path">Path</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Datatypes and functions associated with paths.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Result.html#Result">Result</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Functions associated with results of function calls.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Scheduler.html#Scheduler">Scheduler</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Datatypes and functions associated with the scheduler.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="String.html#String">String</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Functions associated with string variables.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Structure.html#Structure">Structure</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Functions associated with structures.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Supervise.html#Supervise">Supervise</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Execution time supervision functions.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Time.html#Time">Time</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Functions associated with time variables.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Variable.html#Variable">Variable</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Functions associated with variables.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Vector.html#Vector">Vector</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Functions associated with vector variables.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="Vendortree.html#Vendortree">Vendortree</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Functions associated with the vendor tree.
+</td></tr>
+</table>
+
+<hr>
+<div class="header">
+<p>
+ &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+
+
+
+</body>
+</html>

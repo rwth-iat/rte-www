@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>LibOV API Reference: OV_STRING</title>
+
+<meta name="description" content="LibOV API Reference: OV_STRING">
+<meta name="keywords" content="LibOV API Reference: OV_STRING">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Fundamental-datatypes.html#Fundamental-datatypes" rel="up" title="Fundamental datatypes">
+<link href="OV_005fTIME.html#OV_005fTIME" rel="next" title="OV_TIME">
+<link href="OV_005fDOUBLE.html#OV_005fDOUBLE" rel="prev" title="OV_DOUBLE">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="OV_005fSTRING"></a>
+<div class="header">
+<p>
+Next: <a href="OV_005fTIME.html#OV_005fTIME" accesskey="n" rel="next">OV_TIME</a>, Previous: <a href="OV_005fDOUBLE.html#OV_005fDOUBLE" accesskey="p" rel="prev">OV_DOUBLE</a>, Up: <a href="Fundamental-datatypes.html#Fundamental-datatypes" accesskey="u" rel="up">Fundamental datatypes</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<a name="String-value"></a>
+<h3 class="section">7.6 String value</h3>
+
+<p>A string value is a pointer a <code>NULL</code>-terminated <code>char</code> array.
+</p>
+<p><strong>Header file</strong>
+</p>
+<p><code>#include &quot;libov/ov_ov.h&quot;</code>
+</p>
+<p><strong>Declaration</strong>
+</p>
+<p><code>typedef char* OV_STRING;</code>
+</p>
+<p><strong>Remarks</strong>
+</p>
+<p><code>OV_STRING</code> does not contain the actual string but a pointer to a 
+<code>NULL</code>-terminated <code>char</code> array. This means that you must pay
+careful attention to the question who the owner of the string is.
+</p>
+<p>If the string belongs to the instance of an ACPLT/OV class, the instance
+is the owner of the string and the string must <strong>always</strong> be stored
+in the database unless the string pointer is <code>NULL</code>. The ACPLT/OV 
+library provides the functions <code>ov_string_setvalue()</code> and 
+<code>ov_string_setvecvalue()</code> which take care of setting such string values
+of instances for you. Do <strong>not</strong> use this function for string values
+that do not belong to instances of ACPLT/OV classes!
+</p>
+<p>In all other cases the ownership of the string must to specially indicated.
+ACPLT/OV Object Management Library functions returning string values, such 
+as <code>ov_path_getcanonicalpath()</code>, allocated the string on the memory 
+stack. If you call such a function, you must call the function 
+<code>ov_memstack_lock()</code> before call the desired function and call the 
+function <code>ov_memstack_unlock()</code> when you do not need the string anymore
+(but always in the same routine). This way strings may be located persistently
+in the database or temporary on the memory stack and you will not have
+to care too much about the ownership.
+</p>
+
+
+
+
+</body>
+</html>

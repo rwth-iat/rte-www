@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>LibOV API Reference: OV_STATIC_LIBRARIES</title>
+
+<meta name="description" content="LibOV API Reference: OV_STATIC_LIBRARIES">
+<meta name="keywords" content="LibOV API Reference: OV_STATIC_LIBRARIES">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Preprocessor-symbols.html#Preprocessor-symbols" rel="up" title="Preprocessor symbols">
+<link href="OV_005fDYNAMIC_005fLIBRARIES.html#OV_005fDYNAMIC_005fLIBRARIES" rel="next" title="OV_DYNAMIC_LIBRARIES">
+<link href="OV_005fDEBUG.html#OV_005fDEBUG" rel="prev" title="OV_DEBUG">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="OV_005fSTATIC_005fLIBRARIES"></a>
+<div class="header">
+<p>
+Next: <a href="OV_005fDYNAMIC_005fLIBRARIES.html#OV_005fDYNAMIC_005fLIBRARIES" accesskey="n" rel="next">OV_DYNAMIC_LIBRARIES</a>, Previous: <a href="OV_005fDEBUG.html#OV_005fDEBUG" accesskey="p" rel="prev">OV_DEBUG</a>, Up: <a href="Preprocessor-symbols.html#Preprocessor-symbols" accesskey="u" rel="up">Preprocessor symbols</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<a name="Definition-whether-static-libraries-are-used"></a>
+<h3 class="section">3.4 Definition whether static libraries are used</h3>
+
+<p>The preprocessor symbol <code>OV_STATIC_LIBRARIES</code> defines whether there are 
+ACPLT/OV libraries statically linked to the application (symbol is defined 
+as <code>1</code>) or not (symbol is defined as <code>0</code>).
+</p>
+<p>Usually if the target operating system supports dynamic linking (DLLs on
+Windows NT, shared libraries on Unix systems), this symbol is defined as
+<code>0</code>), because you get the advantage, that you do not have to determine
+the libraries available for the application at link time but can load them
+at run time.
+</p>
+<p>This symbol is automatically defined in the configuration header file 
+<code>libov/ov_config.h</code>.
+</p>
+
+
+
+
+</body>
+</html>

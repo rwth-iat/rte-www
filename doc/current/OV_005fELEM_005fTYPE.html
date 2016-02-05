@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>LibOV API Reference: OV_ELEM_TYPE</title>
+
+<meta name="description" content="LibOV API Reference: OV_ELEM_TYPE">
+<meta name="keywords" content="LibOV API Reference: OV_ELEM_TYPE">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Element.html#Element" rel="up" title="Element">
+<link href="OV_005fELEMENT.html#OV_005fELEMENT" rel="next" title="OV_ELEMENT">
+<link href="Element.html#Element" rel="prev" title="Element">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="OV_005fELEM_005fTYPE"></a>
+<div class="header">
+<p>
+Next: <a href="OV_005fELEMENT.html#OV_005fELEMENT" accesskey="n" rel="next">OV_ELEMENT</a>, Previous: <a href="Element.html#Element" accesskey="p" rel="prev">Element</a>, Up: <a href="Element.html#Element" accesskey="u" rel="up">Element</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<a name="Type-of-an-element"></a>
+<h3 class="section">11.1 Type of an element</h3>
+
+<p><strong>Header file</strong>
+</p>
+<p><code>#include &quot;libov/ov_element.h&quot;</code>
+</p>
+<p><strong>Declaration</strong>
+</p>
+<div class="format">
+<pre class="format"><tt>enum OV_ELEM_TYPE_ENUM {
+    OV_ET_NONE         = 0x00,       /* invalid element */
+    OV_ET_OBJECT       = 0x01,
+    OV_ET_VARIABLE     = 0x02,
+    OV_ET_MEMBER       = 0x04,
+    OV_ET_PARENTLINK   = 0x08,
+    OV_ET_CHILDLINK    = 0x10,
+    OV_ET_OPERATION    = 0x20,
+    OV_ET_ANY          = 0x3F        /* used for search masks only */
+};
+
+typedef enum_t   OV_ELEM_TYPE;</tt>
+</pre></div>
+
+<p><strong>Remarks</strong>
+</p>
+
+
+
+
+</body>
+</html>

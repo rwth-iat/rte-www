@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>LibOV API Reference: OV_DLLFNCEXPORT</title>
+
+<meta name="description" content="LibOV API Reference: OV_DLLFNCEXPORT">
+<meta name="keywords" content="LibOV API Reference: OV_DLLFNCEXPORT">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Import_002fExport.html#Import_002fExport" rel="up" title="Import/Export">
+<link href="OV_005fDLLVAREXPORT.html#OV_005fDLLVAREXPORT" rel="next" title="OV_DLLVAREXPORT">
+<link href="Import_002fExport.html#Import_002fExport" rel="prev" title="Import/Export">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="OV_005fDLLFNCEXPORT"></a>
+<div class="header">
+<p>
+Next: <a href="OV_005fDLLVAREXPORT.html#OV_005fDLLVAREXPORT" accesskey="n" rel="next">OV_DLLVAREXPORT</a>, Previous: <a href="Import_002fExport.html#Import_002fExport" accesskey="p" rel="prev">Import/Export</a>, Up: <a href="Import_002fExport.html#Import_002fExport" accesskey="u" rel="up">Import/Export</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<a name="Modifier-for-functions-that-are-exported-from-a-DLL"></a>
+<h3 class="section">4.1 Modifier for functions that are exported from a DLL</h3>
+
+<p>The preprocessor symbol <code>OV_DLLFNCEXPORT</code> is used to tell the compiler, 
+that a function needs to be exported from a DLL. Using this symbol you do not 
+need a module definition file (<code>.def</code>-file) listing all functions to be 
+exported from a DLL.
+</p>
+<p>This symbol is automatically defined in the configuration header file 
+<code>libov/ov_config.h</code>.
+</p>
+<p><strong>Example</strong>
+</p>
+<p>The following piece of code defines a DLL function which may be used by
+other modules linking to the import library of the DLL:
+</p>
+<div class="format">
+<pre class="format"><tt>/*
+*   hello.c
+*/
+
+#include &quot;libov/ov_ov.h&quot;
+#include &lt;stdio.h&gt;
+
+OV_DLLFNCEXPORT void hello(
+    OV_STRING   name
+) {
+    printf(&quot;hello %s\n&quot;, name);
+}</tt>
+</pre></div>
+
+<p><strong>Remarks</strong>
+</p>
+<p>Note, that you need to use this modifier in the declaration of function
+prototypes as well (compare file <code>ov.ovf</code>)!
+</p>
+
+
+
+
+</body>
+</html>
