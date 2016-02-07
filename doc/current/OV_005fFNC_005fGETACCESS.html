@@ -1,104 +1,71 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<html lang="en">
 <head>
-<title>LibOV API Reference: OV_FNC_GETACCESS</title>
-
-<meta name="description" content="LibOV API Reference: OV_FNC_GETACCESS">
-<meta name="keywords" content="LibOV API Reference: OV_FNC_GETACCESS">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="index.html#Top" rel="start" title="Top">
-<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
-<link href="Object.html#Object" rel="up" title="Object">
-<link href="OV_005fFNC_005fGETFLAGS.html#OV_005fFNC_005fGETFLAGS" rel="next" title="OV_FNC_GETFLAGS">
-<link href="OV_005fFNC_005fSHUTDOWN.html#OV_005fFNC_005fSHUTDOWN" rel="prev" title="OV_FNC_SHUTDOWN">
-<style type="text/css">
-<!--
-a.summary-letter {text-decoration: none}
-blockquote.smallquotation {font-size: smaller}
-div.display {margin-left: 3.2em}
-div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
-div.lisp {margin-left: 3.2em}
-div.smalldisplay {margin-left: 3.2em}
-div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
-div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
-pre.display {font-family: inherit}
-pre.format {font-family: inherit}
-pre.menu-comment {font-family: serif}
-pre.menu-preformatted {font-family: serif}
-pre.smalldisplay {font-family: inherit; font-size: smaller}
-pre.smallexample {font-size: smaller}
-pre.smallformat {font-family: inherit; font-size: smaller}
-pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
-ul.no-bullet {list-style: none}
--->
-</style>
-
-
+<title>OV_FNC_GETACCESS - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Object.html#Object" title="Object">
+<link rel="prev" href="OV_005fFNC_005fSHUTDOWN.html#OV_005fFNC_005fSHUTDOWN" title="OV_FNC_SHUTDOWN">
+<link rel="next" href="OV_005fFNC_005fGETFLAGS.html#OV_005fFNC_005fGETFLAGS" title="OV_FNC_GETFLAGS">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
 </head>
-
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body>
+<div class="node">
+<a name="OV_FNC_GETACCESS"></a>
 <a name="OV_005fFNC_005fGETACCESS"></a>
-<div class="header">
 <p>
-Next: <a href="OV_005fFNC_005fGETFLAGS.html#OV_005fFNC_005fGETFLAGS" accesskey="n" rel="next">OV_FNC_GETFLAGS</a>, Previous: <a href="OV_005fFNC_005fSHUTDOWN.html#OV_005fFNC_005fSHUTDOWN" accesskey="p" rel="prev">OV_FNC_SHUTDOWN</a>, Up: <a href="Object.html#Object" accesskey="u" rel="up">Object</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
-</div>
+Next:&nbsp;<a rel="next" accesskey="n" href="OV_005fFNC_005fGETFLAGS.html#OV_005fFNC_005fGETFLAGS">OV_FNC_GETFLAGS</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="OV_005fFNC_005fSHUTDOWN.html#OV_005fFNC_005fSHUTDOWN">OV_FNC_SHUTDOWN</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Object.html#Object">Object</a>
 <hr>
-<a name="Function-prototype-for-method-reading-access-rights"></a>
+</div>
+
 <h3 class="section">16.6 Function prototype for method reading access rights</h3>
 
 <p>The function prototype <code>OV_FNC_GETACCESS</code> is used for defining the function
 of an object, which returns the access rights of an object or one of its elements.
-</p>
-<p><strong>Header file</strong>
-</p>
-<p><code>#include &quot;ov.ovf&quot;</code>
-</p>
-<p><strong>Declaration</strong>
-</p>
-<div class="format">
+
+   <p><strong>Header file</strong>
+
+   <p><code>#include "ov.ovf"</code>
+
+   <p><strong>Declaration</strong>
+
 <pre class="format"><tt>typedef OV_DLLFNCEXPORT OV_ACCESS OV_FNC_GETACCESS(
     OV_INSTPTR_ov_object pobj,
     const OV_ELEMENT     *pelem,
     const OV_TICKET      *pticket
 );</tt>
-</pre></div>
+</pre>
+   <p><strong>Parameters</strong>
 
-<p><strong>Parameters</strong>
-</p>
-<dl compact="compact">
-<dt><code><code>pobj</code></code></dt>
-<dd><p>Pointer to the object to be asked about the access rights.
-</p></dd>
-<dt><code><code>pelem</code></code></dt>
-<dd><p>Pointer to a structure containing information about the element of the object
-the access rights are read from.
-</p></dd>
-<dt><code><code>pticket</code></code></dt>
-<dd><p>Pointer to the ticket structure providing authentification/verification
+     <dl>
+<dt><code>pobj</code><dd>Pointer to the object to be asked about the access rights. 
+<br><dt><code>pelem</code><dd>Pointer to a structure containing information about the element of the object
+the access rights are read from. 
+<br><dt><code>pticket</code><dd>Pointer to the ticket structure providing authentification/verification
 information. The information included in this structure may be used to
 decide which access rights are granted to the specified element of the
-object.
-</p></dd>
+object. 
 </dl>
 
-<p><strong>Return value</strong>
-</p>
-<p>Access rights of the object or object element respectively.
-</p>
+   <p><strong>Return value</strong>
 
+   <p>Access rights of the object or object element respectively.
 
+<!--  -->
+   </body></html>
 
-
-</body>
-</html>

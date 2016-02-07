@@ -1,101 +1,61 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<html lang="en">
 <head>
-<title>LibOV API Reference: Object</title>
-
-<meta name="description" content="LibOV API Reference: Object">
-<meta name="keywords" content="LibOV API Reference: Object">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="index.html#Top" rel="start" title="Top">
-<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
-<link href="index.html#Top" rel="up" title="Top">
-<link href="OV_005fFNC_005fCONSTRUCTOR.html#OV_005fFNC_005fCONSTRUCTOR" rel="next" title="OV_FNC_CONSTRUCTOR">
-<link href="ov_005fmemstack_005funlock_0028_0029.html#ov_005fmemstack_005funlock_0028_0029" rel="prev" title="ov_memstack_unlock()">
-<style type="text/css">
-<!--
-a.summary-letter {text-decoration: none}
-blockquote.smallquotation {font-size: smaller}
-div.display {margin-left: 3.2em}
-div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
-div.lisp {margin-left: 3.2em}
-div.smalldisplay {margin-left: 3.2em}
-div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
-div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
-pre.display {font-family: inherit}
-pre.format {font-family: inherit}
-pre.menu-comment {font-family: serif}
-pre.menu-preformatted {font-family: serif}
-pre.smalldisplay {font-family: inherit; font-size: smaller}
-pre.smallexample {font-size: smaller}
-pre.smallformat {font-family: inherit; font-size: smaller}
-pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
-ul.no-bullet {list-style: none}
--->
-</style>
-
-
+<title>Object - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Memstack.html#Memstack" title="Memstack">
+<link rel="next" href="Operation.html#Operation" title="Operation">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
 </head>
-
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body>
+<div class="node">
 <a name="Object"></a>
-<div class="header">
 <p>
-Next: <a href="Operation.html#Operation" accesskey="n" rel="next">Operation</a>, Previous: <a href="Memstack.html#Memstack" accesskey="p" rel="prev">Memstack</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
-</div>
+Next:&nbsp;<a rel="next" accesskey="n" href="Operation.html#Operation">Operation</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Memstack.html#Memstack">Memstack</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
 <hr>
-<a name="Datatypes-and-functions-associated-with-objects-_0028top-level-class_0029"></a>
+</div>
+
 <h2 class="chapter">16 Datatypes and functions associated with objects (top level class)</h2>
 
 <p>Datatypes associated with objects:
-</p>
-<table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top">&bull; <a href="OV_005fFNC_005fCONSTRUCTOR.html#OV_005fFNC_005fCONSTRUCTOR" accesskey="1">OV_FNC_CONSTRUCTOR</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Function prototype for constructor of an object.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="OV_005fFNC_005fCHECKINIT.html#OV_005fFNC_005fCHECKINIT" accesskey="2">OV_FNC_CHECKINIT</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Function prototype for checking the initialization.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="OV_005fFNC_005fDESTRUCTOR.html#OV_005fFNC_005fDESTRUCTOR" accesskey="3">OV_FNC_DESTRUCTOR</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Function prototype for destructor of an object.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="OV_005fFNC_005fSTARTUP.html#OV_005fFNC_005fSTARTUP" accesskey="4">OV_FNC_STARTUP</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Function prototype for method starting up an object.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="OV_005fFNC_005fSHUTDOWN.html#OV_005fFNC_005fSHUTDOWN" accesskey="5">OV_FNC_SHUTDOWN</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Function prototype for method shutting down an object.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="OV_005fFNC_005fGETACCESS.html#OV_005fFNC_005fGETACCESS" accesskey="6">OV_FNC_GETACCESS</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Function prototype for method reading access rights.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="OV_005fFNC_005fGETFLAGS.html#OV_005fFNC_005fGETFLAGS" accesskey="7">OV_FNC_GETFLAGS</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Function prototype for method reading semantical flags.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="OV_005fFNC_005fGETCOMMENT.html#OV_005fFNC_005fGETCOMMENT" accesskey="8">OV_FNC_GETCOMMENT</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Function prototype for method reading comments.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="OV_005fFNC_005fGETTECHUNIT.html#OV_005fFNC_005fGETTECHUNIT" accesskey="9">OV_FNC_GETTECHUNIT</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Function prototype for method reading variable units.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="OV_005fFNC_005fGETVAR.html#OV_005fFNC_005fGETVAR">OV_FNC_GETVAR</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Function prototype for method reading current variable properties.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="OV_005fFNC_005fSETVAR.html#OV_005fFNC_005fSETVAR">OV_FNC_SETVAR</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Function prototype for method writing current variable properties.
-</td></tr>
-</table>
 
-<p>Functions associated with objects:
-</p>
-<table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top">&bull; <a href="ov_005fobject_005fhaslinks_0028_0029.html#ov_005fobject_005fhaslinks_0028_0029" accesskey="1">ov_object_haslinks()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Test, if an object owns links (except for the parent domain and class).
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="ov_005fobject_005fidentifierok_0028_0029.html#ov_005fobject_005fidentifierok_0028_0029" accesskey="2">ov_object_identifierok()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Test, if a string is a valid identifier for an object.
-</td></tr>
-</table>
+<ul class="menu">
+<li><a accesskey="1" href="OV_005fFNC_005fCONSTRUCTOR.html#OV_005fFNC_005fCONSTRUCTOR">OV_FNC_CONSTRUCTOR</a>:          Function prototype for constructor of an object. 
+<li><a accesskey="2" href="OV_005fFNC_005fCHECKINIT.html#OV_005fFNC_005fCHECKINIT">OV_FNC_CHECKINIT</a>:            Function prototype for checking the initialization. 
+<li><a accesskey="3" href="OV_005fFNC_005fDESTRUCTOR.html#OV_005fFNC_005fDESTRUCTOR">OV_FNC_DESTRUCTOR</a>:           Function prototype for destructor of an object. 
+<li><a accesskey="4" href="OV_005fFNC_005fSTARTUP.html#OV_005fFNC_005fSTARTUP">OV_FNC_STARTUP</a>:              Function prototype for method starting up an object. 
+<li><a accesskey="5" href="OV_005fFNC_005fSHUTDOWN.html#OV_005fFNC_005fSHUTDOWN">OV_FNC_SHUTDOWN</a>:             Function prototype for method shutting down an object. 
+<li><a accesskey="6" href="OV_005fFNC_005fGETACCESS.html#OV_005fFNC_005fGETACCESS">OV_FNC_GETACCESS</a>:            Function prototype for method reading access rights. 
+<li><a accesskey="7" href="OV_005fFNC_005fGETFLAGS.html#OV_005fFNC_005fGETFLAGS">OV_FNC_GETFLAGS</a>:             Function prototype for method reading semantical flags. 
+<li><a accesskey="8" href="OV_005fFNC_005fGETCOMMENT.html#OV_005fFNC_005fGETCOMMENT">OV_FNC_GETCOMMENT</a>:           Function prototype for method reading comments. 
+<li><a accesskey="9" href="OV_005fFNC_005fGETTECHUNIT.html#OV_005fFNC_005fGETTECHUNIT">OV_FNC_GETTECHUNIT</a>:          Function prototype for method reading variable units. 
+<li><a href="OV_005fFNC_005fGETVAR.html#OV_005fFNC_005fGETVAR">OV_FNC_GETVAR</a>:               Function prototype for method reading current variable properties. 
+<li><a href="OV_005fFNC_005fSETVAR.html#OV_005fFNC_005fSETVAR">OV_FNC_SETVAR</a>:               Function prototype for method writing current variable properties. 
+</ul>
 
+   <p>Functions associated with objects:
 
+<ul class="menu">
+<li><a accesskey="1" href="ov_005fobject_005fhaslinks_0028_0029.html#ov_005fobject_005fhaslinks_0028_0029">ov_object_haslinks()</a>:        Test, if an object owns links (except for the parent domain and class). 
+<li><a accesskey="2" href="ov_005fobject_005fidentifierok_0028_0029.html#ov_005fobject_005fidentifierok_0028_0029">ov_object_identifierok()</a>:    Test, if a string is a valid identifier for an object. 
+</ul>
 
+<!--  -->
+   </body></html>
 
-
-</body>
-</html>

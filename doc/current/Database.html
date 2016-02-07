@@ -1,118 +1,77 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<html lang="en">
 <head>
-<title>LibOV API Reference: Database</title>
-
-<meta name="description" content="LibOV API Reference: Database">
-<meta name="keywords" content="LibOV API Reference: Database">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="index.html#Top" rel="start" title="Top">
-<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
-<link href="index.html#Top" rel="up" title="Top">
-<link href="ov_005fdatabase_005fcreate_0028_0029.html#ov_005fdatabase_005fcreate_0028_0029" rel="next" title="ov_database_create()">
-<link href="ov_005fclass_005frenameobject_0028_0029.html#ov_005fclass_005frenameobject_0028_0029" rel="prev" title="ov_class_renameobject()">
-<style type="text/css">
-<!--
-a.summary-letter {text-decoration: none}
-blockquote.smallquotation {font-size: smaller}
-div.display {margin-left: 3.2em}
-div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
-div.lisp {margin-left: 3.2em}
-div.smalldisplay {margin-left: 3.2em}
-div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
-div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
-pre.display {font-family: inherit}
-pre.format {font-family: inherit}
-pre.menu-comment {font-family: serif}
-pre.menu-preformatted {font-family: serif}
-pre.smalldisplay {font-family: inherit; font-size: smaller}
-pre.smallexample {font-size: smaller}
-pre.smallformat {font-family: inherit; font-size: smaller}
-pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
-ul.no-bullet {list-style: none}
--->
-</style>
-
-
+<title>Database - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Class.html#Class" title="Class">
+<link rel="next" href="Element.html#Element" title="Element">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
 </head>
-
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body>
+<div class="node">
 <a name="Database"></a>
-<div class="header">
 <p>
-Next: <a href="Element.html#Element" accesskey="n" rel="next">Element</a>, Previous: <a href="Class.html#Class" accesskey="p" rel="prev">Class</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
-</div>
+Next:&nbsp;<a rel="next" accesskey="n" href="Element.html#Element">Element</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Class.html#Class">Class</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
 <hr>
-<a name="Functions-associated-with-the-database"></a>
+</div>
+
 <h2 class="chapter">10 Functions associated with the database</h2>
 
 <p>ACPLT/OV applications always run on exactly one database. The database usually
-is a memory mapped file and stores the application&rsquo;s objects as well as the
+is a memory mapped file and stores the application's objects as well as the
 meta objects defined in the libraries of the application. The objects stored
 in the database are persistent, i.e. they survive if you stop the application
 process and restart it later.
-</p>
-<p>Functions associated with the database file:
-</p><table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top">&bull; <a href="ov_005fdatabase_005fcreate_0028_0029.html#ov_005fdatabase_005fcreate_0028_0029" accesskey="1">ov_database_create()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Create a new database.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="ov_005fdatabase_005fmap_0028_0029.html#ov_005fdatabase_005fmap_0028_0029" accesskey="2">ov_database_map()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Map an existing database.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="ov_005fdatabase_005funmap_0028_0029.html#ov_005fdatabase_005funmap_0028_0029" accesskey="3">ov_database_unmap()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Unmap the mapped database.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="ov_005fdatabase_005fflush_0028_0029.html#ov_005fdatabase_005fflush_0028_0029" accesskey="4">ov_database_flush()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Flush the contents of the mapped database.
-</td></tr>
-</table>
 
-<p>Functions for startup and shutdown of the objects:
-</p><table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top">&bull; <a href="ov_005fdatabase_005fstartup_0028_0029.html#ov_005fdatabase_005fstartup_0028_0029" accesskey="1">ov_database_startup()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Start up the objects in the database.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="ov_005fdatabase_005fshutdown_0028_0029.html#ov_005fdatabase_005fshutdown_0028_0029" accesskey="2">ov_database_shutdown()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Shut down the objects in the database.
-</td></tr>
-</table>
+   <p>Functions associated with the database file:
 
-<p>Database memory management functions:
-</p><table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top">&bull; <a href="ov_005fdatabase_005fmalloc_0028_0029.html#ov_005fdatabase_005fmalloc_0028_0029" accesskey="1">ov_database_malloc()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Allocate persistent database memory.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="ov_005fdatabase_005frealloc_0028_0029.html#ov_005fdatabase_005frealloc_0028_0029" accesskey="2">ov_database_realloc()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Reallocate persistent database memory.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="ov_005fdatabase_005ffree_0028_0029.html#ov_005fdatabase_005ffree_0028_0029" accesskey="3">ov_database_free()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Free persistent database memory.
-</td></tr>
-</table>
+<ul class="menu">
+<li><a accesskey="1" href="ov_005fdatabase_005fcreate_0028_0029.html#ov_005fdatabase_005fcreate_0028_0029">ov_database_create()</a>:    Create a new database. 
+<li><a accesskey="2" href="ov_005fdatabase_005fmap_0028_0029.html#ov_005fdatabase_005fmap_0028_0029">ov_database_map()</a>:       Map an existing database. 
+<li><a accesskey="3" href="ov_005fdatabase_005funmap_0028_0029.html#ov_005fdatabase_005funmap_0028_0029">ov_database_unmap()</a>:     Unmap the mapped database. 
+<li><a accesskey="4" href="ov_005fdatabase_005fflush_0028_0029.html#ov_005fdatabase_005fflush_0028_0029">ov_database_flush()</a>:     Flush the contents of the mapped database. 
+</ul>
 
-<p>Database memory usage statistics functions:
-</p><table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top">&bull; <a href="ov_005fdatabase_005fgetsize_0028_0029.html#ov_005fdatabase_005fgetsize_0028_0029" accesskey="1">ov_database_getsize()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Get the total size of the database memory.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="ov_005fdatabase_005fgetfree_0028_0029.html#ov_005fdatabase_005fgetfree_0028_0029" accesskey="2">ov_database_getfree()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Get the size of the free database memory.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="ov_005fdatabase_005fgetused_0028_0029.html#ov_005fdatabase_005fgetused_0028_0029" accesskey="3">ov_database_getused()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Get the size of the used database memory.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="ov_005fdatabase_005fgetfrag_0028_0029.html#ov_005fdatabase_005fgetfrag_0028_0029" accesskey="4">ov_database_getfrag()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Get the fragmentation of the database memory.
-</td></tr>
-</table>
+   <p>Functions for startup and shutdown of the objects:
 
+<ul class="menu">
+<li><a accesskey="1" href="ov_005fdatabase_005fstartup_0028_0029.html#ov_005fdatabase_005fstartup_0028_0029">ov_database_startup()</a>:   Start up the objects in the database. 
+<li><a accesskey="2" href="ov_005fdatabase_005fshutdown_0028_0029.html#ov_005fdatabase_005fshutdown_0028_0029">ov_database_shutdown()</a>:  Shut down the objects in the database. 
+</ul>
 
-<hr>
-<div class="header">
-<p>
-Next: <a href="Element.html#Element" accesskey="n" rel="next">Element</a>, Previous: <a href="Class.html#Class" accesskey="p" rel="prev">Class</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
-</div>
+   <p>Database memory management functions:
 
+<ul class="menu">
+<li><a accesskey="1" href="ov_005fdatabase_005fmalloc_0028_0029.html#ov_005fdatabase_005fmalloc_0028_0029">ov_database_malloc()</a>:    Allocate persistent database memory. 
+<li><a accesskey="2" href="ov_005fdatabase_005frealloc_0028_0029.html#ov_005fdatabase_005frealloc_0028_0029">ov_database_realloc()</a>:   Reallocate persistent database memory. 
+<li><a accesskey="3" href="ov_005fdatabase_005ffree_0028_0029.html#ov_005fdatabase_005ffree_0028_0029">ov_database_free()</a>:      Free persistent database memory. 
+</ul>
 
+   <p>Database memory usage statistics functions:
 
-</body>
-</html>
+<ul class="menu">
+<li><a accesskey="1" href="ov_005fdatabase_005fgetsize_0028_0029.html#ov_005fdatabase_005fgetsize_0028_0029">ov_database_getsize()</a>:   Get the total size of the database memory. 
+<li><a accesskey="2" href="ov_005fdatabase_005fgetfree_0028_0029.html#ov_005fdatabase_005fgetfree_0028_0029">ov_database_getfree()</a>:   Get the size of the free database memory. 
+<li><a accesskey="3" href="ov_005fdatabase_005fgetused_0028_0029.html#ov_005fdatabase_005fgetused_0028_0029">ov_database_getused()</a>:   Get the size of the used database memory. 
+<li><a accesskey="4" href="ov_005fdatabase_005fgetfrag_0028_0029.html#ov_005fdatabase_005fgetfrag_0028_0029">ov_database_getfrag()</a>:   Get the fragmentation of the database memory. 
+</ul>
+
+<!--  -->
+   </body></html>
+

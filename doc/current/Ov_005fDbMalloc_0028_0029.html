@@ -1,83 +1,58 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<html lang="en">
 <head>
-<title>LibOV API Reference: Ov_DbMalloc()</title>
-
-<meta name="description" content="LibOV API Reference: Ov_DbMalloc()">
-<meta name="keywords" content="LibOV API Reference: Ov_DbMalloc()">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="index.html#Top" rel="start" title="Top">
-<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
-<link href="Useful-macros.html#Useful-macros" rel="up" title="Useful macros">
-<link href="Ov_005fDbFree_0028_0029.html#Ov_005fDbFree_0028_0029" rel="next" title="Ov_DbFree()">
-<link href="Ov_005fDbAlloc_0028_0029.html#Ov_005fDbAlloc_0028_0029" rel="prev" title="Ov_DbAlloc()">
-<style type="text/css">
-<!--
-a.summary-letter {text-decoration: none}
-blockquote.smallquotation {font-size: smaller}
-div.display {margin-left: 3.2em}
-div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
-div.lisp {margin-left: 3.2em}
-div.smalldisplay {margin-left: 3.2em}
-div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
-div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
-pre.display {font-family: inherit}
-pre.format {font-family: inherit}
-pre.menu-comment {font-family: serif}
-pre.menu-preformatted {font-family: serif}
-pre.smalldisplay {font-family: inherit; font-size: smaller}
-pre.smallexample {font-size: smaller}
-pre.smallformat {font-family: inherit; font-size: smaller}
-pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
-ul.no-bullet {list-style: none}
--->
-</style>
-
-
+<title>Ov_DbMalloc() - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Useful-macros.html#Useful-macros" title="Useful macros">
+<link rel="prev" href="Ov_005fDbAlloc_0028_0029.html#Ov_005fDbAlloc_0028_0029" title="Ov_DbAlloc()">
+<link rel="next" href="Ov_005fDbFree_0028_0029.html#Ov_005fDbFree_0028_0029" title="Ov_DbFree()">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
 </head>
-
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body>
+<div class="node">
+<a name="Ov_DbMalloc()"></a>
 <a name="Ov_005fDbMalloc_0028_0029"></a>
-<div class="header">
 <p>
-Next: <a href="Ov_005fDbFree_0028_0029.html#Ov_005fDbFree_0028_0029" accesskey="n" rel="next">Ov_DbFree()</a>, Previous: <a href="Ov_005fDbAlloc_0028_0029.html#Ov_005fDbAlloc_0028_0029" accesskey="p" rel="prev">Ov_DbAlloc()</a>, Up: <a href="Useful-macros.html#Useful-macros" accesskey="u" rel="up">Useful macros</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
-</div>
+Next:&nbsp;<a rel="next" accesskey="n" href="Ov_005fDbFree_0028_0029.html#Ov_005fDbFree_0028_0029">Ov_DbFree()</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Ov_005fDbAlloc_0028_0029.html#Ov_005fDbAlloc_0028_0029">Ov_DbAlloc()</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Useful-macros.html#Useful-macros">Useful macros</a>
 <hr>
-<a name="Allocate-memory-in-the-database-1"></a>
+</div>
+
 <h3 class="section">6.52 Allocate memory in the database</h3>
 
 <p><strong>Header file</strong>
-</p>
-<p><code>#include &quot;libov/ov_macros.h&quot;</code>
-</p>
-<p><strong>Macro usage</strong>
-</p>
-<p><code> = Ov_DbMalloc(size);</code>
-</p>
-<p><strong>Parameters</strong>
-</p>
-<dl compact="compact">
-<dt><code>size</code></dt>
+
+   <p><code>#include "libov/ov_macros.h"</code>
+
+   <p><strong>Macro usage</strong>
+
+   <p><code> = Ov_DbMalloc(size);</code>
+
+   <p><strong>Parameters</strong>
+
+     <dl>
+<dt><code>size</code><dd>
 </dl>
 
-<p><strong>Return value</strong>
-</p>
-<p><strong>Remarks</strong>
-</p>
+   <p><strong>Return value</strong>
 
+   <p><strong>Remarks</strong>
 
+<!--  -->
+   </body></html>
 
-
-</body>
-</html>

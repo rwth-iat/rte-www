@@ -1,86 +1,61 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<html lang="en">
 <head>
-<title>LibOV API Reference: ov_database_getsize()</title>
-
-<meta name="description" content="LibOV API Reference: ov_database_getsize()">
-<meta name="keywords" content="LibOV API Reference: ov_database_getsize()">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="index.html#Top" rel="start" title="Top">
-<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
-<link href="Database.html#Database" rel="up" title="Database">
-<link href="ov_005fdatabase_005fgetfree_0028_0029.html#ov_005fdatabase_005fgetfree_0028_0029" rel="next" title="ov_database_getfree()">
-<link href="ov_005fdatabase_005ffree_0028_0029.html#ov_005fdatabase_005ffree_0028_0029" rel="prev" title="ov_database_free()">
-<style type="text/css">
-<!--
-a.summary-letter {text-decoration: none}
-blockquote.smallquotation {font-size: smaller}
-div.display {margin-left: 3.2em}
-div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
-div.lisp {margin-left: 3.2em}
-div.smalldisplay {margin-left: 3.2em}
-div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
-div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
-pre.display {font-family: inherit}
-pre.format {font-family: inherit}
-pre.menu-comment {font-family: serif}
-pre.menu-preformatted {font-family: serif}
-pre.smalldisplay {font-family: inherit; font-size: smaller}
-pre.smallexample {font-size: smaller}
-pre.smallformat {font-family: inherit; font-size: smaller}
-pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
-ul.no-bullet {list-style: none}
--->
-</style>
-
-
+<title>ov_database_getsize() - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Database.html#Database" title="Database">
+<link rel="prev" href="ov_005fdatabase_005ffree_0028_0029.html#ov_005fdatabase_005ffree_0028_0029" title="ov_database_free()">
+<link rel="next" href="ov_005fdatabase_005fgetfree_0028_0029.html#ov_005fdatabase_005fgetfree_0028_0029" title="ov_database_getfree()">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
 </head>
-
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body>
+<div class="node">
+<a name="ov_database_getsize()"></a>
 <a name="ov_005fdatabase_005fgetsize_0028_0029"></a>
-<div class="header">
 <p>
-Next: <a href="ov_005fdatabase_005fgetfree_0028_0029.html#ov_005fdatabase_005fgetfree_0028_0029" accesskey="n" rel="next">ov_database_getfree()</a>, Previous: <a href="ov_005fdatabase_005ffree_0028_0029.html#ov_005fdatabase_005ffree_0028_0029" accesskey="p" rel="prev">ov_database_free()</a>, Up: <a href="Database.html#Database" accesskey="u" rel="up">Database</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
-</div>
+Next:&nbsp;<a rel="next" accesskey="n" href="ov_005fdatabase_005fgetfree_0028_0029.html#ov_005fdatabase_005fgetfree_0028_0029">ov_database_getfree()</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="ov_005fdatabase_005ffree_0028_0029.html#ov_005fdatabase_005ffree_0028_0029">ov_database_free()</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Database.html#Database">Database</a>
 <hr>
-<a name="Get-the-total-size-of-the-database-memory"></a>
+</div>
+
 <h3 class="section">10.10 Get the total size of the database memory</h3>
 
-<p>The <code>ov_database_getsize()</code> function returns the total amount of memory 
-the mapped database contains. Usually this size is equal the file size of 
+<p>The <code>ov_database_getsize()</code> function returns the total amount of memory
+the mapped database contains. Usually this size is equal the file size of
 the database file.
-</p>
-<p><strong>Header file</strong>
-</p>
-<p><code>#include &quot;libov/ov_database.h&quot;</code>
-</p>
-<p><strong>Declaration</strong>
-</p>
-<p><code>OV_DLLFNCEXPORT OV_UINT ov_database_getsize(void);</code>
-</p>
-<p><strong>Return value</strong>
-</p>
-<p>The function returns the total amount of memory in the mapped
+
+   <p><strong>Header file</strong>
+
+   <p><code>#include "libov/ov_database.h"</code>
+
+   <p><strong>Declaration</strong>
+
+   <p><code>OV_DLLFNCEXPORT OV_UINT ov_database_getsize(void);</code>
+
+   <p><strong>Return value</strong>
+
+   <p>The function returns the total amount of memory in the mapped
 database (in bytes).
-</p>
-<p><strong>Remarks</strong>
-</p>
-<p>If no database is mapped, the function returns <code>0</code>.
-</p>
 
+   <p><strong>Remarks</strong>
 
+   <p>If no database is mapped, the function returns <code>0</code>.
 
+<!--  -->
+   </body></html>
 
-</body>
-</html>

@@ -1,78 +1,55 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<html lang="en">
 <head>
-<title>LibOV API Reference: OV_DLLVARIMPORT</title>
-
-<meta name="description" content="LibOV API Reference: OV_DLLVARIMPORT">
-<meta name="keywords" content="LibOV API Reference: OV_DLLVARIMPORT">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="index.html#Top" rel="start" title="Top">
-<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
-<link href="Import_002fExport.html#Import_002fExport" rel="up" title="Import/Export">
-<link href="OV_005fCOMPILE_005fLIBOV.html#OV_005fCOMPILE_005fLIBOV" rel="next" title="OV_COMPILE_LIBOV">
-<link href="OV_005fDLLVAREXPORT.html#OV_005fDLLVAREXPORT" rel="prev" title="OV_DLLVAREXPORT">
-<style type="text/css">
-<!--
-a.summary-letter {text-decoration: none}
-blockquote.smallquotation {font-size: smaller}
-div.display {margin-left: 3.2em}
-div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
-div.lisp {margin-left: 3.2em}
-div.smalldisplay {margin-left: 3.2em}
-div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
-div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
-pre.display {font-family: inherit}
-pre.format {font-family: inherit}
-pre.menu-comment {font-family: serif}
-pre.menu-preformatted {font-family: serif}
-pre.smalldisplay {font-family: inherit; font-size: smaller}
-pre.smallexample {font-size: smaller}
-pre.smallformat {font-family: inherit; font-size: smaller}
-pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
-ul.no-bullet {list-style: none}
--->
-</style>
-
-
+<title>OV_DLLVARIMPORT - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Import_002fExport.html#Import_002fExport" title="Import/Export">
+<link rel="prev" href="OV_005fDLLVAREXPORT.html#OV_005fDLLVAREXPORT" title="OV_DLLVAREXPORT">
+<link rel="next" href="OV_005fCOMPILE_005fLIBOV.html#OV_005fCOMPILE_005fLIBOV" title="OV_COMPILE_LIBOV">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
 </head>
-
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body>
+<div class="node">
+<a name="OV_DLLVARIMPORT"></a>
 <a name="OV_005fDLLVARIMPORT"></a>
-<div class="header">
 <p>
-Next: <a href="OV_005fCOMPILE_005fLIBOV.html#OV_005fCOMPILE_005fLIBOV" accesskey="n" rel="next">OV_COMPILE_LIBOV</a>, Previous: <a href="OV_005fDLLVAREXPORT.html#OV_005fDLLVAREXPORT" accesskey="p" rel="prev">OV_DLLVAREXPORT</a>, Up: <a href="Import_002fExport.html#Import_002fExport" accesskey="u" rel="up">Import/Export</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
-</div>
+Next:&nbsp;<a rel="next" accesskey="n" href="OV_005fCOMPILE_005fLIBOV.html#OV_005fCOMPILE_005fLIBOV">OV_COMPILE_LIBOV</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="OV_005fDLLVAREXPORT.html#OV_005fDLLVAREXPORT">OV_DLLVAREXPORT</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Import_002fExport.html#Import_002fExport">Import/Export</a>
 <hr>
-<a name="Modifier-for-global-variables-that-are-exported-from-a-DLL-1"></a>
+</div>
+
 <h3 class="section">4.3 Modifier for global variables that are exported from a DLL</h3>
 
-<p>The preprocessor symbol <code>OV_DLLVARIMPORT</code> is to tell the compiler, that 
+<p>The preprocessor symbol <code>OV_DLLVARIMPORT</code> is to tell the compiler, that
 a global variable is imported from a DLL.
-</p>
-<p>This symbol is automatically defined in the configuration header file 
+
+   <p>This symbol is automatically defined in the configuration header file
 <code>libov/ov_config.h</code>.
-</p>
-<p><strong>Example</strong>
-</p>
-<p>The following piece of code declares a global variable which is imported from a DLL:
-</p>
-<div class="format">
+
+   <p><strong>Example</strong>
+
+   <p>The following piece of code declares a global variable which is imported from a DLL:
+
 <pre class="format"><tt>/*
 *   bar.c
 */
 
-#include &quot;libov/ov_ov.h&quot;
+#include "libov/ov_ov.h"
 #include &lt;stdio.h&gt;
 
 /*
@@ -84,17 +61,13 @@ OV_DLLVARIMPORT OV_STRING pstring;
 *   a function setting and printing the global variable
 */
 void bar(void) {
-    pstring = &quot;hello world&quot;;
-    printf(&quot;pstring = %s\n&quot;, pstring);
+    pstring = "hello world";
+    printf("pstring = %s\n", pstring);
 }</tt>
-</pre></div>
-
-<p>A module using the DLL can access this variable using the preprocessor symbol
+</pre>
+   <p>A module using the DLL can access this variable using the preprocessor symbol
 <code>OV_DLLVARIMPORT</code>.
-</p>
 
+<!--  -->
+   </body></html>
 
-
-
-</body>
-</html>

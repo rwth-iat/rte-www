@@ -1,97 +1,68 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<html lang="en">
 <head>
-<title>LibOV API Reference: Ov_Association_GetPreviousChild()</title>
-
-<meta name="description" content="LibOV API Reference: Ov_Association_GetPreviousChild()">
-<meta name="keywords" content="LibOV API Reference: Ov_Association_GetPreviousChild()">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="index.html#Top" rel="start" title="Top">
-<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
-<link href="Association.html#Association" rel="up" title="Association">
-<link href="Ov_005fAssociation_005fGetParent_0028_0029.html#Ov_005fAssociation_005fGetParent_0028_0029" rel="next" title="Ov_Association_GetParent()">
-<link href="Ov_005fAssociation_005fGetNextChild_0028_0029.html#Ov_005fAssociation_005fGetNextChild_0028_0029" rel="prev" title="Ov_Association_GetNextChild()">
-<style type="text/css">
-<!--
-a.summary-letter {text-decoration: none}
-blockquote.smallquotation {font-size: smaller}
-div.display {margin-left: 3.2em}
-div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
-div.lisp {margin-left: 3.2em}
-div.smalldisplay {margin-left: 3.2em}
-div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
-div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
-pre.display {font-family: inherit}
-pre.format {font-family: inherit}
-pre.menu-comment {font-family: serif}
-pre.menu-preformatted {font-family: serif}
-pre.smalldisplay {font-family: inherit; font-size: smaller}
-pre.smallexample {font-size: smaller}
-pre.smallformat {font-family: inherit; font-size: smaller}
-pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
-ul.no-bullet {list-style: none}
--->
-</style>
-
-
+<title>Ov_Association_GetPreviousChild() - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Association.html#Association" title="Association">
+<link rel="prev" href="Ov_005fAssociation_005fGetNextChild_0028_0029.html#Ov_005fAssociation_005fGetNextChild_0028_0029" title="Ov_Association_GetNextChild()">
+<link rel="next" href="Ov_005fAssociation_005fGetParent_0028_0029.html#Ov_005fAssociation_005fGetParent_0028_0029" title="Ov_Association_GetParent()">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
 </head>
-
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body>
+<div class="node">
+<a name="Ov_Association_GetPreviousChild()"></a>
 <a name="Ov_005fAssociation_005fGetPreviousChild_0028_0029"></a>
-<div class="header">
 <p>
-Next: <a href="Ov_005fAssociation_005fGetParent_0028_0029.html#Ov_005fAssociation_005fGetParent_0028_0029" accesskey="n" rel="next">Ov_Association_GetParent()</a>, Previous: <a href="Ov_005fAssociation_005fGetNextChild_0028_0029.html#Ov_005fAssociation_005fGetNextChild_0028_0029" accesskey="p" rel="prev">Ov_Association_GetNextChild()</a>, Up: <a href="Association.html#Association" accesskey="u" rel="up">Association</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
-</div>
+Next:&nbsp;<a rel="next" accesskey="n" href="Ov_005fAssociation_005fGetParent_0028_0029.html#Ov_005fAssociation_005fGetParent_0028_0029">Ov_Association_GetParent()</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Ov_005fAssociation_005fGetNextChild_0028_0029.html#Ov_005fAssociation_005fGetNextChild_0028_0029">Ov_Association_GetNextChild()</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Association.html#Association">Association</a>
 <hr>
-<a name="Get-previous-child-in-a-1_003an-association"></a>
+</div>
+
 <h3 class="section">8.4 Get previous child in a 1:n association</h3>
 
 <p>The <code>Ov_Association_GetPreviousChild()</code> macro returns a pointer of the previous
 child object of a link.
-</p>
-<p><strong>Header file</strong>
-</p>
-<p><code>#include &quot;libov/ov_association.h&quot;</code>
-</p>
-<p><strong>Macro usage</strong>
-</p>
-<p><code>pchild = Ov_Association_GetPreviousChild(passoc, pchild);</code>
-</p>
-<p><strong>Parameters</strong>
-</p>
-<dl compact="compact">
-<dt><code><code>passoc</code></code></dt>
-<dd><p>Pointer to the association object defining the link.
-</p></dd>
-<dt><code><code>pchild</code></code></dt>
-<dd><p>Pointer to the current child object of the link.
-</p></dd>
+
+   <p><strong>Header file</strong>
+
+   <p><code>#include "libov/ov_association.h"</code>
+
+   <p><strong>Macro usage</strong>
+
+   <p><code>pchild = Ov_Association_GetPreviousChild(passoc, pchild);</code>
+
+   <p><strong>Parameters</strong>
+
+     <dl>
+<dt><code>passoc</code><dd>Pointer to the association object defining the link. 
+<br><dt><code>pchild</code><dd>Pointer to the current child object of the link. 
 </dl>
 
-<p><strong>Return value</strong>
-</p>
-<p>The macro returns a pointer to the previous child object or <code>NULL</code> if the current 
+   <p><strong>Return value</strong>
+
+   <p>The macro returns a pointer to the previous child object or <code>NULL</code> if the current
 child object is the first object of the link.
-</p>
-<p><strong>Remarks</strong>
-</p>
-<p>This generic macro is <strong>not type safe</strong>. Whenever possible, use the macro
+
+   <p><strong>Remarks</strong>
+
+   <p>This generic macro is <strong>not type safe</strong>. Whenever possible, use the macro
 <code>Ov_GetPrevChild()</code> instead!
-</p>
 
+<!--  -->
+   </body></html>
 
-
-
-</body>
-</html>

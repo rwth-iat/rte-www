@@ -1,96 +1,64 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<html lang="en">
 <head>
-<title>LibOV API Reference: Element</title>
-
-<meta name="description" content="LibOV API Reference: Element">
-<meta name="keywords" content="LibOV API Reference: Element">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="index.html#Top" rel="start" title="Top">
-<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
-<link href="index.html#Top" rel="up" title="Top">
-<link href="OV_005fELEM_005fTYPE.html#OV_005fELEM_005fTYPE" rel="next" title="OV_ELEM_TYPE">
-<link href="ov_005fdatabase_005fgetfrag_0028_0029.html#ov_005fdatabase_005fgetfrag_0028_0029" rel="prev" title="ov_database_getfrag()">
-<style type="text/css">
-<!--
-a.summary-letter {text-decoration: none}
-blockquote.smallquotation {font-size: smaller}
-div.display {margin-left: 3.2em}
-div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
-div.lisp {margin-left: 3.2em}
-div.smalldisplay {margin-left: 3.2em}
-div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
-div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
-pre.display {font-family: inherit}
-pre.format {font-family: inherit}
-pre.menu-comment {font-family: serif}
-pre.menu-preformatted {font-family: serif}
-pre.smalldisplay {font-family: inherit; font-size: smaller}
-pre.smallexample {font-size: smaller}
-pre.smallformat {font-family: inherit; font-size: smaller}
-pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
-ul.no-bullet {list-style: none}
--->
-</style>
-
-
+<title>Element - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Database.html#Database" title="Database">
+<link rel="next" href="Library.html#Library" title="Library">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
 </head>
-
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body>
+<div class="node">
 <a name="Element"></a>
-<div class="header">
 <p>
-Next: <a href="Library.html#Library" accesskey="n" rel="next">Library</a>, Previous: <a href="Database.html#Database" accesskey="p" rel="prev">Database</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
-</div>
+Next:&nbsp;<a rel="next" accesskey="n" href="Library.html#Library">Library</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Database.html#Database">Database</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
 <hr>
-<a name="Datatypes-and-functions-associated-with-elements"></a>
+</div>
+
 <h2 class="chapter">11 Datatypes and functions associated with elements</h2>
 
 <p>An element is either an object or a part of an object, i.e. a variable, an end
-of a link (head or anchor), a part object, an operation or a member of a 
-structured variable and can be identified by a unique path. Each element is 
-either a child or a part of another element except for the element corresponding 
+of a link (head or anchor), a part object, an operation or a member of a
+structured variable and can be identified by a unique path. Each element is
+either a child or a part of another element except for the element corresponding
 to the root object. This relationship is expressed in the path identifying
 the element, e.g. in <code>parent/child</code> the <code>child</code> element is a child
 of the <code>parent</code> element and in <code>composite.part</code> the <code>part</code>
 element is a part of the <code>composite</code> element.
-</p>
-<p>Datatypes associated with elements:
-</p><table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top">&bull; <a href="OV_005fELEM_005fTYPE.html#OV_005fELEM_005fTYPE" accesskey="1">OV_ELEM_TYPE</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Type of an element.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="OV_005fELEMENT.html#OV_005fELEMENT" accesskey="2">OV_ELEMENT</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Information associated with an element.
-</td></tr>
-</table>
 
-<p>Functions associated with elements:
-</p><table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top">&bull; <a href="ov_005felement_005fsearchchild_0028_0029.html#ov_005felement_005fsearchchild_0028_0029" accesskey="1">ov_element_searchchild()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Search a child element of an element.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="ov_005felement_005fsearchpart_0028_0029.html#ov_005felement_005fsearchpart_0028_0029" accesskey="2">ov_element_searchpart()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Search a part element of an element.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="ov_005felement_005fgetnextchild_0028_0029.html#ov_005felement_005fgetnextchild_0028_0029" accesskey="3">ov_element_getnextchild()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Get next child element of an element.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="ov_005felement_005fgetnextpart_0028_0029.html#ov_005felement_005fgetnextpart_0028_0029" accesskey="4">ov_element_getnextpart()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Get next part element of an element.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="ov_005felement_005fgetidentifier_0028_0029.html#ov_005felement_005fgetidentifier_0028_0029" accesskey="5">ov_element_getidentifier()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Get the identifier of an element.
-</td></tr>
-</table>
+   <p>Datatypes associated with elements:
 
+<ul class="menu">
+<li><a accesskey="1" href="OV_005fELEM_005fTYPE.html#OV_005fELEM_005fTYPE">OV_ELEM_TYPE</a>:                 Type of an element. 
+<li><a accesskey="2" href="OV_005fELEMENT.html#OV_005fELEMENT">OV_ELEMENT</a>:                   Information associated with an element. 
+</ul>
 
+   <p>Functions associated with elements:
 
+<ul class="menu">
+<li><a accesskey="1" href="ov_005felement_005fsearchchild_0028_0029.html#ov_005felement_005fsearchchild_0028_0029">ov_element_searchchild()</a>:     Search a child element of an element. 
+<li><a accesskey="2" href="ov_005felement_005fsearchpart_0028_0029.html#ov_005felement_005fsearchpart_0028_0029">ov_element_searchpart()</a>:      Search a part element of an element. 
+<li><a accesskey="3" href="ov_005felement_005fgetnextchild_0028_0029.html#ov_005felement_005fgetnextchild_0028_0029">ov_element_getnextchild()</a>:    Get next child element of an element. 
+<li><a accesskey="4" href="ov_005felement_005fgetnextpart_0028_0029.html#ov_005felement_005fgetnextpart_0028_0029">ov_element_getnextpart()</a>:     Get next part element of an element. 
+<li><a accesskey="5" href="ov_005felement_005fgetidentifier_0028_0029.html#ov_005felement_005fgetidentifier_0028_0029">ov_element_getidentifier()</a>:   Get the identifier of an element. 
+</ul>
 
+<!--  -->
+   </body></html>
 
-</body>
-</html>

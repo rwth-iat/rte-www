@@ -1,89 +1,62 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<html lang="en">
 <head>
-<title>LibOV API Reference: ov_time_asciitotime()</title>
-
-<meta name="description" content="LibOV API Reference: ov_time_asciitotime()">
-<meta name="keywords" content="LibOV API Reference: ov_time_asciitotime()">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="index.html#Top" rel="start" title="Top">
-<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
-<link href="Time.html#Time" rel="up" title="Time">
-<link href="Variable.html#Variable" rel="next" title="Variable">
-<link href="ov_005ftime_005ftimetoascii_0028_0029.html#ov_005ftime_005ftimetoascii_0028_0029" rel="prev" title="ov_time_timetoascii()">
-<style type="text/css">
-<!--
-a.summary-letter {text-decoration: none}
-blockquote.smallquotation {font-size: smaller}
-div.display {margin-left: 3.2em}
-div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
-div.lisp {margin-left: 3.2em}
-div.smalldisplay {margin-left: 3.2em}
-div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
-div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
-pre.display {font-family: inherit}
-pre.format {font-family: inherit}
-pre.menu-comment {font-family: serif}
-pre.menu-preformatted {font-family: serif}
-pre.smalldisplay {font-family: inherit; font-size: smaller}
-pre.smallexample {font-size: smaller}
-pre.smallformat {font-family: inherit; font-size: smaller}
-pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
-ul.no-bullet {list-style: none}
--->
-</style>
-
-
+<title>ov_time_asciitotime() - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Time.html#Time" title="Time">
+<link rel="prev" href="ov_005ftime_005ftimetoascii_0028_0029.html#ov_005ftime_005ftimetoascii_0028_0029" title="ov_time_timetoascii()">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
 </head>
-
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body>
+<div class="node">
+<a name="ov_time_asciitotime()"></a>
 <a name="ov_005ftime_005fasciitotime_0028_0029"></a>
-<div class="header">
 <p>
-Previous: <a href="ov_005ftime_005ftimetoascii_0028_0029.html#ov_005ftime_005ftimetoascii_0028_0029" accesskey="p" rel="prev">ov_time_timetoascii()</a>, Up: <a href="Time.html#Time" accesskey="u" rel="up">Time</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
-</div>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="ov_005ftime_005ftimetoascii_0028_0029.html#ov_005ftime_005ftimetoascii_0028_0029">ov_time_timetoascii()</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Time.html#Time">Time</a>
 <hr>
-<a name="Convert-an-ASCII-string-into-a-time"></a>
+</div>
+
 <h3 class="section">25.6 Convert an ASCII string into a time</h3>
 
 <p><strong>Header file</strong>
-</p>
-<p><code>#include &quot;libov/ov_time.h&quot;</code>
-</p>
-<p><strong>Declaration</strong>
-</p>
-<div class="format">
+
+   <p><code>#include "libov/ov_time.h"</code>
+
+   <p><strong>Declaration</strong>
+
 <pre class="format"><tt>OV_DLLFNCEXPORT OV_RESULT ov_time_asciitotime(
     OV_TIME           *ptime,
     const OV_STRING   timestring
 );</tt>
-</pre></div>
+</pre>
+   <p><strong>Parameters</strong>
 
-<p><strong>Parameters</strong>
-</p>
-<dl compact="compact">
-<dt><code>ptime</code></dt>
-<dt><code>timestring</code></dt>
+     <dl>
+<dt><code>ptime</code>
+<br><dt><code>timestring</code><dd>
 </dl>
 
-<p><strong>Return value</strong>
-</p>
-<p><strong>Remarks</strong>
-</p>
+   <p><strong>Return value</strong>
 
+   <p><strong>Remarks</strong>
 
+<!--  -->
+<!-- Variable -->
+<!--  -->
+   </body></html>
 
-
-</body>
-</html>

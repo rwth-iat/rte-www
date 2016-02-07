@@ -1,80 +1,55 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<html lang="en">
 <head>
-<title>LibOV API Reference: OV_COMPILE_LIBOV</title>
-
-<meta name="description" content="LibOV API Reference: OV_COMPILE_LIBOV">
-<meta name="keywords" content="LibOV API Reference: OV_COMPILE_LIBOV">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="index.html#Top" rel="start" title="Top">
-<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
-<link href="Import_002fExport.html#Import_002fExport" rel="up" title="Import/Export">
-<link href="Debugging-macros.html#Debugging-macros" rel="next" title="Debugging macros">
-<link href="OV_005fDLLVARIMPORT.html#OV_005fDLLVARIMPORT" rel="prev" title="OV_DLLVARIMPORT">
-<style type="text/css">
-<!--
-a.summary-letter {text-decoration: none}
-blockquote.smallquotation {font-size: smaller}
-div.display {margin-left: 3.2em}
-div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
-div.lisp {margin-left: 3.2em}
-div.smalldisplay {margin-left: 3.2em}
-div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
-div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
-pre.display {font-family: inherit}
-pre.format {font-family: inherit}
-pre.menu-comment {font-family: serif}
-pre.menu-preformatted {font-family: serif}
-pre.smalldisplay {font-family: inherit; font-size: smaller}
-pre.smallexample {font-size: smaller}
-pre.smallformat {font-family: inherit; font-size: smaller}
-pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
-ul.no-bullet {list-style: none}
--->
-</style>
-
-
+<title>OV_COMPILE_LIBOV - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Import_002fExport.html#Import_002fExport" title="Import/Export">
+<link rel="prev" href="OV_005fDLLVARIMPORT.html#OV_005fDLLVARIMPORT" title="OV_DLLVARIMPORT">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
 </head>
-
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body>
+<div class="node">
+<a name="OV_COMPILE_LIBOV"></a>
 <a name="OV_005fCOMPILE_005fLIBOV"></a>
-<div class="header">
 <p>
-Previous: <a href="OV_005fDLLVARIMPORT.html#OV_005fDLLVARIMPORT" accesskey="p" rel="prev">OV_DLLVARIMPORT</a>, Up: <a href="Import_002fExport.html#Import_002fExport" accesskey="u" rel="up">Import/Export</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
-</div>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="OV_005fDLLVARIMPORT.html#OV_005fDLLVARIMPORT">OV_DLLVARIMPORT</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Import_002fExport.html#Import_002fExport">Import/Export</a>
 <hr>
-<a name="Definition-whether-a-LibOV-source-file-is-compiled"></a>
+</div>
+
 <h3 class="section">4.4 Definition whether a LibOV source file is compiled</h3>
 
 <p>The preprocessor symbol <code>OV_COMPILE_LIBOV</code> defines whether a source file
 (module) of the ACPLT/OV Object Management Library LibOV itself is compiled
-(symbol is defined as <code>1</code>) or not (symbol is defined as <code>0</code>). 
-</p>
-<p>This symbol is necessary for Windows NT in order to determine whether global
+(symbol is defined as <code>1</code>) or not (symbol is defined as <code>0</code>).
+
+   <p>This symbol is necessary for Windows NT in order to determine whether global
 variables need to be exported (symbol is defined as <code>1</code>) or imported
 (symbol is defined as <code>0</code>) from a DLL.
-</p>
-<p><strong>Always</strong> define this symbol if you add source files to the ACPLT/OV 
-Object Management Library LibOV and <strong>never</strong> define it in any other 
-file! 
-</p>
-<p>If you define the symbol, make sure that you define the symbol <strong>before</strong> 
+
+   <p><strong>Always</strong> define this symbol if you add source files to the ACPLT/OV
+Object Management Library LibOV and <strong>never</strong> define it in any other
+file!
+
+   <p>If you define the symbol, make sure that you define the symbol <strong>before</strong>
 including any ACPLT/OV header files!
-</p>
 
+<!--  -->
+<!-- Debugging macros -->
+<!--  -->
+   </body></html>
 
-
-
-</body>
-</html>

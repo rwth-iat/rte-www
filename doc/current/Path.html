@@ -1,83 +1,52 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<html lang="en">
 <head>
-<title>LibOV API Reference: Path</title>
-
-<meta name="description" content="LibOV API Reference: Path">
-<meta name="keywords" content="LibOV API Reference: Path">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="index.html#Top" rel="start" title="Top">
-<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
-<link href="index.html#Top" rel="up" title="Top">
-<link href="OV_005fPATH.html#OV_005fPATH" rel="next" title="OV_PATH">
-<link href="ov_005fpart_005fcanunload_0028_0029.html#ov_005fpart_005fcanunload_0028_0029" rel="prev" title="ov_part_canunload()">
-<style type="text/css">
-<!--
-a.summary-letter {text-decoration: none}
-blockquote.smallquotation {font-size: smaller}
-div.display {margin-left: 3.2em}
-div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
-div.lisp {margin-left: 3.2em}
-div.smalldisplay {margin-left: 3.2em}
-div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
-div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
-pre.display {font-family: inherit}
-pre.format {font-family: inherit}
-pre.menu-comment {font-family: serif}
-pre.menu-preformatted {font-family: serif}
-pre.smalldisplay {font-family: inherit; font-size: smaller}
-pre.smallexample {font-size: smaller}
-pre.smallformat {font-family: inherit; font-size: smaller}
-pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
-ul.no-bullet {list-style: none}
--->
-</style>
-
-
+<title>Path - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Part.html#Part" title="Part">
+<link rel="next" href="Result.html#Result" title="Result">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
 </head>
-
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body>
+<div class="node">
 <a name="Path"></a>
-<div class="header">
 <p>
-Next: <a href="Result.html#Result" accesskey="n" rel="next">Result</a>, Previous: <a href="Part.html#Part" accesskey="p" rel="prev">Part</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
-</div>
+Next:&nbsp;<a rel="next" accesskey="n" href="Result.html#Result">Result</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Part.html#Part">Part</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
 <hr>
-<a name="Datatypes-and-functions-associated-with-paths"></a>
+</div>
+
 <h2 class="chapter">19 Datatypes and functions associated with paths</h2>
 
 <p>Datatypes associated with paths:
-</p>
-<table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top">&bull; <a href="OV_005fPATH.html#OV_005fPATH" accesskey="1">OV_PATH</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Array of elements corresponding to the identifiers of a path name.
-</td></tr>
-</table>
 
-<p>Functions associated with paths:
-</p>
-<table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top">&bull; <a href="ov_005fpath_005fresolve_0028_0029.html#ov_005fpath_005fresolve_0028_0029" accesskey="1">ov_path_resolve()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Resolve a path using a given path name.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="ov_005fpath_005fgetcanonicalpath_0028_0029.html#ov_005fpath_005fgetcanonicalpath_0028_0029" accesskey="2">ov_path_getcanonicalpath()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Get the canonical path of an element.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="ov_005fpath_005fgetobjectpointer_0028_0029.html#ov_005fpath_005fgetobjectpointer_0028_0029" accesskey="3">ov_path_getobjectpointer()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Get the pointer to an object with given path name.
-</td></tr>
-</table>
+<ul class="menu">
+<li><a accesskey="1" href="OV_005fPATH.html#OV_005fPATH">OV_PATH</a>:                       Array of elements corresponding to the identifiers of a path name. 
+</ul>
 
+   <p>Functions associated with paths:
 
+<ul class="menu">
+<li><a accesskey="1" href="ov_005fpath_005fresolve_0028_0029.html#ov_005fpath_005fresolve_0028_0029">ov_path_resolve()</a>:             Resolve a path using a given path name. 
+<li><a accesskey="2" href="ov_005fpath_005fgetcanonicalpath_0028_0029.html#ov_005fpath_005fgetcanonicalpath_0028_0029">ov_path_getcanonicalpath()</a>:    Get the canonical path of an element. 
+<li><a accesskey="3" href="ov_005fpath_005fgetobjectpointer_0028_0029.html#ov_005fpath_005fgetobjectpointer_0028_0029">ov_path_getobjectpointer()</a>:    Get the pointer to an object with given path name. 
+</ul>
 
+<!--  -->
+   </body></html>
 
-
-</body>
-</html>

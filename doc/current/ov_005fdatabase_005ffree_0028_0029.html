@@ -1,95 +1,66 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<html lang="en">
 <head>
-<title>LibOV API Reference: ov_database_free()</title>
-
-<meta name="description" content="LibOV API Reference: ov_database_free()">
-<meta name="keywords" content="LibOV API Reference: ov_database_free()">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="index.html#Top" rel="start" title="Top">
-<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
-<link href="Database.html#Database" rel="up" title="Database">
-<link href="ov_005fdatabase_005fgetsize_0028_0029.html#ov_005fdatabase_005fgetsize_0028_0029" rel="next" title="ov_database_getsize()">
-<link href="ov_005fdatabase_005frealloc_0028_0029.html#ov_005fdatabase_005frealloc_0028_0029" rel="prev" title="ov_database_realloc()">
-<style type="text/css">
-<!--
-a.summary-letter {text-decoration: none}
-blockquote.smallquotation {font-size: smaller}
-div.display {margin-left: 3.2em}
-div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
-div.lisp {margin-left: 3.2em}
-div.smalldisplay {margin-left: 3.2em}
-div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
-div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
-pre.display {font-family: inherit}
-pre.format {font-family: inherit}
-pre.menu-comment {font-family: serif}
-pre.menu-preformatted {font-family: serif}
-pre.smalldisplay {font-family: inherit; font-size: smaller}
-pre.smallexample {font-size: smaller}
-pre.smallformat {font-family: inherit; font-size: smaller}
-pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
-ul.no-bullet {list-style: none}
--->
-</style>
-
-
+<title>ov_database_free() - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Database.html#Database" title="Database">
+<link rel="prev" href="ov_005fdatabase_005frealloc_0028_0029.html#ov_005fdatabase_005frealloc_0028_0029" title="ov_database_realloc()">
+<link rel="next" href="ov_005fdatabase_005fgetsize_0028_0029.html#ov_005fdatabase_005fgetsize_0028_0029" title="ov_database_getsize()">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
 </head>
-
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body>
+<div class="node">
+<a name="ov_database_free()"></a>
 <a name="ov_005fdatabase_005ffree_0028_0029"></a>
-<div class="header">
 <p>
-Next: <a href="ov_005fdatabase_005fgetsize_0028_0029.html#ov_005fdatabase_005fgetsize_0028_0029" accesskey="n" rel="next">ov_database_getsize()</a>, Previous: <a href="ov_005fdatabase_005frealloc_0028_0029.html#ov_005fdatabase_005frealloc_0028_0029" accesskey="p" rel="prev">ov_database_realloc()</a>, Up: <a href="Database.html#Database" accesskey="u" rel="up">Database</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
-</div>
+Next:&nbsp;<a rel="next" accesskey="n" href="ov_005fdatabase_005fgetsize_0028_0029.html#ov_005fdatabase_005fgetsize_0028_0029">ov_database_getsize()</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="ov_005fdatabase_005frealloc_0028_0029.html#ov_005fdatabase_005frealloc_0028_0029">ov_database_realloc()</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Database.html#Database">Database</a>
 <hr>
-<a name="Free-persistent-database-memory"></a>
+</div>
+
 <h3 class="section">10.9 Free persistent database memory</h3>
 
 <p>Similar to the ANSI C <code>free()</code> function, <code>ov_database_free()</code>
 frees a memory block previously allocated using <code>ov_database_malloc()</code>
-or <code>ov_database_realloc()</code>. While <code>free()</code> frees memory 
-allocated on the system heap, <code>ov_database_free()</code> frees memory 
+or <code>ov_database_realloc()</code>. While <code>free()</code> frees memory
+allocated on the system heap, <code>ov_database_free()</code> frees memory
 allocated in the persistent database.
-</p>
-<p><strong>Header file</strong>
-</p>
-<p><code>#include &quot;libov/ov_database.h&quot;</code>
-</p>
-<p><strong>Declaration</strong>
-</p>
-<div class="format">
+
+   <p><strong>Header file</strong>
+
+   <p><code>#include "libov/ov_database.h"</code>
+
+   <p><strong>Declaration</strong>
+
 <pre class="format"><tt>OV_DLLFNCEXPORT void ov_database_free(
     OV_POINTER ptr
 );</tt>
-</pre></div>
+</pre>
+   <p><strong>Parameters</strong>
 
-<p><strong>Parameters</strong>
-</p>
-<dl compact="compact">
-<dt><code>ptr</code></dt>
-<dd><p>Pointer to the memory block in the database that has to be freed.
-</p></dd>
+     <dl>
+<dt><code>ptr</code><dd>Pointer to the memory block in the database that has to be freed. 
 </dl>
 
-<p><strong>Remarks</strong>
-</p>
-<p>If no database is mapped, the function has no effect.
-</p>
+   <p><strong>Remarks</strong>
 
+   <p>If no database is mapped, the function has no effect.
 
+<!--  -->
+   </body></html>
 
-
-</body>
-</html>

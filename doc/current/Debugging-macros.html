@@ -1,85 +1,51 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
+<html lang="en">
 <head>
-<title>LibOV API Reference: Debugging macros</title>
-
-<meta name="description" content="LibOV API Reference: Debugging macros">
-<meta name="keywords" content="LibOV API Reference: Debugging macros">
-<meta name="resource-type" content="document">
-<meta name="distribution" content="global">
-<meta name="Generator" content="makeinfo">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link href="index.html#Top" rel="start" title="Top">
-<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
-<link href="index.html#Top" rel="up" title="Top">
-<link href="Ov_005fInfo_0028_0029.html#Ov_005fInfo_0028_0029" rel="next" title="Ov_Info()">
-<link href="OV_005fCOMPILE_005fLIBOV.html#OV_005fCOMPILE_005fLIBOV" rel="prev" title="OV_COMPILE_LIBOV">
-<style type="text/css">
-<!--
-a.summary-letter {text-decoration: none}
-blockquote.smallquotation {font-size: smaller}
-div.display {margin-left: 3.2em}
-div.example {margin-left: 3.2em}
-div.indentedblock {margin-left: 3.2em}
-div.lisp {margin-left: 3.2em}
-div.smalldisplay {margin-left: 3.2em}
-div.smallexample {margin-left: 3.2em}
-div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
-div.smalllisp {margin-left: 3.2em}
-kbd {font-style:oblique}
-pre.display {font-family: inherit}
-pre.format {font-family: inherit}
-pre.menu-comment {font-family: serif}
-pre.menu-preformatted {font-family: serif}
-pre.smalldisplay {font-family: inherit; font-size: smaller}
-pre.smallexample {font-size: smaller}
-pre.smallformat {font-family: inherit; font-size: smaller}
-pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space:nowrap}
-span.nolinebreak {white-space:nowrap}
-span.roman {font-family:serif; font-weight:normal}
-span.sansserif {font-family:sans-serif; font-weight:normal}
-ul.no-bullet {list-style: none}
--->
-</style>
-
-
+<title>Debugging macros - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Import_002fExport.html#Import_002fExport" title="Import/Export">
+<link rel="next" href="Useful-macros.html#Useful-macros" title="Useful macros">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
 </head>
-
-<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<body>
+<div class="node">
 <a name="Debugging-macros"></a>
-<div class="header">
 <p>
-Next: <a href="Useful-macros.html#Useful-macros" accesskey="n" rel="next">Useful macros</a>, Previous: <a href="Import_002fExport.html#Import_002fExport" accesskey="p" rel="prev">Import/Export</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
-</div>
+Next:&nbsp;<a rel="next" accesskey="n" href="Useful-macros.html#Useful-macros">Useful macros</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Import_002fExport.html#Import_002fExport">Import/Export</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
 <hr>
-<a name="Debugging-macros-used-in-the-library"></a>
+</div>
+
 <h2 class="chapter">5 Debugging macros used in the library</h2>
 
 <p>In debugging mode (<code>OV_DEBUG</code> defined) the following macros are available, otherwise they do not
 take effect:
-</p>
-<table class="menu" border="0" cellspacing="0">
-<tr><td align="left" valign="top">&bull; <a href="Ov_005fInfo_0028_0029.html#Ov_005fInfo_0028_0029" accesskey="1">Ov_Info()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Print information.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Ov_005fWarning_0028_0029.html#Ov_005fWarning_0028_0029" accesskey="2">Ov_Warning()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Print a warning and continue.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Ov_005fError_0028_0029.html#Ov_005fError_0028_0029" accesskey="3">Ov_Error()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Print an error and abort.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Ov_005fWarnIf_0028_0029.html#Ov_005fWarnIf_0028_0029" accesskey="4">Ov_WarnIf()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Print a warning if a condition holds.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Ov_005fWarnIfNot_0028_0029.html#Ov_005fWarnIfNot_0028_0029" accesskey="5">Ov_WarnIfNot()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Print a warning if a condition does not hold.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Ov_005fAbortIf_0028_0029.html#Ov_005fAbortIf_0028_0029" accesskey="6">Ov_AbortIf()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Print an error if a condition holds and abort.
-</td></tr>
-<tr><td align="left" valign="top">&bull; <a href="Ov_005fAbortIfNot_0028_0029.html#Ov_005fAbortIfNot_0028_0029" accesskey="7">Ov_AbortIfNot()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Print an error if a condition does not hold and abort.
-</td></tr>
-</table>
 
+<ul class="menu">
+<li><a accesskey="1" href="Ov_005fInfo_0028_0029.html#Ov_005fInfo_0028_0029">Ov_Info()</a>:                Print information. 
+<li><a accesskey="2" href="Ov_005fWarning_0028_0029.html#Ov_005fWarning_0028_0029">Ov_Warning()</a>:             Print a warning and continue. 
+<li><a accesskey="3" href="Ov_005fError_0028_0029.html#Ov_005fError_0028_0029">Ov_Error()</a>:               Print an error and abort. 
+<li><a accesskey="4" href="Ov_005fWarnIf_0028_0029.html#Ov_005fWarnIf_0028_0029">Ov_WarnIf()</a>:              Print a warning if a condition holds. 
+<li><a accesskey="5" href="Ov_005fWarnIfNot_0028_0029.html#Ov_005fWarnIfNot_0028_0029">Ov_WarnIfNot()</a>:           Print a warning if a condition does not hold. 
+<li><a accesskey="6" href="Ov_005fAbortIf_0028_0029.html#Ov_005fAbortIf_0028_0029">Ov_AbortIf()</a>:             Print an error if a condition holds and abort. 
+<li><a accesskey="7" href="Ov_005fAbortIfNot_0028_0029.html#Ov_005fAbortIfNot_0028_0029">Ov_AbortIfNot()</a>:          Print an error if a condition does not hold and abort. 
+</ul>
 
+<!--  -->
+   </body></html>
 
-
-
-</body>
-</html>
