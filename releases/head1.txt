@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Releases of acplt/rte</title>
+  <style type="text/css">
+  td { 
+      padding: 3px;
+  }
+  </style>
+  </head>
+<body>
+<p>
+Binary development releases for Windows32, Linux32, Linux64 and Raspberry Pi. For each system the latest 10 building commits are listed. They can change at any Time.
+</p>
+
+<h1>
+Windows 32 Releases
+</h1>
+<p>
+In order to use the start scripts you need tclsh. fb_dbcommands is not included in the archives.
+</p>
