@@ -7,4 +7,4 @@ Linux 32 Releases
 In order to use the start scripts you need tclsh.
 </p>
 <table style="border 1px solid gray;">
-<tr><th>File</th><th>Tag</th><th>Date</th></tr>
+<tr><th>File</th><th>Tag</th><th>Date</th><th>Size</th></tr>
