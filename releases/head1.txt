@@ -19,3 +19,5 @@ Windows 32 Releases
 <p>
 In order to use the start scripts you need tclsh. fb_dbcommands is not included in the archives.
 </p>
+<table style="border 1px solid gray;">
+<tr><th>File</th><th>Tag</th><th>Date</th></tr>
