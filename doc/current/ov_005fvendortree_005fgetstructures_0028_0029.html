@@ -1,0 +1,448 @@
+<html lang="en">
+<head>
+<title>ov_vendortree_getstructures() - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Vendortree.html#Vendortree" title="Vendortree">
+<link rel="prev" href="ov_005fvendortree_005fgetstartuptime_0028_0029.html#ov_005fvendortree_005fgetstartuptime_0028_0029" title="ov_vendortree_getstartuptime()">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="ov_vendortree_getstructures()"></a>
+<a name="ov_005fvendortree_005fgetstructures_0028_0029"></a>
+<p>
+Previous:&nbsp;<a rel="previous" accesskey="p" href="ov_005fvendortree_005fgetstartuptime_0028_0029.html#ov_005fvendortree_005fgetstartuptime_0028_0029">ov_vendortree_getstartuptime()</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Vendortree.html#Vendortree">Vendortree</a>
+<hr>
+</div>
+
+<h3 class="section">28.32 Get list of structures in the database</h3>
+
+<p><strong>Header file</strong>
+
+   <p><code>#include "libov/ov_vendortree.h"</code>
+
+   <p><strong>Declaration</strong>
+
+<pre class="format"><tt>OV_DLLFNCEXPORT OV_RESULT ov_vendortree_getstructures(
+    OV_VAR_CURRENT_PROPS   *pvarcurrprops,
+    const OV_TICKET        *pticket
+);</tt>
+</pre>
+   <p><strong>Parameters</strong>
+
+     <dl>
+<dt><code>pvarcurrprops</code>
+<br><dt><code>pticket</code><dd>
+</dl>
+
+   <p><strong>Return value</strong>
+
+   <p><strong>Remarks</strong>
+
+<!-- =============================== -->
+<!-- Part 6: The End of the Document -->
+<!-- =============================== -->
+   <div class="contents">
+<h2>Table of Contents</h2>
+<ul>
+<li><a name="toc_Top" href="index.html#Top">LibOV API Reference (Version 1.2.1)</a>
+<li><a name="toc_Index" href="Index.html#Index">1 Index</a>
+<li><a name="toc_License" href="License.html#License">2 Legal terms and conditions</a>
+<li><a name="toc_Preprocessor-symbols" href="Preprocessor-symbols.html#Preprocessor-symbols">3 Preprocessor symbols used in the library</a>
+<ul>
+<li><a href="OV_005fCOMPILER_005fXXX.html#OV_005fCOMPILER_005fXXX">3.1 Definition of the compiler used</a>
+<li><a href="OV_005fSYSTEM_005fXXX.html#OV_005fSYSTEM_005fXXX">3.2 Definition of the target operating system</a>
+<li><a href="OV_005fDEBUG.html#OV_005fDEBUG">3.3 Definition whether debugging features are used</a>
+<li><a href="OV_005fSTATIC_005fLIBRARIES.html#OV_005fSTATIC_005fLIBRARIES">3.4 Definition whether static libraries are used</a>
+<li><a href="OV_005fDYNAMIC_005fLIBRARIES.html#OV_005fDYNAMIC_005fLIBRARIES">3.5 Definition whether dynamic libraries are used</a>
+<li><a href="OV_005fDYNAMIC_005fDATABASE.html#OV_005fDYNAMIC_005fDATABASE">3.6 Definition whether dynamically growing databases are used</a>
+</li></ul>
+<li><a name="toc_Import_002fExport" href="Import_002fExport.html#Import_002fExport">4 Import/Export of functions and global variables</a>
+<ul>
+<li><a href="OV_005fDLLFNCEXPORT.html#OV_005fDLLFNCEXPORT">4.1 Modifier for functions that are exported from a DLL</a>
+<li><a href="OV_005fDLLVAREXPORT.html#OV_005fDLLVAREXPORT">4.2 Modifier for global variables that are exported from a DLL</a>
+<li><a href="OV_005fDLLVARIMPORT.html#OV_005fDLLVARIMPORT">4.3 Modifier for global variables that are exported from a DLL</a>
+<li><a href="OV_005fCOMPILE_005fLIBOV.html#OV_005fCOMPILE_005fLIBOV">4.4 Definition whether a LibOV source file is compiled</a>
+</li></ul>
+<li><a name="toc_Debugging-macros" href="Debugging-macros.html#Debugging-macros">5 Debugging macros used in the library</a>
+<ul>
+<li><a href="Ov_005fInfo_0028_0029.html#Ov_005fInfo_0028_0029">5.1 Print debug information</a>
+<li><a href="Ov_005fWarning_0028_0029.html#Ov_005fWarning_0028_0029">5.2 Print a warning and continue</a>
+<li><a href="Ov_005fError_0028_0029.html#Ov_005fError_0028_0029">5.3 Print an error and abort</a>
+<li><a href="Ov_005fWarnIf_0028_0029.html#Ov_005fWarnIf_0028_0029">5.4 Print a warning if a condition holds</a>
+<li><a href="Ov_005fWarnIfNot_0028_0029.html#Ov_005fWarnIfNot_0028_0029">5.5 Print a warning if a condition does not hold</a>
+<li><a href="Ov_005fAbortIf_0028_0029.html#Ov_005fAbortIf_0028_0029">5.6 Print an error if a condition holds and abort</a>
+<li><a href="Ov_005fAbortIfNot_0028_0029.html#Ov_005fAbortIfNot_0028_0029">5.7 Print an error if a condition does not hold and abort</a>
+</li></ul>
+<li><a name="toc_Useful-macros" href="Useful-macros.html#Useful-macros">6 Useful macros easing the use of the library</a>
+<ul>
+<li><a href="Ov_005fParentPtrUpCast_0028_0029.html#Ov_005fParentPtrUpCast_0028_0029">6.1 Upcast of an instance pointer of the parent class</a>
+<li><a href="Ov_005fChildPtrUpCast_0028_0029.html#Ov_005fChildPtrUpCast_0028_0029">6.2 Upcast of an instance pointer of the child class</a>
+<li><a href="Ov_005fGetFirstChild_0028_0029.html#Ov_005fGetFirstChild_0028_0029">6.3 Get first child in a 1:n association</a>
+<li><a href="Ov_005fGetLastChild_0028_0029.html#Ov_005fGetLastChild_0028_0029">6.4 Get last child in a 1:n association</a>
+<li><a href="Ov_005fGetNextChild_0028_0029.html#Ov_005fGetNextChild_0028_0029">6.5 Get next child in a 1:n association</a>
+<li><a href="Ov_005fGetPreviousChild_0028_0029.html#Ov_005fGetPreviousChild_0028_0029">6.6 Get previous child a 1:n association</a>
+<li><a href="Ov_005fGetParent_0028_0029.html#Ov_005fGetParent_0028_0029">6.7 Get parent in a 1:n association</a>
+<li><a href="Ov_005fForEachChild_0028_0029.html#Ov_005fForEachChild_0028_0029">6.8 Iterate over all child objects in a 1:n association</a>
+<li><a href="Ov_005fForEachChildEx_0028_0029.html#Ov_005fForEachChildEx_0028_0029">6.9 Iterate over all child objects in a 1:n association and dynamically cast to a given child class</a>
+<li><a href="Ov_005fSearchChild_0028_0029.html#Ov_005fSearchChild_0028_0029">6.10 Search a child with given identifier in a 1:n association</a>
+<li><a href="Ov_005fSearchChildEx_0028_0029.html#Ov_005fSearchChildEx_0028_0029">6.11 Search a child with given identifier and cast to child class in a 1:n association</a>
+<li><a href="Ov_005fDefineIteratorNM_0028_0029.html#Ov_005fDefineIteratorNM_0028_0029">6.12 Define an iterator for iterating over n:m associations</a>
+<li><a href="Ov_005fGetFirstChildNM_0028_0029.html#Ov_005fGetFirstChildNM_0028_0029">6.13 Get first child in an n:m association</a>
+<li><a href="Ov_005fGetLastChildNM_0028_0029.html#Ov_005fGetLastChildNM_0028_0029">6.14 Get last child in an n:m association</a>
+<li><a href="Ov_005fGetNextChildNM_0028_0029.html#Ov_005fGetNextChildNM_0028_0029">6.15 Get next child in an n:m association</a>
+<li><a href="Ov_005fGetPreviousChildNM_0028_0029.html#Ov_005fGetPreviousChildNM_0028_0029">6.16 Get previous child in an n:m association</a>
+<li><a href="Ov_005fGetFirstParentNM_0028_0029.html#Ov_005fGetFirstParentNM_0028_0029">6.17 Get first parent in an n:m association</a>
+<li><a href="Ov_005fGetLastParentNM_0028_0029.html#Ov_005fGetLastParentNM_0028_0029">6.18 Get last parent in an n:m association</a>
+<li><a href="Ov_005fGetNextParentNM_0028_0029.html#Ov_005fGetNextParentNM_0028_0029">6.19 Get next parent in an n:m association</a>
+<li><a href="Ov_005fGetPreviousParentNM_0028_0029.html#Ov_005fGetPreviousParentNM_0028_0029">6.20 Get previous parent in an n:m association</a>
+<li><a href="Ov_005fForEachChildNM_0028_0029.html#Ov_005fForEachChildNM_0028_0029">6.21 Iterate over all child objects in an n:m association</a>
+<li><a href="Ov_005fForEachChildNMEx_0028_0029.html#Ov_005fForEachChildNMEx_0028_0029">6.22 Iterate over all child objects in an n:m association and dynamically cast to a given child class</a>
+<li><a href="Ov_005fForEachParentNM_0028_0029.html#Ov_005fForEachParentNM_0028_0029">6.23 Iterate over all parent objects in an n:m association</a>
+<li><a href="Ov_005fForEachParentNMEx_0028_0029.html#Ov_005fForEachParentNMEx_0028_0029">6.24 Iterate over all parent objects in an n:m association and dynamically cast to a given parent class</a>
+<li><a href="Ov_005fLink_0028_0029.html#Ov_005fLink_0028_0029">6.25 Link parent and child object (1:n or n:m association)</a>
+<li><a href="Ov_005fLinkPlaced_0028_0029.html#Ov_005fLinkPlaced_0028_0029">6.26 Link parent and child object with given child placement hint (1:n association)</a>
+<li><a href="Ov_005fLinkRelativePlaced_0028_0029.html#Ov_005fLinkRelativePlaced_0028_0029">6.27 Link parent and child object with given relative child placement hint (1:n association)</a>
+<li><a href="Ov_005fUnlink_0028_0029.html#Ov_005fUnlink_0028_0029">6.28 Unlink parent and child object (1:n or n:m association)</a>
+<li><a href="Ov_005fLinkNM_0028_0029.html#Ov_005fLinkNM_0028_0029">6.29 Link parent and child object (1:n or n:m association)</a>
+<li><a href="Ov_005fLinkPlacedNM_0028_0029.html#Ov_005fLinkPlacedNM_0028_0029">6.30 Link parent and child object with given child placement hint (n:m association)</a>
+<li><a href="Ov_005fLinkRelativePlacedNM_0028_0029.html#Ov_005fLinkRelativePlacedNM_0028_0029">6.31 Link parent and child object with given relative placement hints (n:m association)</a>
+<li><a href="Ov_005fUnlinkNM_0028_0029.html#Ov_005fUnlinkNM_0028_0029">6.32 Unlink parent and child object (1:n or n:m association)</a>
+<li><a href="Ov_005fPtrUpCast_0028_0029.html#Ov_005fPtrUpCast_0028_0029">6.33 Upcast to a pointer of a given base class</a>
+<li><a href="Ov_005fStaticPtrCast_0028_0029.html#Ov_005fStaticPtrCast_0028_0029">6.34 Static cast to a pointer of a given class</a>
+<li><a href="Ov_005fCanCastTo_0028_0029.html#Ov_005fCanCastTo_0028_0029">6.35 Test if it is allowed to cast to a given class</a>
+<li><a href="Ov_005fDynamicPtrCast_0028_0029.html#Ov_005fDynamicPtrCast_0028_0029">6.36 Dynamic cast to a pointer of a given class</a>
+<li><a href="Ov_005fCreateObject_0028_0029.html#Ov_005fCreateObject_0028_0029">6.37 Create an object of a given class</a>
+<li><a href="Ov_005fDeleteObject_0028_0029.html#Ov_005fDeleteObject_0028_0029">6.38 Delete an object</a>
+<li><a href="Ov_005fGetStaticInstPtr_0028_0029.html#Ov_005fGetStaticInstPtr_0028_0029">6.39 Get a pointer to the static part of an object</a>
+<li><a href="Ov_005fGetPartPtr_0028_0029.html#Ov_005fGetPartPtr_0028_0029">6.40 Get a pointer to a part object</a>
+<li><a href="Ov_005fGetClassPtr_0028_0029.html#Ov_005fGetClassPtr_0028_0029">6.41 Get pointer to the class object of an instance</a>
+<li><a href="Ov_005fGetVTablePtr_0028_0029.html#Ov_005fGetVTablePtr_0028_0029">6.42 Get the vtable pointer to an object of a given class</a>
+<li><a href="Ov_005fGetBaseclassVTablePtr_0028_0029.html#Ov_005fGetBaseclassVTablePtr_0028_0029">6.43 Get the vtable pointer of the direct base class of an object of a given class</a>
+<li><a href="Ov_005fIsVariable_0028_0029.html#Ov_005fIsVariable_0028_0029">6.44 Test, if a variable definition object defines a variable with a given name</a>
+<li><a href="Ov_005fSetStaticVectorValue_0028_0029.html#Ov_005fSetStaticVectorValue_0028_0029">6.45 Set the value of a static vector variable</a>
+<li><a href="Ov_005fSetDynamicVectorValue_0028_0029.html#Ov_005fSetDynamicVectorValue_0028_0029">6.46 Set the value of a dynamic vector variable</a>
+<li><a href="Ov_005fSetDynamicVectorLength_0028_0029.html#Ov_005fSetDynamicVectorLength_0028_0029">6.47 Set the vector length of a dynamic vector variable</a>
+<li><a href="Ov_005fCompareVectorValues_0028_0029.html#Ov_005fCompareVectorValues_0028_0029">6.48 Compare two vector variable values</a>
+<li><a href="Ov_005fTimeToDouble_0028_0029.html#Ov_005fTimeToDouble_0028_0029">6.49 Convert a time (span) into a double variable</a>
+<li><a href="Ov_005fDoubleToTime_0028_0029.html#Ov_005fDoubleToTime_0028_0029">6.50 Convert a double into a time (span) variable</a>
+<li><a href="Ov_005fDbAlloc_0028_0029.html#Ov_005fDbAlloc_0028_0029">6.51 Allocate memory in the database</a>
+<li><a href="Ov_005fDbMalloc_0028_0029.html#Ov_005fDbMalloc_0028_0029">6.52 Allocate memory in the database</a>
+<li><a href="Ov_005fDbFree_0028_0029.html#Ov_005fDbFree_0028_0029">6.53 Free memory allocated in the database</a>
+<li><a href="Ov_005fMemStackAlloc_0028_0029.html#Ov_005fMemStackAlloc_0028_0029">6.54 Allocate memory on the stack memory</a>
+<li><a href="Ov_005fHeapAlloc_0028_0029.html#Ov_005fHeapAlloc_0028_0029">6.55 Allocate memory on the heap</a>
+<li><a href="Ov_005fHeapMalloc_0028_0029.html#Ov_005fHeapMalloc_0028_0029">6.56 Allocate memory on the heap</a>
+<li><a href="Ov_005fHeapRealloc_0028_0029.html#Ov_005fHeapRealloc_0028_0029">6.57 Reallocate memory on the heap</a>
+<li><a href="Ov_005fHeapFree_0028_0029.html#Ov_005fHeapFree_0028_0029">6.58 Free memory allocated on the heap</a>
+<li><a href="Ov_005fHeapStrdup_0028_0029.html#Ov_005fHeapStrdup_0028_0029">6.59 Duplicate a string on the heap</a>
+</li></ul>
+<li><a name="toc_Fundamental-datatypes" href="Fundamental-datatypes.html#Fundamental-datatypes">7 Fundamental datatypes used in the library</a>
+<ul>
+<li><a href="OV_005fBOOL.html#OV_005fBOOL">7.1 Bool value</a>
+<li><a href="OV_005fINT.html#OV_005fINT">7.2 Signed integer value</a>
+<li><a href="OV_005fUINT.html#OV_005fUINT">7.3 Unsigned integer value</a>
+<li><a href="OV_005fSINGLE.html#OV_005fSINGLE">7.4 Single precision floating point value</a>
+<li><a href="OV_005fDOUBLE.html#OV_005fDOUBLE">7.5 Double precision floating point value</a>
+<li><a href="OV_005fSTRING.html#OV_005fSTRING">7.6 String value</a>
+<li><a href="OV_005fTIME.html#OV_005fTIME">7.7 Time or date value</a>
+<li><a href="OV_005fTIME_005fSPAN.html#OV_005fTIME_005fSPAN">7.8 Time span value</a>
+<li><a href="OV_005fOBJ_005fSTATE.html#OV_005fOBJ_005fSTATE">7.9 Macro state of an object</a>
+<li><a href="OV_005fVAR_005fTYPE.html#OV_005fVAR_005fTYPE">7.10 Type of a variable</a>
+<li><a href="OV_005fVAR_005fVALUE.html#OV_005fVAR_005fVALUE">7.11 Value of a variable</a>
+<li><a href="OV_005fSTATE.html#OV_005fSTATE">7.12 State of a variable</a>
+<li><a href="OV_005fVAR_005fCURRENT_005fPROPS.html#OV_005fVAR_005fCURRENT_005fPROPS">7.13 Current properties of a variable</a>
+<li><a href="OV_005fRESULT.html#OV_005fRESULT">7.14 Result of a function call</a>
+<li><a href="OV_005fASSOC_005fTYPE.html#OV_005fASSOC_005fTYPE">7.15 Type of an association</a>
+<li><a href="OV_005fPLACEMENT_005fHINT.html#OV_005fPLACEMENT_005fHINT">7.16 Placement hint used with links</a>
+<li><a href="OV_005fACCESS.html#OV_005fACCESS">7.17 Access rights of an object</a>
+<li><a href="OV_005fTICKET_005fTYPE.html#OV_005fTICKET_005fTYPE">7.18 Type of an A/V-ticket</a>
+<li><a href="OV_005fTICKET_005fVTBL.html#OV_005fTICKET_005fVTBL">7.19 Virtual function table associated with a ticket</a>
+<li><a href="OV_005fTICKET.html#OV_005fTICKET">7.20 A/V-ticket</a>
+<li><a href="OV_005fBYTE.html#OV_005fBYTE">7.21 Generic byte value</a>
+<li><a href="OV_005fENUM.html#OV_005fENUM">7.22 Generic enumeration value</a>
+<li><a href="OV_005fPOINTER.html#OV_005fPOINTER">7.23 Generic pointer value</a>
+<li><a href="OV_005fBOOL_005fVEC.html#OV_005fBOOL_005fVEC">7.24 Dynamic bool value vector</a>
+<li><a href="OV_005fINT_005fVEC.html#OV_005fINT_005fVEC">7.25 Dynamic signed integer value vector</a>
+<li><a href="OV_005fUINT_005fVEC.html#OV_005fUINT_005fVEC">7.26 Dynamic unsigned integer value vector</a>
+<li><a href="OV_005fSINGLE_005fVEC.html#OV_005fSINGLE_005fVEC">7.27 Dynamic single precision floating point value vector</a>
+<li><a href="OV_005fDOUBLE_005fVEC.html#OV_005fDOUBLE_005fVEC">7.28 Dynamic double precision floating point value vector</a>
+<li><a href="OV_005fSTRING_005fVEC.html#OV_005fSTRING_005fVEC">7.29 Dynamic string value vector</a>
+<li><a href="OV_005fTIME_005fVEC.html#OV_005fTIME_005fVEC">7.30 Dynamic time/date value vector</a>
+<li><a href="OV_005fTIME_005fSPAN_005fVEC.html#OV_005fTIME_005fSPAN_005fVEC">7.31 Dynamic time span value vector</a>
+<li><a href="OV_005fGENERIC_005fVEC.html#OV_005fGENERIC_005fVEC">7.32 Generic dynamic value vector (internal use)</a>
+<li><a href="OV_005fBOOL_005fPV.html#OV_005fBOOL_005fPV">7.33 Boolean process value</a>
+<li><a href="OV_005fINT_005fPV.html#OV_005fINT_005fPV">7.34 Integer process value</a>
+<li><a href="OV_005fSINGLE_005fPV.html#OV_005fSINGLE_005fPV">7.35 Single precision floating point process value</a>
+<li><a href="OV_005fVAR_005fPROPS.html#OV_005fVAR_005fPROPS">7.36 Variable properties</a>
+<li><a href="OV_005fCLASS_005fPROPS.html#OV_005fCLASS_005fPROPS">7.37 Class properties</a>
+<li><a href="OV_005fASSOC_005fPROPS.html#OV_005fASSOC_005fPROPS">7.38 Association properties</a>
+<li><a href="OV_005fOP_005fPROPS.html#OV_005fOP_005fPROPS">7.39 Operation properties</a>
+<li><a href="OV_005fTIME_005fTYPE.html#OV_005fTIME_005fTYPE">7.40 Time types for use with ACPLT/KS histories</a>
+<li><a href="OV_005fHSEL_005fTYPE.html#OV_005fHSEL_005fTYPE">7.41 Selector types for use with ACPLT/KS histories</a>
+<li><a href="OV_005fHIST_005fTYPE.html#OV_005fHIST_005fTYPE">7.42 History types for use with ACPLT/KS histories</a>
+<li><a href="OV_005fINTERPOLATION_005fMODE.html#OV_005fINTERPOLATION_005fMODE">7.43 Interpolation modes for use with ACPLT/KS histories</a>
+<li><a href="OV_005fMSG_005fTYPE.html#OV_005fMSG_005fTYPE">7.44 Type of a logfile message</a>
+</li></ul>
+<li><a name="toc_Association" href="Association.html#Association">8 Functions and macros associated with associations</a>
+<ul>
+<li><a href="Ov_005fAssociation_005fGetFirstChild_0028_0029.html#Ov_005fAssociation_005fGetFirstChild_0028_0029">8.1 Get first child in a 1:n association</a>
+<li><a href="Ov_005fAssociation_005fGetLastChild_0028_0029.html#Ov_005fAssociation_005fGetLastChild_0028_0029">8.2 Get last child in a 1:n association</a>
+<li><a href="Ov_005fAssociation_005fGetNextChild_0028_0029.html#Ov_005fAssociation_005fGetNextChild_0028_0029">8.3 Get next child in a 1:n association</a>
+<li><a href="Ov_005fAssociation_005fGetPreviousChild_0028_0029.html#Ov_005fAssociation_005fGetPreviousChild_0028_0029">8.4 Get previous child in a 1:n association</a>
+<li><a href="Ov_005fAssociation_005fGetParent_0028_0029.html#Ov_005fAssociation_005fGetParent_0028_0029">8.5 Get parent in a 1:n association</a>
+<li><a href="Ov_005fAssociation_005fForEachChild_0028_0029.html#Ov_005fAssociation_005fForEachChild_0028_0029">8.6 Iterate over all children in a 1:n association</a>
+<li><a href="Ov_005fAssociation_005fDefineIteratorNM_0028_0029.html#Ov_005fAssociation_005fDefineIteratorNM_0028_0029">8.7 Define an iterator for iterating over n:m associations</a>
+<li><a href="Ov_005fAssociation_005fGetFirstChildNM_0028_0029.html#Ov_005fAssociation_005fGetFirstChildNM_0028_0029">8.8 Get first child in an n:m assocation</a>
+<li><a href="Ov_005fAssociation_005fGetLastChildNM_0028_0029.html#Ov_005fAssociation_005fGetLastChildNM_0028_0029">8.9 Get last child in an n:m assocation</a>
+<li><a href="Ov_005fAssociation_005fGetNextChildNM_0028_0029.html#Ov_005fAssociation_005fGetNextChildNM_0028_0029">8.10 Get next child in an n:m association</a>
+<li><a href="Ov_005fAssociation_005fGetPreviousChildNM_0028_0029.html#Ov_005fAssociation_005fGetPreviousChildNM_0028_0029">8.11 Get previous child in an n:m association</a>
+<li><a href="Ov_005fAssociation_005fForEachChildNM_0028_0029.html#Ov_005fAssociation_005fForEachChildNM_0028_0029">8.12 Iterate over all children in an n:m association</a>
+<li><a href="Ov_005fAssociation_005fGetFirstParentNM_0028_0029.html#Ov_005fAssociation_005fGetFirstParentNM_0028_0029">8.13 Get first parent in an n:m assocation</a>
+<li><a href="Ov_005fAssociation_005fGetLastParentNM_0028_0029.html#Ov_005fAssociation_005fGetLastParentNM_0028_0029">8.14 Get last parent in an n:m assocation</a>
+<li><a href="Ov_005fAssociation_005fGetNextParentNM_0028_0029.html#Ov_005fAssociation_005fGetNextParentNM_0028_0029">8.15 Get next parent in an n:m association</a>
+<li><a href="Ov_005fAssociation_005fGetPreviousParentNM_0028_0029.html#Ov_005fAssociation_005fGetPreviousParentNM_0028_0029">8.16 Get previous parent in an n:m association</a>
+<li><a href="Ov_005fAssociation_005fForEachParentNM_0028_0029.html#Ov_005fAssociation_005fForEachParentNM_0028_0029">8.17 Iterate over all parents in an n:m association</a>
+<li><a href="ov_005fassociation_005fsearchchild_0028_0029.html#ov_005fassociation_005fsearchchild_0028_0029">8.18 Search for a child object with a given identifier in a 1:n association</a>
+<li><a href="ov_005fassociation_005flink_0028_0029.html#ov_005fassociation_005flink_0028_0029">8.19 Create a link between a child and a parent object</a>
+<li><a href="ov_005fassociation_005funlink_0028_0029.html#ov_005fassociation_005funlink_0028_0029">8.20 Remove a link between a child and a parent object</a>
+<li><a href="ov_005fassociation_005fgetchildcount_0028_0029.html#ov_005fassociation_005fgetchildcount_0028_0029">8.21 Get the number of child objects</a>
+<li><a href="ov_005fassociation_005fisusedhead_0028_0029.html#ov_005fassociation_005fisusedhead_0028_0029">8.22 Test whether a head of a link is used</a>
+<li><a href="ov_005fassociation_005fisusedanchor_0028_0029.html#ov_005fassociation_005fisusedanchor_0028_0029">8.23 Test whether an anchor of a link is used</a>
+<li><a href="ov_005fassociation_005fload_0028_0029.html#ov_005fassociation_005fload_0028_0029">8.24 Load an association into the database</a>
+<li><a href="ov_005fassociation_005fcompare_0028_0029.html#ov_005fassociation_005fcompare_0028_0029">8.25 Compare an association with its definition</a>
+<li><a href="ov_005fassociation_005fcanunload_0028_0029.html#ov_005fassociation_005fcanunload_0028_0029">8.26 Test if we can unload an association from the database</a>
+<li><a href="ov_005fassociation_005fgetparentcount_0028_0029.html#ov_005fassociation_005fgetparentcount_0028_0029">8.27 Get the number of parents of an association</a>
+<li><a href="ov_005fassociation_005fisusedparentlink_0028_0029.html#ov_005fassociation_005fisusedparentlink_0028_0029">8.28 Test if a parent link is used</a>
+<li><a href="ov_005fassociation_005fisusedchildlink_0028_0029.html#ov_005fassociation_005fisusedchildlink_0028_0029">8.29 Test if a child link is used</a>
+</li></ul>
+<li><a name="toc_Class" href="Class.html#Class">9 Datatypes and functions associated with classes</a>
+<ul>
+<li><a href="OV_005fFNC_005fINITOBJ.html#OV_005fFNC_005fINITOBJ">9.1 Function prototype of an initialization function</a>
+<li><a href="ov_005fclass_005fcreateobject_0028_0029.html#ov_005fclass_005fcreateobject_0028_0029">9.2 Create an instance of a class</a>
+<li><a href="ov_005fclass_005fdeleteobject_0028_0029.html#ov_005fclass_005fdeleteobject_0028_0029">9.3 Delete an instance of a class</a>
+<li><a href="ov_005fclass_005fcancastto_0028_0029.html#ov_005fclass_005fcancastto_0028_0029">9.4 Test if a pointer cast of an instance pointer is allowed</a>
+<li><a href="ov_005fclass_005fsearch_0028_0029.html#ov_005fclass_005fsearch_0028_0029">9.5 Search for a class object with given identifier</a>
+<li><a href="ov_005fclass_005fload_0028_0029.html#ov_005fclass_005fload_0028_0029">9.6 Load a class into the database</a>
+<li><a href="ov_005fclass_005fcompare_0028_0029.html#ov_005fclass_005fcompare_0028_0029">9.7 Compare a class with its definition</a>
+<li><a href="ov_005fclass_005fcanunload_0028_0029.html#ov_005fclass_005fcanunload_0028_0029">9.8 Test if we can unload a class from the database</a>
+<li><a href="ov_005fclass_005frenameobject_0028_0029.html#ov_005fclass_005frenameobject_0028_0029">9.9 Rename an instance of a class</a>
+</li></ul>
+<li><a name="toc_Database" href="Database.html#Database">10 Functions associated with the database</a>
+<ul>
+<li><a href="ov_005fdatabase_005fcreate_0028_0029.html#ov_005fdatabase_005fcreate_0028_0029">10.1 Create a new database</a>
+<li><a href="ov_005fdatabase_005fmap_0028_0029.html#ov_005fdatabase_005fmap_0028_0029">10.2 Map an existing database</a>
+<li><a href="ov_005fdatabase_005funmap_0028_0029.html#ov_005fdatabase_005funmap_0028_0029">10.3 Unmap the mapped database</a>
+<li><a href="ov_005fdatabase_005fflush_0028_0029.html#ov_005fdatabase_005fflush_0028_0029">10.4 Flush the contents of the mapped database</a>
+<li><a href="ov_005fdatabase_005fstartup_0028_0029.html#ov_005fdatabase_005fstartup_0028_0029">10.5 Start up the objects in the database</a>
+<li><a href="ov_005fdatabase_005fshutdown_0028_0029.html#ov_005fdatabase_005fshutdown_0028_0029">10.6 Shut down the objects in the database</a>
+<li><a href="ov_005fdatabase_005fmalloc_0028_0029.html#ov_005fdatabase_005fmalloc_0028_0029">10.7 Allocate persistent database memory</a>
+<li><a href="ov_005fdatabase_005frealloc_0028_0029.html#ov_005fdatabase_005frealloc_0028_0029">10.8 Reallocate persistent database memory</a>
+<li><a href="ov_005fdatabase_005ffree_0028_0029.html#ov_005fdatabase_005ffree_0028_0029">10.9 Free persistent database memory</a>
+<li><a href="ov_005fdatabase_005fgetsize_0028_0029.html#ov_005fdatabase_005fgetsize_0028_0029">10.10 Get the total size of the database memory</a>
+<li><a href="ov_005fdatabase_005fgetfree_0028_0029.html#ov_005fdatabase_005fgetfree_0028_0029">10.11 Get the size of the free database memory</a>
+<li><a href="ov_005fdatabase_005fgetused_0028_0029.html#ov_005fdatabase_005fgetused_0028_0029">10.12 Get the size of the used database memory</a>
+<li><a href="ov_005fdatabase_005fgetfrag_0028_0029.html#ov_005fdatabase_005fgetfrag_0028_0029">10.13 Get the fragmentation of the database memory</a>
+</li></ul>
+<li><a name="toc_Element" href="Element.html#Element">11 Datatypes and functions associated with elements</a>
+<ul>
+<li><a href="OV_005fELEM_005fTYPE.html#OV_005fELEM_005fTYPE">11.1 Type of an element</a>
+<li><a href="OV_005fELEMENT.html#OV_005fELEMENT">11.2 Information associated with an element</a>
+<li><a href="ov_005felement_005fsearchchild_0028_0029.html#ov_005felement_005fsearchchild_0028_0029">11.3 Search a child element of an element</a>
+<li><a href="ov_005felement_005fsearchpart_0028_0029.html#ov_005felement_005fsearchpart_0028_0029">11.4 Search a part element of an element</a>
+<li><a href="ov_005felement_005fgetnextchild_0028_0029.html#ov_005felement_005fgetnextchild_0028_0029">11.5 Get next child element of an element</a>
+<li><a href="ov_005felement_005fgetnextpart_0028_0029.html#ov_005felement_005fgetnextpart_0028_0029">11.6 Get next part element of an element</a>
+<li><a href="ov_005felement_005fgetidentifier_0028_0029.html#ov_005felement_005fgetidentifier_0028_0029">11.7 Get the identifier of an element</a>
+</li></ul>
+<li><a name="toc_Library" href="Library.html#Library">12 Functions associated with libraries</a>
+<ul>
+<li><a href="ov_005flibrary_005fsearch_0028_0029.html#ov_005flibrary_005fsearch_0028_0029">12.1 Search for a library object with given identifier</a>
+<li><a href="ov_005flibrary_005fopen_0028_0029.html#ov_005flibrary_005fopen_0028_0029">12.2 Open a library which is either a DLL/shared library or statically linked</a>
+<li><a href="ov_005flibrary_005fclose_0028_0029.html#ov_005flibrary_005fclose_0028_0029">12.3 Close a library file if it is a DLL/shared library</a>
+<li><a href="ov_005flibrary_005fload_0028_0029.html#ov_005flibrary_005fload_0028_0029">12.4 Load a library and its definitions into the database</a>
+<li><a href="ov_005flibrary_005fcompare_0028_0029.html#ov_005flibrary_005fcompare_0028_0029">12.5 Compare a library with its definition</a>
+<li><a href="ov_005flibrary_005fcanunload_0028_0029.html#ov_005flibrary_005fcanunload_0028_0029">12.6 Test if we can unload a library and its definitions from the database</a>
+<li><a href="ov_005flibrary_005fgetenv_0028_0029.html#ov_005flibrary_005fgetenv_0028_0029">12.7 Get environment variable with library path</a>
+<li><a href="ov_005flibrary_005fsetenv_0028_0029.html#ov_005flibrary_005fsetenv_0028_0029">12.8 Set environment variable with library path</a>
+</li></ul>
+<li><a name="toc_Logfile" href="Logfile.html#Logfile">13 Functions associated with logfiles</a>
+<ul>
+<li><a href="ov_005flogfile_005fopen_0028_0029.html#ov_005flogfile_005fopen_0028_0029">13.1 Open/create a logfile</a>
+<li><a href="ov_005flogfile_005fclose_0028_0029.html#ov_005flogfile_005fclose_0028_0029">13.2 Close the logfile</a>
+<li><a href="ov_005flogfile_005flogtostdout_0028_0029.html#ov_005flogfile_005flogtostdout_0028_0029">13.3 Log to stdout</a>
+<li><a href="ov_005flogfile_005flogtostderr_0028_0029.html#ov_005flogfile_005flogtostderr_0028_0029">13.4 Log to stderr</a>
+<li><a href="ov_005flogfile_005flogtontlog_0028_0029.html#ov_005flogfile_005flogtontlog_0028_0029">13.5 Log to the NT logger (Windows NT only)</a>
+<li><a href="ov_005flogfile_005fprint_0028_0029.html#ov_005flogfile_005fprint_0028_0029">13.6 Print text to logfile</a>
+<li><a href="ov_005flogfile_005finfo_0028_0029.html#ov_005flogfile_005finfo_0028_0029">13.7 Print info to logfile</a>
+<li><a href="ov_005flogfile_005fdebug_0028_0029.html#ov_005flogfile_005fdebug_0028_0029">13.8 Print debug info to logfile</a>
+<li><a href="ov_005flogfile_005fwarning_0028_0029.html#ov_005flogfile_005fwarning_0028_0029">13.9 Print warning to logfile</a>
+<li><a href="ov_005flogfile_005ferror_0028_0029.html#ov_005flogfile_005ferror_0028_0029">13.10 Print error to logfile</a>
+<li><a href="ov_005flogfile_005falert_0028_0029.html#ov_005flogfile_005falert_0028_0029">13.11 Print alert to logfile</a>
+<li><a href="ov_005flogfile_005fgetmessages_0028_0029.html#ov_005flogfile_005fgetmessages_0028_0029">13.12 Get messages from the logfile</a>
+</li></ul>
+<li><a name="toc_Malloc" href="Malloc.html#Malloc">14 Memory management functions for the system heap memory</a>
+<ul>
+<li><a href="ov_005fmalloc_0028_0029.html#ov_005fmalloc_0028_0029">14.1 Allocate memory on the heap</a>
+<li><a href="ov_005ffree_0028_0029.html#ov_005ffree_0028_0029">14.2 Free memory allocated in the heap</a>
+<li><a href="ov_005frealloc_0028_0029.html#ov_005frealloc_0028_0029">14.3 Reallocate memory on the heap</a>
+<li><a href="ov_005fstrdup_0028_0029.html#ov_005fstrdup_0028_0029">14.4 Duplicate a string on the heap using malloc</a>
+</li></ul>
+<li><a name="toc_Memstack" href="Memstack.html#Memstack">15 Memory management functions for the memory stack</a>
+<ul>
+<li><a href="ov_005fmemstack_005flock_0028_0029.html#ov_005fmemstack_005flock_0028_0029">15.1 Increment the reference count of the stack and initialize if necessary</a>
+<li><a href="ov_005fmemstack_005falloc_0028_0029.html#ov_005fmemstack_005falloc_0028_0029">15.2 Allocate memory on the stack</a>
+<li><a href="ov_005fmemstack_005funlock_0028_0029.html#ov_005fmemstack_005funlock_0028_0029">15.3 Decrement the reference count of the stack and free the stack memory if necessary</a>
+</li></ul>
+<li><a name="toc_Object" href="Object.html#Object">16 Datatypes and functions associated with objects (top level class)</a>
+<ul>
+<li><a href="OV_005fFNC_005fCONSTRUCTOR.html#OV_005fFNC_005fCONSTRUCTOR">16.1 Function prototype for constructor of an object</a>
+<li><a href="OV_005fFNC_005fCHECKINIT.html#OV_005fFNC_005fCHECKINIT">16.2 Function prototype for checking the initialization</a>
+<li><a href="OV_005fFNC_005fDESTRUCTOR.html#OV_005fFNC_005fDESTRUCTOR">16.3 Function prototype for destructor of an object</a>
+<li><a href="OV_005fFNC_005fSTARTUP.html#OV_005fFNC_005fSTARTUP">16.4 Function prototype for method starting up an object</a>
+<li><a href="OV_005fFNC_005fSHUTDOWN.html#OV_005fFNC_005fSHUTDOWN">16.5 Function prototype for method shutting down an object</a>
+<li><a href="OV_005fFNC_005fGETACCESS.html#OV_005fFNC_005fGETACCESS">16.6 Function prototype for method reading access rights</a>
+<li><a href="OV_005fFNC_005fGETFLAGS.html#OV_005fFNC_005fGETFLAGS">16.7 Function prototype for method reading semantical flags</a>
+<li><a href="OV_005fFNC_005fGETCOMMENT.html#OV_005fFNC_005fGETCOMMENT">16.8 Function prototype for method reading comments</a>
+<li><a href="OV_005fFNC_005fGETTECHUNIT.html#OV_005fFNC_005fGETTECHUNIT">16.9 Function prototype for method reading variable units</a>
+<li><a href="OV_005fFNC_005fGETVAR.html#OV_005fFNC_005fGETVAR">16.10 Function prototype for method reading current variable properties</a>
+<li><a href="OV_005fFNC_005fSETVAR.html#OV_005fFNC_005fSETVAR">16.11 Function prototype for method writing current variable properties</a>
+<li><a href="ov_005fobject_005fhaslinks_0028_0029.html#ov_005fobject_005fhaslinks_0028_0029">16.12 Test, if an object owns links (except for the parent domain and class)</a>
+<li><a href="ov_005fobject_005fidentifierok_0028_0029.html#ov_005fobject_005fidentifierok_0028_0029">16.13 Test, if a string is a valid identifier for an object</a>
+</li></ul>
+<li><a name="toc_Operation" href="Operation.html#Operation">17 Functions associated with operations</a>
+<ul>
+<li><a href="ov_005foperation_005fload_0028_0029.html#ov_005foperation_005fload_0028_0029">17.1 Load an operation into the database</a>
+<li><a href="ov_005foperation_005fcompare_0028_0029.html#ov_005foperation_005fcompare_0028_0029">17.2 Compare an operation with its definition</a>
+<li><a href="ov_005foperation_005fcanunload_0028_0029.html#ov_005foperation_005fcanunload_0028_0029">17.3 Test if we can unload an operation from the database</a>
+</li></ul>
+<li><a name="toc_Part" href="Part.html#Part">18 Functions associated with parts</a>
+<ul>
+<li><a href="ov_005fpart_005fload_0028_0029.html#ov_005fpart_005fload_0028_0029">18.1 Load a part into the database</a>
+<li><a href="ov_005fpart_005fcompare_0028_0029.html#ov_005fpart_005fcompare_0028_0029">18.2 Compare a part with its definition</a>
+<li><a href="ov_005fpart_005fcanunload_0028_0029.html#ov_005fpart_005fcanunload_0028_0029">18.3 Test if we can unload a part from the database</a>
+</li></ul>
+<li><a name="toc_Path" href="Path.html#Path">19 Datatypes and functions associated with paths</a>
+<ul>
+<li><a href="OV_005fPATH.html#OV_005fPATH">19.1 Array of elements corresponding to the identifiers of a path name</a>
+<li><a href="ov_005fpath_005fresolve_0028_0029.html#ov_005fpath_005fresolve_0028_0029">19.2 Resolve a path using a given path name</a>
+<li><a href="ov_005fpath_005fgetcanonicalpath_0028_0029.html#ov_005fpath_005fgetcanonicalpath_0028_0029">19.3 Get the canonical path of an element</a>
+<li><a href="ov_005fpath_005fgetobjectpointer_0028_0029.html#ov_005fpath_005fgetobjectpointer_0028_0029">19.4 Get the pointer to an object with given path name</a>
+</li></ul>
+<li><a name="toc_Result" href="Result.html#Result">20 Functions associated with results of function calls</a>
+<ul>
+<li><a href="ov_005fresult_005fgetresulttext_0028_0029.html#ov_005fresult_005fgetresulttext_0028_0029">20.1 Return error string associated with an error code</a>
+</li></ul>
+<li><a name="toc_Scheduler" href="Scheduler.html#Scheduler">21 Datatypes and functions associated with the scheduler</a>
+<ul>
+<li><a href="OV_005fFNC_005fEXECUTE.html#OV_005fFNC_005fEXECUTE">21.1 Function prototype for methods used in active objects</a>
+<li><a href="OV_005fSCHEDULER_005fEVENT.html#OV_005fSCHEDULER_005fEVENT">21.2 Event in a simple event queue, ordered by time</a>
+<li><a href="ov_005fscheduler_005fregister_0028_0029.html#ov_005fscheduler_005fregister_0028_0029">21.3 Register an active object with the scheduler</a>
+<li><a href="ov_005fscheduler_005funregister_0028_0029.html#ov_005fscheduler_005funregister_0028_0029">21.4 Unregister an active object with the scheduler</a>
+<li><a href="ov_005fscheduler_005fsetabseventtime_0028_0029.html#ov_005fscheduler_005fsetabseventtime_0028_0029">21.5 Set absolute event time of a registered active object</a>
+<li><a href="ov_005fscheduler_005fsetreleventtime_0028_0029.html#ov_005fscheduler_005fsetreleventtime_0028_0029">21.6 Set relative event time of a registered active object (time span from now on)</a>
+<li><a href="ov_005fscheduler_005fschedulenextevent_0028_0029.html#ov_005fscheduler_005fschedulenextevent_0028_0029">21.7 Schedule the next event of the event queue if the event is pending</a>
+</li></ul>
+<li><a name="toc_String" href="String.html#String">22 Functions associated with string variables</a>
+<ul>
+<li><a href="ov_005fstring_005fsetvalue_0028_0029.html#ov_005fstring_005fsetvalue_0028_0029">22.1 Set value of a string in the database</a>
+<li><a href="ov_005fstring_005fsetvecvalue_0028_0029.html#ov_005fstring_005fsetvecvalue_0028_0029">22.2 Set value of a string vector in the database</a>
+<li><a href="ov_005fstring_005fcompare_0028_0029.html#ov_005fstring_005fcompare_0028_0029">22.3 Compare two strings, result is greater than, equal to or less than zero</a>
+<li><a href="ov_005fstring_005fgetlength_0028_0029.html#ov_005fstring_005fgetlength_0028_0029">22.4 Get the length of a string</a>
+<li><a href="ov_005fstring_005fappend_0028_0029.html#ov_005fstring_005fappend_0028_0029">22.5 Append a string to an existing one</a>
+<li><a href="ov_005fstring_005fprint_0028_0029.html#ov_005fstring_005fprint_0028_0029">22.6 Formatted print to a string</a>
+<li><a href="ov_005fstring_005fmatch_0028_0029.html#ov_005fstring_005fmatch_0028_0029">22.7 Test if a string matches a regular expression</a>
+<li><a href="ov_005fstring_005ftolower_0028_0029.html#ov_005fstring_005ftolower_0028_0029">22.8 Convert a string to lower case</a>
+<li><a href="ov_005fstring_005ftoupper_0028_0029.html#ov_005fstring_005ftoupper_0028_0029">22.9 Convert a string to upper case</a>
+</li></ul>
+<li><a name="toc_Structure" href="Structure.html#Structure">23 Functions associated with Structures</a>
+<ul>
+<li><a href="ov_005fstructure_005fsearch_0028_0029.html#ov_005fstructure_005fsearch_0028_0029">23.1 Search for a structure object with given identifier</a>
+<li><a href="ov_005fstructure_005fload_0028_0029.html#ov_005fstructure_005fload_0028_0029">23.2 Load a structure into the database</a>
+<li><a href="ov_005fstructure_005fcompare_0028_0029.html#ov_005fstructure_005fcompare_0028_0029">23.3 Compare a structure with its definition</a>
+<li><a href="ov_005fstructure_005fcanunload_0028_0029.html#ov_005fstructure_005fcanunload_0028_0029">23.4 Test if we can unload a structure from the database</a>
+</li></ul>
+<li><a name="toc_Supervise" href="Supervise.html#Supervise">24 Execution time supervision functions</a>
+<ul>
+<li><a href="Example-code.html#Example-code">24.1 Example code for the execution time supervision functions</a>
+<li><a href="OV_005fJUMPBUFFER.html#OV_005fJUMPBUFFER">24.2 Datatype describing the stack frame before calling the user function</a>
+<li><a href="ov_005fsupervise_005fsetjmp_0028_0029.html#ov_005fsupervise_005fsetjmp_0028_0029">24.3 Wrapper macro for the setjmp function/macro</a>
+<li><a href="ov_005fsupervise_005fstart_0028_0029.html#ov_005fsupervise_005fstart_0028_0029">24.4 Start the supervision of a user function</a>
+<li><a href="ov_005fsupervise_005fend_0028_0029.html#ov_005fsupervise_005fend_0028_0029">24.5 Finish supervising a user function</a>
+</li></ul>
+<li><a name="toc_Time" href="Time.html#Time">25 Functions associated with time variables</a>
+<ul>
+<li><a href="ov_005ftime_005fgettime_0028_0029.html#ov_005ftime_005fgettime_0028_0029">25.1 Get the current system time</a>
+<li><a href="ov_005ftime_005fadd_0028_0029.html#ov_005ftime_005fadd_0028_0029">25.2 Calculate the sum of a time and a time span</a>
+<li><a href="ov_005ftime_005fdiff_0028_0029.html#ov_005ftime_005fdiff_0028_0029">25.3 Calculate the difference of two times</a>
+<li><a href="ov_005ftime_005fcompare_0028_0029.html#ov_005ftime_005fcompare_0028_0029">25.4 Compare two times, result is -1, 0 or 1</a>
+<li><a href="ov_005ftime_005ftimetoascii_0028_0029.html#ov_005ftime_005ftimetoascii_0028_0029">25.5 Convert a time into an ASCII string</a>
+<li><a href="ov_005ftime_005fasciitotime_0028_0029.html#ov_005ftime_005fasciitotime_0028_0029">25.6 Convert an ASCII string into a time</a>
+</li></ul>
+<li><a name="toc_Variable" href="Variable.html#Variable">26 Functions associated with variables</a>
+<ul>
+<li><a href="ov_005fvariable_005fload_0028_0029.html#ov_005fvariable_005fload_0028_0029">26.1 Load a variable into the database</a>
+<li><a href="ov_005fvariable_005fcompare_0028_0029.html#ov_005fvariable_005fcompare_0028_0029">26.2 Compare a variable with its definition</a>
+<li><a href="ov_005fvariable_005fcanunload_0028_0029.html#ov_005fvariable_005fcanunload_0028_0029">26.3 Test if we can unload a variable from the database</a>
+</li></ul>
+<li><a name="toc_Vector" href="Vector.html#Vector">27 Functions associated with vector variables</a>
+<ul>
+<li><a href="ov_005fvector_005fsetstaticvalue_0028_0029.html#ov_005fvector_005fsetstaticvalue_0028_0029">27.1 Set the value of a static vector variable</a>
+<li><a href="ov_005fvector_005fsetdynamicvalue_0028_0029.html#ov_005fvector_005fsetdynamicvalue_0028_0029">27.2 Set the value of a dynamic vector variable</a>
+<li><a href="ov_005fvector_005fsetdynamicveclen_0028_0029.html#ov_005fvector_005fsetdynamicveclen_0028_0029">27.3 Set the vector length of a dynamic vector variable value</a>
+<li><a href="ov_005fvector_005fcompare_0028_0029.html#ov_005fvector_005fcompare_0028_0029">27.4 Compare two vector variable values, result is greater than, equal to or less than zero</a>
+</li></ul>
+<li><a name="toc_Vendortree" href="Vendortree.html#Vendortree">28 Datatypes and functions associated with the vendor tree</a>
+<ul>
+<li><a href="OV_005fFNC_005fGETVENDORVAR.html#OV_005fFNC_005fGETVENDORVAR">28.1 Function prototype for getting vendor variables</a>
+<li><a href="OV_005fVENDORTREE_005fINFO.html#OV_005fVENDORTREE_005fINFO">28.2 Information of a vendor tree object</a>
+<li><a href="ov_005fvendortree_005finit_0028_0029.html#ov_005fvendortree_005finit_0028_0029">28.3 Initialize the vendor tree</a>
+<li><a href="ov_005fvendortree_005fgetunit_0028_0029.html#ov_005fvendortree_005fgetunit_0028_0029">28.4 Get unit of a vendor object</a>
+<li><a href="ov_005fvendortree_005fgetvar_0028_0029.html#ov_005fvendortree_005fgetvar_0028_0029">28.5 Get variable of a vendor object</a>
+<li><a href="ov_005fvendortree_005fsetdatabasename_0028_0029.html#ov_005fvendortree_005fsetdatabasename_0028_0029">28.6 Set database name</a>
+<li><a href="ov_005fvendortree_005fsetname_0028_0029.html#ov_005fvendortree_005fsetname_0028_0029">28.7 Set vendor name</a>
+<li><a href="ov_005fvendortree_005fsetsemanticflag_0028_0029.html#ov_005fvendortree_005fsetsemanticflag_0028_0029">28.8 Set semantic flag</a>
+<li><a href="ov_005fvendortree_005fsetservername_0028_0029.html#ov_005fvendortree_005fsetservername_0028_0029">28.9 Set server name</a>
+<li><a href="ov_005fvendortree_005fsetserverdescription_0028_0029.html#ov_005fvendortree_005fsetserverdescription_0028_0029">28.10 Set server description</a>
+<li><a href="ov_005fvendortree_005fsetserverversion_0028_0029.html#ov_005fvendortree_005fsetserverversion_0028_0029">28.11 Set server version</a>
+<li><a href="ov_005fvendortree_005fsetstartuptime_0028_0029.html#ov_005fvendortree_005fsetstartuptime_0028_0029">28.12 Set startup time</a>
+<li><a href="ov_005fvendortree_005fgetassociations_0028_0029.html#ov_005fvendortree_005fgetassociations_0028_0029">28.13 Get list of associations in the database</a>
+<li><a href="ov_005fvendortree_005fgetclasses_0028_0029.html#ov_005fvendortree_005fgetclasses_0028_0029">28.14 Get list of classes in the database</a>
+<li><a href="ov_005fvendortree_005fgetdatabasefrag_0028_0029.html#ov_005fvendortree_005fgetdatabasefrag_0028_0029">28.15 Get fragmentation of the database</a>
+<li><a href="ov_005fvendortree_005fgetdatabasefree_0028_0029.html#ov_005fvendortree_005fgetdatabasefree_0028_0029">28.16 Get free storage of the database</a>
+<li><a href="ov_005fvendortree_005fgetdatabasename_0028_0029.html#ov_005fvendortree_005fgetdatabasename_0028_0029">28.17 Get database name</a>
+<li><a href="ov_005fvendortree_005fgetdatabasesize_0028_0029.html#ov_005fvendortree_005fgetdatabasesize_0028_0029">28.18 Get size of the database</a>
+<li><a href="ov_005fvendortree_005fgetdatabasestarted_0028_0029.html#ov_005fvendortree_005fgetdatabasestarted_0028_0029">28.19 Get whether the database is started or not</a>
+<li><a href="ov_005fvendortree_005fgetdatabaseused_0028_0029.html#ov_005fvendortree_005fgetdatabaseused_0028_0029">28.20 Get used storage of the database</a>
+<li><a href="ov_005fvendortree_005fgetname_0028_0029.html#ov_005fvendortree_005fgetname_0028_0029">28.21 Get vendor name</a>
+<li><a href="ov_005fvendortree_005fgetlibksversion_0028_0029.html#ov_005fvendortree_005fgetlibksversion_0028_0029">28.22 Get LibKS version</a>
+<li><a href="ov_005fvendortree_005fgetlibovversion_0028_0029.html#ov_005fvendortree_005fgetlibovversion_0028_0029">28.23 Get LibOV version</a>
+<li><a href="ov_005fvendortree_005fgetlibovksversion_0028_0029.html#ov_005fvendortree_005fgetlibovksversion_0028_0029">28.24 Get LibOVKS version</a>
+<li><a href="ov_005fvendortree_005fgetlibraries_0028_0029.html#ov_005fvendortree_005fgetlibraries_0028_0029">28.25 Get list of libraries in the database</a>
+<li><a href="ov_005fvendortree_005fgetsemanticflags_0028_0029.html#ov_005fvendortree_005fgetsemanticflags_0028_0029">28.26 Get list of semantic flags in the database</a>
+<li><a href="ov_005fvendortree_005fgetserverdescription_0028_0029.html#ov_005fvendortree_005fgetserverdescription_0028_0029">28.27 Get server description</a>
+<li><a href="ov_005fvendortree_005fgetservername_0028_0029.html#ov_005fvendortree_005fgetservername_0028_0029">28.28 Get server name</a>
+<li><a href="ov_005fvendortree_005fgetservertime_0028_0029.html#ov_005fvendortree_005fgetservertime_0028_0029">28.29 Get server time</a>
+<li><a href="ov_005fvendortree_005fgetserverversion_0028_0029.html#ov_005fvendortree_005fgetserverversion_0028_0029">28.30 Get server version</a>
+<li><a href="ov_005fvendortree_005fgetstartuptime_0028_0029.html#ov_005fvendortree_005fgetstartuptime_0028_0029">28.31 Get startup time</a>
+<li><a href="ov_005fvendortree_005fgetstructures_0028_0029.html#ov_005fvendortree_005fgetstructures_0028_0029">28.32 Get list of structures in the database</a>
+</li></ul>
+</li></ul>
+</div>
+
+</body></html>
+

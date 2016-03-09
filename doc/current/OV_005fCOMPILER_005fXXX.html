@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+<title>OV_COMPILER_XXX - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Preprocessor-symbols.html#Preprocessor-symbols" title="Preprocessor symbols">
+<link rel="prev" href="Preprocessor-symbols.html#Preprocessor-symbols" title="Preprocessor symbols">
+<link rel="next" href="OV_005fSYSTEM_005fXXX.html#OV_005fSYSTEM_005fXXX" title="OV_SYSTEM_XXX">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="OV_COMPILER_XXX"></a>
+<a name="OV_005fCOMPILER_005fXXX"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="OV_005fSYSTEM_005fXXX.html#OV_005fSYSTEM_005fXXX">OV_SYSTEM_XXX</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Preprocessor-symbols.html#Preprocessor-symbols">Preprocessor symbols</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Preprocessor-symbols.html#Preprocessor-symbols">Preprocessor symbols</a>
+<hr>
+</div>
+
+<h3 class="section">3.1 Definition of the compiler used</h3>
+
+<p>The preprocessor symbol <code>OV_COMPILER_</code><em>COMPILER</em> defines which compiler
+is used (symbol is defined as <code>1</code>) and which ones not (symbol is defined
+as <code>0</code>).
+
+   <p>For instance, if you are compiling using the Borland compiler, the following
+symbols are defined:
+
+<pre class="format"><tt>#define OV_COMPILER_BORLAND 1
+#define OV_COMPILER_CYGWIN  0
+#define OV_COMPILER_GCC     0</tt>
+</pre>
+   <p>These symbols are automatically defined in the configuration header file
+<code>libov/ov_config.h</code>.
+
+   <p>Available Symbols:
+<pre class="format"><tt>OV_COMPILER_CYGWIN
+OV_COMPILER_GCC
+OV_COMPILER_MSVC
+OV_COMPILER_BORLAND
+OV_COMPILER_KEIL
+OV_COMPILER_DECCXX</tt>
+</pre>
+   <!--  -->
+   </body></html>
+

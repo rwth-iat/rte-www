@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+<title>OV_STRING - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Fundamental-datatypes.html#Fundamental-datatypes" title="Fundamental datatypes">
+<link rel="prev" href="OV_005fDOUBLE.html#OV_005fDOUBLE" title="OV_DOUBLE">
+<link rel="next" href="OV_005fTIME.html#OV_005fTIME" title="OV_TIME">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="OV_STRING"></a>
+<a name="OV_005fSTRING"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="OV_005fTIME.html#OV_005fTIME">OV_TIME</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="OV_005fDOUBLE.html#OV_005fDOUBLE">OV_DOUBLE</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Fundamental-datatypes.html#Fundamental-datatypes">Fundamental datatypes</a>
+<hr>
+</div>
+
+<h3 class="section">7.6 String value</h3>
+
+<p>A string value is a pointer a <code>NULL</code>-terminated <code>char</code> array.
+
+   <p><strong>Header file</strong>
+
+   <p><code>#include "libov/ov_ov.h"</code>
+
+   <p><strong>Declaration</strong>
+
+   <p><code>typedef char* OV_STRING;</code>
+
+   <p><strong>Remarks</strong>
+
+   <p><code>OV_STRING</code> does not contain the actual string but a pointer to a
+<code>NULL</code>-terminated <code>char</code> array. This means that you must pay
+careful attention to the question who the owner of the string is.
+
+   <p>If the string belongs to the instance of an ACPLT/OV class, the instance
+is the owner of the string and the string must <strong>always</strong> be stored
+in the database unless the string pointer is <code>NULL</code>. The ACPLT/OV
+library provides the functions <code>ov_string_setvalue()</code> and
+<code>ov_string_setvecvalue()</code> which take care of setting such string values
+of instances for you. Do <strong>not</strong> use this function for string values
+that do not belong to instances of ACPLT/OV classes!
+
+   <p>In all other cases the ownership of the string must to specially indicated. 
+ACPLT/OV Object Management Library functions returning string values, such
+as <code>ov_path_getcanonicalpath()</code>, allocated the string on the memory
+stack. If you call such a function, you must call the function
+<code>ov_memstack_lock()</code> before call the desired function and call the
+function <code>ov_memstack_unlock()</code> when you do not need the string anymore
+(but always in the same routine). This way strings may be located persistently
+in the database or temporary on the memory stack and you will not have
+to care too much about the ownership.
+
+<!--  -->
+   </body></html>
+

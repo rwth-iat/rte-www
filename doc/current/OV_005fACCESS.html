@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+<title>OV_ACCESS - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Fundamental-datatypes.html#Fundamental-datatypes" title="Fundamental datatypes">
+<link rel="prev" href="OV_005fPLACEMENT_005fHINT.html#OV_005fPLACEMENT_005fHINT" title="OV_PLACEMENT_HINT">
+<link rel="next" href="OV_005fTICKET_005fTYPE.html#OV_005fTICKET_005fTYPE" title="OV_TICKET_TYPE">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="OV_ACCESS"></a>
+<a name="OV_005fACCESS"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="OV_005fTICKET_005fTYPE.html#OV_005fTICKET_005fTYPE">OV_TICKET_TYPE</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="OV_005fPLACEMENT_005fHINT.html#OV_005fPLACEMENT_005fHINT">OV_PLACEMENT_HINT</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Fundamental-datatypes.html#Fundamental-datatypes">Fundamental datatypes</a>
+<hr>
+</div>
+
+<h3 class="section">7.17 Access rights of an object</h3>
+
+<p><code>OV_ACCESS</code> is an enumeration value defining the access rights of an
+ACPLT/OV object or any of its parts. The access rights also indicate if an
+object or part is a part of another object or part.
+
+   <p><strong>Header file</strong>
+
+   <p><code>#include "libov/ov_ov.h"</code>
+
+   <p><strong>Declaration</strong>
+
+<pre class="format"><tt>#define OV_AC_NONE         KS_AC_NONE         /* no access at all, element is not visible */
+#define OV_AC_READ         KS_AC_READ         /* read access */
+#define OV_AC_WRITE        KS_AC_WRITE        /* write access */
+#define OV_AC_READWRITE    KS_AC_READWRITE    /* both read and write access */
+#define OV_AC_INSTANTIABLE KS_AC_INSTANTIABLE /* object can act as a factory */
+#define OV_AC_PART         KS_AC_PART         /* object is part of another object */
+#define OV_AC_DELETEABLE   0x00010000         /* object can be deleted */
+#define OV_AC_LINKABLE     0x00010010         /* parent/child can be linked */
+#define OV_AC_UNLINKABLE   0x00010011         /* parent/child can be unlinked */
+
+typedef OV_ENUM OV_ACCESS;</tt>
+</pre>
+   <p><strong>Remarks</strong>
+
+   <p>Note, that the some enumeration values are identical to the corresponding ACPLT/KS
+values of the datatype <code>KS_ACCESS</code>.
+
+<!--  -->
+   </body></html>
+

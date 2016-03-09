@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+<title>OV_DEBUG - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Preprocessor-symbols.html#Preprocessor-symbols" title="Preprocessor symbols">
+<link rel="prev" href="OV_005fSYSTEM_005fXXX.html#OV_005fSYSTEM_005fXXX" title="OV_SYSTEM_XXX">
+<link rel="next" href="OV_005fSTATIC_005fLIBRARIES.html#OV_005fSTATIC_005fLIBRARIES" title="OV_STATIC_LIBRARIES">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="OV_DEBUG"></a>
+<a name="OV_005fDEBUG"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="OV_005fSTATIC_005fLIBRARIES.html#OV_005fSTATIC_005fLIBRARIES">OV_STATIC_LIBRARIES</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="OV_005fSYSTEM_005fXXX.html#OV_005fSYSTEM_005fXXX">OV_SYSTEM_XXX</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Preprocessor-symbols.html#Preprocessor-symbols">Preprocessor symbols</a>
+<hr>
+</div>
+
+<h3 class="section">3.3 Definition whether debugging features are used</h3>
+
+<p>The preprocessor sysmbol <code>OV_DEBUG</code> defines if you want to use the
+ACPLT/OV debugging features defined in the header file
+<code>libov/ov_debug.h</code>. If you define this symbol, the debugging macros
+log debugging information to the logfile. If you do not define this symbol,
+the debugging macros are ignored during compilation.
+
+   <p>For example, the compiler call
+
+   <p><code>gcc -Wall -O2 -DOV_SYSTEM_LINUX=1 -DOV_DEBUG -c foo.c -o foo.o</code>
+
+   <p>compiles using the debugging features.
+
+   <p>You may also define <code>OV_DEBUG</code> in your source file:
+
+<pre class="format"><tt>/*
+*   foo.c
+*/
+
+#define OV_DEBUG
+
+#include "libov/ov_ov.h"
+#include &lt;stdio.h&gt;
+
+void foo(
+    OV_STRING   text
+) {
+    Ov_WarnIfNot(text); /* warn if text is NULL */
+    printf(text);
+}</tt>
+</pre>
+   <p>Make sure, that you define the symbol <strong>before</strong> including any ACPLT/OV
+header files!
+
+<!--  -->
+   </body></html>
+

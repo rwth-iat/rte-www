@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+<title>Useful macros - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Debugging-macros.html#Debugging-macros" title="Debugging macros">
+<link rel="next" href="Fundamental-datatypes.html#Fundamental-datatypes" title="Fundamental datatypes">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="Useful-macros"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Fundamental-datatypes.html#Fundamental-datatypes">Fundamental datatypes</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Debugging-macros.html#Debugging-macros">Debugging macros</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
+<hr>
+</div>
+
+<h2 class="chapter">6 Useful macros easing the use of the library</h2>
+
+<ul class="menu">
+<li><a accesskey="1" href="Ov_005fParentPtrUpCast_0028_0029.html#Ov_005fParentPtrUpCast_0028_0029">Ov_ParentPtrUpCast()</a>:           Upcast of an instance pointer of the parent class. 
+<li><a accesskey="2" href="Ov_005fChildPtrUpCast_0028_0029.html#Ov_005fChildPtrUpCast_0028_0029">Ov_ChildPtrUpCast()</a>:            Upcast of an instance pointer of the child class. 
+<li><a accesskey="3" href="Ov_005fGetFirstChild_0028_0029.html#Ov_005fGetFirstChild_0028_0029">Ov_GetFirstChild()</a>:             Get first child in a 1:n association. 
+<li><a accesskey="4" href="Ov_005fGetLastChild_0028_0029.html#Ov_005fGetLastChild_0028_0029">Ov_GetLastChild()</a>:              Get last child in a 1:n association. 
+<li><a accesskey="5" href="Ov_005fGetNextChild_0028_0029.html#Ov_005fGetNextChild_0028_0029">Ov_GetNextChild()</a>:              Get next child in a 1:n association. 
+<li><a accesskey="6" href="Ov_005fGetPreviousChild_0028_0029.html#Ov_005fGetPreviousChild_0028_0029">Ov_GetPreviousChild()</a>:          Get previous child a 1:n association. 
+<li><a accesskey="7" href="Ov_005fGetParent_0028_0029.html#Ov_005fGetParent_0028_0029">Ov_GetParent()</a>:                 Get parent in a 1:n association. 
+<li><a accesskey="8" href="Ov_005fForEachChild_0028_0029.html#Ov_005fForEachChild_0028_0029">Ov_ForEachChild()</a>:              Iterate over all child objects in a 1:n association. 
+<li><a accesskey="9" href="Ov_005fForEachChildEx_0028_0029.html#Ov_005fForEachChildEx_0028_0029">Ov_ForEachChildEx()</a>:            Iterate over all child objects in a 1:n association and dynamically cast to a given child class. 
+<li><a href="Ov_005fSearchChild_0028_0029.html#Ov_005fSearchChild_0028_0029">Ov_SearchChild()</a>:               Search a child with given identifier in a 1:n association. 
+<li><a href="Ov_005fSearchChildEx_0028_0029.html#Ov_005fSearchChildEx_0028_0029">Ov_SearchChildEx()</a>:             Search a child with given identifier and cast to child class in a 1:n association. 
+<li><a href="Ov_005fDefineIteratorNM_0028_0029.html#Ov_005fDefineIteratorNM_0028_0029">Ov_DefineIteratorNM()</a>:          Define an iterator for iterating over n:m associations. 
+<li><a href="Ov_005fGetFirstChildNM_0028_0029.html#Ov_005fGetFirstChildNM_0028_0029">Ov_GetFirstChildNM()</a>:           Get first child in an n:m association. 
+<li><a href="Ov_005fGetLastChildNM_0028_0029.html#Ov_005fGetLastChildNM_0028_0029">Ov_GetLastChildNM()</a>:            Get last child in an n:m association. 
+<li><a href="Ov_005fGetNextChildNM_0028_0029.html#Ov_005fGetNextChildNM_0028_0029">Ov_GetNextChildNM()</a>:            Get next child in an n:m association. 
+<li><a href="Ov_005fGetPreviousChildNM_0028_0029.html#Ov_005fGetPreviousChildNM_0028_0029">Ov_GetPreviousChildNM()</a>:        Get previous child in an n:m association. 
+<li><a href="Ov_005fGetFirstParentNM_0028_0029.html#Ov_005fGetFirstParentNM_0028_0029">Ov_GetFirstParentNM()</a>:          Get first parent in an n:m association. 
+<li><a href="Ov_005fGetLastParentNM_0028_0029.html#Ov_005fGetLastParentNM_0028_0029">Ov_GetLastParentNM()</a>:           Get last parent in an n:m association. 
+<li><a href="Ov_005fGetNextParentNM_0028_0029.html#Ov_005fGetNextParentNM_0028_0029">Ov_GetNextParentNM()</a>:           Get next parent in an n:m association. 
+<li><a href="Ov_005fGetPreviousParentNM_0028_0029.html#Ov_005fGetPreviousParentNM_0028_0029">Ov_GetPreviousParentNM()</a>:       Get previous parent in an n:m association. 
+<li><a href="Ov_005fForEachChildNM_0028_0029.html#Ov_005fForEachChildNM_0028_0029">Ov_ForEachChildNM()</a>:            Iterate over all child objects in an n:m association. 
+<li><a href="Ov_005fForEachChildNMEx_0028_0029.html#Ov_005fForEachChildNMEx_0028_0029">Ov_ForEachChildNMEx()</a>:          Iterate over all child objects in an n:m association and dynamically cast to a given child class. 
+<li><a href="Ov_005fForEachParentNM_0028_0029.html#Ov_005fForEachParentNM_0028_0029">Ov_ForEachParentNM()</a>:           Iterate over all parent objects in an n:m association. 
+<li><a href="Ov_005fForEachParentNMEx_0028_0029.html#Ov_005fForEachParentNMEx_0028_0029">Ov_ForEachParentNMEx()</a>:         Iterate over all parent objects in an n:m association and dynamically cast to a given parent class. 
+<li><a href="Ov_005fLink_0028_0029.html#Ov_005fLink_0028_0029">Ov_Link()</a>:                      Link parent and child object, no placement hint (1:n or n:m association). 
+<li><a href="Ov_005fLinkPlaced_0028_0029.html#Ov_005fLinkPlaced_0028_0029">Ov_LinkPlaced()</a>:                Link parent and child object with given child placement hint (1:n association). 
+<li><a href="Ov_005fLinkRelativePlaced_0028_0029.html#Ov_005fLinkRelativePlaced_0028_0029">Ov_LinkRelativePlaced()</a>:        Link parent and child object with given relative child placement hint (1:n association). 
+<li><a href="Ov_005fUnlink_0028_0029.html#Ov_005fUnlink_0028_0029">Ov_Unlink()</a>:                    Unlink parent and child object (1:n or n:m association). 
+<li><a href="Ov_005fLinkNM_0028_0029.html#Ov_005fLinkNM_0028_0029">Ov_LinkNM()</a>:                    Link parent and child object, no placement hint (1:n or n:m association). 
+<li><a href="Ov_005fLinkPlacedNM_0028_0029.html#Ov_005fLinkPlacedNM_0028_0029">Ov_LinkPlacedNM()</a>:              Link parent and child object with given child placement hint (n:m association). 
+<li><a href="Ov_005fLinkRelativePlacedNM_0028_0029.html#Ov_005fLinkRelativePlacedNM_0028_0029">Ov_LinkRelativePlacedNM()</a>:      Link parent and child object with given relative placement hints (n:m association). 
+<li><a href="Ov_005fUnlinkNM_0028_0029.html#Ov_005fUnlinkNM_0028_0029">Ov_UnlinkNM()</a>:                  Unlink parent and child object (1:n or n:m association). 
+<li><a href="Ov_005fPtrUpCast_0028_0029.html#Ov_005fPtrUpCast_0028_0029">Ov_PtrUpCast()</a>:                 Upcast to a pointer of a given base class. 
+<li><a href="Ov_005fStaticPtrCast_0028_0029.html#Ov_005fStaticPtrCast_0028_0029">Ov_StaticPtrCast()</a>:             Static cast to a pointer of a given class. 
+<li><a href="Ov_005fCanCastTo_0028_0029.html#Ov_005fCanCastTo_0028_0029">Ov_CanCastTo()</a>:                 Test if it is allowed to cast to a given class. 
+<li><a href="Ov_005fDynamicPtrCast_0028_0029.html#Ov_005fDynamicPtrCast_0028_0029">Ov_DynamicPtrCast()</a>:            Dynamic cast to a pointer of a given class. 
+<li><a href="Ov_005fCreateObject_0028_0029.html#Ov_005fCreateObject_0028_0029">Ov_CreateObject()</a>:              Create an object of a given class. 
+<li><a href="Ov_005fDeleteObject_0028_0029.html#Ov_005fDeleteObject_0028_0029">Ov_DeleteObject()</a>:              Delete an object. 
+<li><a href="Ov_005fGetStaticInstPtr_0028_0029.html#Ov_005fGetStaticInstPtr_0028_0029">Ov_GetStaticInstPtr()</a>:          Get a pointer to the static part of an object. 
+<li><a href="Ov_005fGetPartPtr_0028_0029.html#Ov_005fGetPartPtr_0028_0029">Ov_GetPartPtr()</a>:                Get a pointer to a part object. 
+<li><a href="Ov_005fGetClassPtr_0028_0029.html#Ov_005fGetClassPtr_0028_0029">Ov_GetClassPtr()</a>:               Get pointer to the class object of an instance. 
+<li><a href="Ov_005fGetVTablePtr_0028_0029.html#Ov_005fGetVTablePtr_0028_0029">Ov_GetVTablePtr()</a>:              Get the vtable pointer to an object of a given class. 
+<li><a href="Ov_005fGetBaseclassVTablePtr_0028_0029.html#Ov_005fGetBaseclassVTablePtr_0028_0029">Ov_GetBaseclassVTablePtr()</a>:     Get the vtable pointer of the direct base class of an object of a given class. 
+<li><a href="Ov_005fIsVariable_0028_0029.html#Ov_005fIsVariable_0028_0029">Ov_IsVariable()</a>:                Test, if a variable definition object defines a variable with a given name. 
+<li><a href="Ov_005fSetStaticVectorValue_0028_0029.html#Ov_005fSetStaticVectorValue_0028_0029">Ov_SetStaticVectorValue()</a>:      Set the value of a static vector variable. 
+<li><a href="Ov_005fSetDynamicVectorValue_0028_0029.html#Ov_005fSetDynamicVectorValue_0028_0029">Ov_SetDynamicVectorValue()</a>:     Set the value of a dynamic vector variable. 
+<li><a href="Ov_005fSetDynamicVectorLength_0028_0029.html#Ov_005fSetDynamicVectorLength_0028_0029">Ov_SetDynamicVectorLength()</a>:    Set the vector length of a dynamic vector variable. 
+<li><a href="Ov_005fCompareVectorValues_0028_0029.html#Ov_005fCompareVectorValues_0028_0029">Ov_CompareVectorValues()</a>:       Compare two vector variable values. 
+<li><a href="Ov_005fTimeToDouble_0028_0029.html#Ov_005fTimeToDouble_0028_0029">Ov_TimeToDouble()</a>:              Convert a time (span) into a double variable. 
+<li><a href="Ov_005fDoubleToTime_0028_0029.html#Ov_005fDoubleToTime_0028_0029">Ov_DoubleToTime()</a>:              Convert a double into a time (span) variable. 
+<li><a href="Ov_005fDbAlloc_0028_0029.html#Ov_005fDbAlloc_0028_0029">Ov_DbAlloc()</a>:                   Allocate memory in the database. 
+<li><a href="Ov_005fDbMalloc_0028_0029.html#Ov_005fDbMalloc_0028_0029">Ov_DbMalloc()</a>:                  Allocate memory in the database. 
+<li><a href="Ov_005fDbFree_0028_0029.html#Ov_005fDbFree_0028_0029">Ov_DbFree()</a>:                    Free memory allocated in the database. 
+<li><a href="Ov_005fMemStackAlloc_0028_0029.html#Ov_005fMemStackAlloc_0028_0029">Ov_MemStackAlloc()</a>:             Allocate memory on the stack memory. 
+<li><a href="Ov_005fHeapAlloc_0028_0029.html#Ov_005fHeapAlloc_0028_0029">Ov_HeapAlloc()</a>:                 Allocate memory on the heap. 
+<li><a href="Ov_005fHeapMalloc_0028_0029.html#Ov_005fHeapMalloc_0028_0029">Ov_HeapMalloc()</a>:                Allocate memory on the heap. 
+<li><a href="Ov_005fHeapRealloc_0028_0029.html#Ov_005fHeapRealloc_0028_0029">Ov_HeapRealloc()</a>:               Reallocate memory on the heap. 
+<li><a href="Ov_005fHeapFree_0028_0029.html#Ov_005fHeapFree_0028_0029">Ov_HeapFree()</a>:                  Free memory allocated on the heap. 
+<li><a href="Ov_005fHeapStrdup_0028_0029.html#Ov_005fHeapStrdup_0028_0029">Ov_HeapStrdup()</a>:                Duplicate a string on the heap. 
+</ul>
+
+<!--  -->
+</body></html>
+

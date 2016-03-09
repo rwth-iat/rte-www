@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+<title>OV_ELEMENT - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Element.html#Element" title="Element">
+<link rel="prev" href="OV_005fELEM_005fTYPE.html#OV_005fELEM_005fTYPE" title="OV_ELEM_TYPE">
+<link rel="next" href="ov_005felement_005fsearchchild_0028_0029.html#ov_005felement_005fsearchchild_0028_0029" title="ov_element_searchchild()">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="OV_ELEMENT"></a>
+<a name="OV_005fELEMENT"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="ov_005felement_005fsearchchild_0028_0029.html#ov_005felement_005fsearchchild_0028_0029">ov_element_searchchild()</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="OV_005fELEM_005fTYPE.html#OV_005fELEM_005fTYPE">OV_ELEM_TYPE</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Element.html#Element">Element</a>
+<hr>
+</div>
+
+<h3 class="section">11.2 Information associated with an element</h3>
+
+<p><strong>Header file</strong>
+
+   <p><code>#include "libov/ov_element.h"</code>
+
+   <p><strong>Declaration</strong>
+
+<pre class="format"><tt>typedef struct {
+    OV_ELEM_TYPE                        elemtype;       /* the type of the element */
+    struct OV_INST_ov_object            *pobj;          /* object this element belongs to */
+    /* in case element is a variable or member of a variable: */
+    OV_BYTE                             *pvalue;        /* pointer to variable value */
+    /* in different cases: */
+    union {
+        /* generic definition object pointer */
+        struct OV_INST_ov_object        *pobj;
+        /* in case element is a variable or member of a variable: */
+        struct OV_INST_ov_variable      *pvar;
+        /* in case element is a part object: */
+        struct OV_INST_ov_part          *ppart;
+        /* in case element is a parent or child link: */
+        struct OV_INST_ov_association   *passoc;
+        /* in case element is an operation: */
+        struct OV_INST_ov_operation     *pop;
+        /* in case element is a class: */
+        struct OV_INST_ov_class         *pclass;
+    }   elemunion;
+}   OV_ELEMENT;</tt>
+</pre>
+   <p><strong>Remarks</strong>
+
+<!--  -->
+   </body></html>
+

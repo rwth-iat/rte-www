@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+<title>Fundamental datatypes - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="prev" href="Useful-macros.html#Useful-macros" title="Useful macros">
+<link rel="next" href="Association.html#Association" title="Association">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="Fundamental-datatypes"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Association.html#Association">Association</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Useful-macros.html#Useful-macros">Useful macros</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
+<hr>
+</div>
+
+<h2 class="chapter">7 Fundamental datatypes used in the library</h2>
+
+<p>Datatypes of object variables supported by the ACPLT/OV modeling language:
+
+<ul class="menu">
+<li><a accesskey="1" href="OV_005fBOOL.html#OV_005fBOOL">OV_BOOL</a>:                 Bool value. 
+<li><a accesskey="2" href="OV_005fINT.html#OV_005fINT">OV_INT</a>:                  Signed integer value. 
+<li><a accesskey="3" href="OV_005fUINT.html#OV_005fUINT">OV_UINT</a>:                 Unsigned integer value. 
+<li><a accesskey="4" href="OV_005fSINGLE.html#OV_005fSINGLE">OV_SINGLE</a>:               Single precision floating point value. 
+<li><a accesskey="5" href="OV_005fDOUBLE.html#OV_005fDOUBLE">OV_DOUBLE</a>:               Double precision floating point value. 
+<li><a accesskey="6" href="OV_005fSTRING.html#OV_005fSTRING">OV_STRING</a>:               String value. 
+<li><a accesskey="7" href="OV_005fTIME.html#OV_005fTIME">OV_TIME</a>:                 Time or date value. 
+<li><a accesskey="8" href="OV_005fTIME_005fSPAN.html#OV_005fTIME_005fSPAN">OV_TIME_SPAN</a>:            Time span value. 
+</ul>
+
+   <p>Datatypes associated with objects:
+
+<ul class="menu">
+<li><a accesskey="1" href="OV_005fOBJ_005fSTATE.html#OV_005fOBJ_005fSTATE">OV_OBJ_STATE</a>:            Macro state of an object. 
+</ul>
+
+   <p>Datatypes associated with variables of an object:
+
+<ul class="menu">
+<li><a accesskey="1" href="OV_005fVAR_005fTYPE.html#OV_005fVAR_005fTYPE">OV_VAR_TYPE</a>:             Type of a variable. 
+<li><a accesskey="2" href="OV_005fVAR_005fVALUE.html#OV_005fVAR_005fVALUE">OV_VAR_VALUE</a>:            Value of a variable. 
+<li><a accesskey="3" href="OV_005fSTATE.html#OV_005fSTATE">OV_STATE</a>:                State of a variable. 
+<li><a accesskey="4" href="OV_005fVAR_005fCURRENT_005fPROPS.html#OV_005fVAR_005fCURRENT_005fPROPS">OV_VAR_CURRENT_PROPS</a>:    Current properties of a variable. 
+</ul>
+
+   <p>Datatypes associated with functions or methods of an object:
+
+<ul class="menu">
+<li><a accesskey="1" href="OV_005fRESULT.html#OV_005fRESULT">OV_RESULT</a>:               Result of a function call. 
+</ul>
+
+   <p>Datatypes associated with links of an object:
+
+<ul class="menu">
+<li><a accesskey="1" href="OV_005fASSOC_005fTYPE.html#OV_005fASSOC_005fTYPE">OV_ASSOC_TYPE</a>:           Type of an association. 
+<li><a accesskey="2" href="OV_005fPLACEMENT_005fHINT.html#OV_005fPLACEMENT_005fHINT">OV_PLACEMENT_HINT</a>:       Placement hint used with links. 
+</ul>
+
+   <p>Datatypes associated with access rights and authentification/verification:
+
+<ul class="menu">
+<li><a accesskey="1" href="OV_005fACCESS.html#OV_005fACCESS">OV_ACCESS</a>:               Access rights of an object. 
+<li><a accesskey="2" href="OV_005fTICKET_005fTYPE.html#OV_005fTICKET_005fTYPE">OV_TICKET_TYPE</a>:          Type of an A/V-ticket. 
+<li><a accesskey="3" href="OV_005fTICKET_005fVTBL.html#OV_005fTICKET_005fVTBL">OV_TICKET_VTBL</a>:          Virtual function table associated with a ticket. 
+<li><a accesskey="4" href="OV_005fTICKET.html#OV_005fTICKET">OV_TICKET</a>:               A/V-ticket. 
+</ul>
+
+   <p>Generic datatypes for different purposes:
+
+<ul class="menu">
+<li><a accesskey="1" href="OV_005fBYTE.html#OV_005fBYTE">OV_BYTE</a>:                 Generic byte value. 
+<li><a accesskey="2" href="OV_005fENUM.html#OV_005fENUM">OV_ENUM</a>:                 Generic enumeration value. 
+<li><a accesskey="3" href="OV_005fPOINTER.html#OV_005fPOINTER">OV_POINTER</a>:              Generic pointer value. 
+</ul>
+
+   <p>Vector datatypes:
+
+<ul class="menu">
+<li><a accesskey="1" href="OV_005fBOOL_005fVEC.html#OV_005fBOOL_005fVEC">OV_BOOL_VEC</a>:             Dynamic bool value vector. 
+<li><a accesskey="2" href="OV_005fINT_005fVEC.html#OV_005fINT_005fVEC">OV_INT_VEC</a>:              Dynamic signed integer value vector. 
+<li><a accesskey="3" href="OV_005fUINT_005fVEC.html#OV_005fUINT_005fVEC">OV_UINT_VEC</a>:             Dynamic unsigned integer value vector. 
+<li><a accesskey="4" href="OV_005fSINGLE_005fVEC.html#OV_005fSINGLE_005fVEC">OV_SINGLE_VEC</a>:           Dynamic single precision floating point value vector. 
+<li><a accesskey="5" href="OV_005fDOUBLE_005fVEC.html#OV_005fDOUBLE_005fVEC">OV_DOUBLE_VEC</a>:           Dynamic double precision floating point value vector. 
+<li><a accesskey="6" href="OV_005fSTRING_005fVEC.html#OV_005fSTRING_005fVEC">OV_STRING_VEC</a>:           Dynamic string value vector. 
+<li><a accesskey="7" href="OV_005fTIME_005fVEC.html#OV_005fTIME_005fVEC">OV_TIME_VEC</a>:             Dynamic time/date value vector. 
+<li><a accesskey="8" href="OV_005fTIME_005fSPAN_005fVEC.html#OV_005fTIME_005fSPAN_005fVEC">OV_TIME_SPAN_VEC</a>:        Dynamic time span value vector. 
+<li><a accesskey="9" href="OV_005fGENERIC_005fVEC.html#OV_005fGENERIC_005fVEC">OV_GENERIC_VEC</a>:          Generic dynamic value vector (internal use). 
+</ul>
+
+   <p>PV (Process Value) datatypes:
+
+<ul class="menu">
+<li><a accesskey="1" href="OV_005fBOOL_005fPV.html#OV_005fBOOL_005fPV">OV_BOOL_PV</a>:              Boolean process value. 
+<li><a accesskey="2" href="OV_005fINT_005fPV.html#OV_005fINT_005fPV">OV_INT_PV</a>:               Integer process value. 
+<li><a accesskey="3" href="OV_005fSINGLE_005fPV.html#OV_005fSINGLE_005fPV">OV_SINGLE_PV</a>:            Single precision floating point process value. 
+</ul>
+
+   <p>Datatypes holding properties of the ACPLT/OV metamodel:
+
+<ul class="menu">
+<li><a accesskey="1" href="OV_005fVAR_005fPROPS.html#OV_005fVAR_005fPROPS">OV_VAR_PROPS</a>:            Variable properties. 
+<li><a accesskey="2" href="OV_005fCLASS_005fPROPS.html#OV_005fCLASS_005fPROPS">OV_CLASS_PROPS</a>:          Class properties. 
+<li><a accesskey="3" href="OV_005fASSOC_005fPROPS.html#OV_005fASSOC_005fPROPS">OV_ASSOC_PROPS</a>:          Association properties. 
+<li><a accesskey="4" href="OV_005fOP_005fPROPS.html#OV_005fOP_005fPROPS">OV_OP_PROPS</a>:             Operation properties. 
+</ul>
+
+   <p>Datatypes associated with ACPLT/KS histories:
+
+<ul class="menu">
+<li><a accesskey="1" href="OV_005fTIME_005fTYPE.html#OV_005fTIME_005fTYPE">OV_TIME_TYPE</a>:            Time types for use with ACPLT/KS histories. 
+<li><a accesskey="2" href="OV_005fHSEL_005fTYPE.html#OV_005fHSEL_005fTYPE">OV_HSEL_TYPE</a>:            Selector types for use with ACPLT/KS histories. 
+<li><a accesskey="3" href="OV_005fHIST_005fTYPE.html#OV_005fHIST_005fTYPE">OV_HIST_TYPE</a>:            History types for use with ACPLT/KS histories. 
+<li><a accesskey="4" href="OV_005fINTERPOLATION_005fMODE.html#OV_005fINTERPOLATION_005fMODE">OV_INTERPOLATION_MODE</a>:   Interpolation modes for use with ACPLT/KS histories. 
+</ul>
+
+   <p>Datatypes associated with logfiles:
+
+<ul class="menu">
+<li><a accesskey="1" href="OV_005fMSG_005fTYPE.html#OV_005fMSG_005fTYPE">OV_MSG_TYPE</a>:             Type of a logfile message. 
+</ul>
+
+<!--  -->
+   </body></html>
+

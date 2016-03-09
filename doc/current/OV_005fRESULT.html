@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+<title>OV_RESULT - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Fundamental-datatypes.html#Fundamental-datatypes" title="Fundamental datatypes">
+<link rel="prev" href="OV_005fVAR_005fCURRENT_005fPROPS.html#OV_005fVAR_005fCURRENT_005fPROPS" title="OV_VAR_CURRENT_PROPS">
+<link rel="next" href="OV_005fASSOC_005fTYPE.html#OV_005fASSOC_005fTYPE" title="OV_ASSOC_TYPE">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="OV_RESULT"></a>
+<a name="OV_005fRESULT"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="OV_005fASSOC_005fTYPE.html#OV_005fASSOC_005fTYPE">OV_ASSOC_TYPE</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="OV_005fVAR_005fCURRENT_005fPROPS.html#OV_005fVAR_005fCURRENT_005fPROPS">OV_VAR_CURRENT_PROPS</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Fundamental-datatypes.html#Fundamental-datatypes">Fundamental datatypes</a>
+<hr>
+</div>
+
+<h3 class="section">7.14 Result of a function call</h3>
+
+<p><code>OV_RESULT</code> is an enumeration value defining the result of a function
+call.
+
+   <p><strong>Header file</strong>
+
+   <p><code>#include "libov/ov_ov.h"</code>
+
+   <p><strong>Declaration</strong>
+
+<pre class="format"><tt>#define OV_ERR_OK                KS_ERR_OK             /* ok, no error */
+#define OV_ERR_GENERIC           KS_ERR_GENERIC        /* generic error */
+#define OV_ERR_TARGETGENERIC     KS_ERR_TARGETGENERIC  /* generic error in target */
+#define OV_ERR_BADAUTH           KS_ERR_BADAUTH        /* bad authentification */
+#define OV_ERR_UNKNOWNAUTH       KS_ERR_UNKNOWNAUTH    /* unknown authentification */
+#define OV_ERR_NOTIMPLEMENTED    KS_ERR_NOTIMPLEMENTED /* not implemented */
+#define OV_ERR_BADPARAM          KS_ERR_BADPARAM       /* bad parameter */
+#define OV_ERR_BADOBJTYPE        KS_ERR_BADOBJTYPE     /* bad object type */
+
+#define OV_ERR_BADNAME           KS_ERR_BADNAME        /* bad name */
+#define OV_ERR_BADPATH           KS_ERR_BADPATH        /* bad path */
+#define OV_ERR_BADMASK           KS_ERR_BADMASK        /* bad mask */
+#define OV_ERR_NOACCESS          KS_ERR_NOACCESS       /* no access */
+#define OV_ERR_BADTYPE           KS_ERR_BADTYPE        /* bad type */
+#define OV_ERR_BADVALUE          KS_ERR_BADVALUE       /* bad value */
+
+#define OV_ERR_BADFACTORY        KS_ERR_BADFACTORY     /* bad factory */
+#define OV_ERR_ALREADYEXISTS     KS_ERR_ALREADYEXISTS  /* object already exists */
+#define OV_ERR_BADINITPARAM      KS_ERR_BADINITPARAM   /* bad initialization parameter */
+#define OV_ERR_BADPLACEMENT      KS_ERR_BADPLACEMENT   /* bad placement */
+
+#define OV_ERR_CANTCREATEFILE    0x00010000            /* can't create file */
+#define OV_ERR_CANTOPENFILE      0x00010001            /* can't open file */
+#define OV_ERR_CANTLOCKFILE      0x00010002            /* can't lock file */
+#define OV_ERR_CANTREADFROMFILE  0x00010003            /* can't read from file */
+#define OV_ERR_CANTWRITETOFILE   0x00010004            /* can't write to file */
+#define OV_ERR_CANTMAPFILE       0x00010005            /* can't map file to memory */
+#define OV_ERR_BADDATABASE       0x00010006            /* bad database */
+
+#define OV_ERR_CANTOPENLIBRARY   0x00010010            /* can't open library */
+
+#define OV_ERR_LIBDEFMISMATCH    0x00010020            /* library def. mismatch */
+#define OV_ERR_STRUCTDEFMISMATCH 0x00010021            /* structure def. mismatch */
+#define OV_ERR_CLASSDEFMISMATCH  0x00010022            /* class def. mismatch */
+#define OV_ERR_ASSOCDEFMISMATCH  0x00010023            /* association def. mismatch */
+#define OV_ERR_VARDEFMISMATCH    0x00010024            /* variable def. mismatch */
+#define OV_ERR_PARTDEFMISMATCH   0x00010025            /* part def. mismatch */
+#define OV_ERR_OPDEFMISMATCH     0x00010026            /* operation def. mismatch */
+#define OV_ERR_UNKNOWNSTRUCTDEF  0x00010027            /* unknown structure def. */
+#define OV_ERR_UNKNOWNCLASSDEF   0x00010028            /* unknown class def. */
+#define OV_ERR_UNKNOWNASSOCDEF   0x00010029            /* unknown association def. */
+
+#define OV_ERR_DBOUTOFMEMORY     0x00010030            /* database is out of memory */
+#define OV_ERR_HEAPOUTOFMEMORY   0x00010031            /* heap is out of memory */
+
+typedef OV_ENUM OV_RESULT;</tt>
+</pre>
+   <p><strong>Remarks</strong>
+
+   <p>Note, that the some enumeration values are identical to the corresponding ACPLT/KS
+values of the datatype <code>KS_RESULT</code>.
+
+<!--  -->
+   </body></html>
+

@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+<title>OV_DLLFNCEXPORT - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Import_002fExport.html#Import_002fExport" title="Import/Export">
+<link rel="prev" href="Import_002fExport.html#Import_002fExport" title="Import/Export">
+<link rel="next" href="OV_005fDLLVAREXPORT.html#OV_005fDLLVAREXPORT" title="OV_DLLVAREXPORT">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="OV_DLLFNCEXPORT"></a>
+<a name="OV_005fDLLFNCEXPORT"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="OV_005fDLLVAREXPORT.html#OV_005fDLLVAREXPORT">OV_DLLVAREXPORT</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Import_002fExport.html#Import_002fExport">Import/Export</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Import_002fExport.html#Import_002fExport">Import/Export</a>
+<hr>
+</div>
+
+<h3 class="section">4.1 Modifier for functions that are exported from a DLL</h3>
+
+<p>The preprocessor symbol <code>OV_DLLFNCEXPORT</code> is used to tell the compiler,
+that a function needs to be exported from a DLL. Using this symbol you do not
+need a module definition file (<code>.def</code>-file) listing all functions to be
+exported from a DLL.
+
+   <p>This symbol is automatically defined in the configuration header file
+<code>libov/ov_config.h</code>.
+
+   <p><strong>Example</strong>
+
+   <p>The following piece of code defines a DLL function which may be used by
+other modules linking to the import library of the DLL:
+
+<pre class="format"><tt>/*
+*   hello.c
+*/
+
+#include "libov/ov_ov.h"
+#include &lt;stdio.h&gt;
+
+OV_DLLFNCEXPORT void hello(
+    OV_STRING   name
+) {
+    printf("hello %s\n", name);
+}</tt>
+</pre>
+   <p><strong>Remarks</strong>
+
+   <p>Note, that you need to use this modifier in the declaration of function
+prototypes as well (compare file <code>ov.ovf</code>)!
+
+<!--  -->
+   </body></html>
+

@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+<title>ov_database_unmap() - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Database.html#Database" title="Database">
+<link rel="prev" href="ov_005fdatabase_005fmap_0028_0029.html#ov_005fdatabase_005fmap_0028_0029" title="ov_database_map()">
+<link rel="next" href="ov_005fdatabase_005fflush_0028_0029.html#ov_005fdatabase_005fflush_0028_0029" title="ov_database_flush()">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="ov_database_unmap()"></a>
+<a name="ov_005fdatabase_005funmap_0028_0029"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="ov_005fdatabase_005fflush_0028_0029.html#ov_005fdatabase_005fflush_0028_0029">ov_database_flush()</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="ov_005fdatabase_005fmap_0028_0029.html#ov_005fdatabase_005fmap_0028_0029">ov_database_map()</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Database.html#Database">Database</a>
+<hr>
+</div>
+
+<h3 class="section">10.3 Unmap the mapped database</h3>
+
+<p>The <code>ov_database_unmap()</code> function unmaps the current database file from
+the application's address space and closes it.
+
+   <p>The function can only succeed if no database is mapped.
+
+   <p><strong>Header file</strong>
+
+   <p><code>#include "libov/ov_database.h"</code>
+
+   <p><strong>Declaration</strong>
+
+   <p><code>OV_DLLFNCEXPORT void ov_database_unmap(void);</code>
+
+   <p><strong>Remarks</strong>
+
+   <p>Before a database which was started up using
+<code>ov_database_startup()</code> is unmapped, it has to be shut down by calling
+<code>ov_database_shutdown()</code>.
+
+   <p>If no database is mapped, the function has no effect.
+
+<!--  -->
+   </body></html>
+

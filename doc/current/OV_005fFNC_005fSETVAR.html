@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+<title>OV_FNC_SETVAR - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Object.html#Object" title="Object">
+<link rel="prev" href="OV_005fFNC_005fGETVAR.html#OV_005fFNC_005fGETVAR" title="OV_FNC_GETVAR">
+<link rel="next" href="ov_005fobject_005fhaslinks_0028_0029.html#ov_005fobject_005fhaslinks_0028_0029" title="ov_object_haslinks()">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="OV_FNC_SETVAR"></a>
+<a name="OV_005fFNC_005fSETVAR"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="ov_005fobject_005fhaslinks_0028_0029.html#ov_005fobject_005fhaslinks_0028_0029">ov_object_haslinks()</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="OV_005fFNC_005fGETVAR.html#OV_005fFNC_005fGETVAR">OV_FNC_GETVAR</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Object.html#Object">Object</a>
+<hr>
+</div>
+
+<h3 class="section">16.11 Function prototype for method writing current variable properties</h3>
+
+<p>The function prototype <code>OV_FNC_SETVAR</code> is used for defining the function
+of an object, which sets the current properties of a variable of the object.
+
+   <p><strong>Header file</strong>
+
+   <p><code>#include "ov.ovf"</code>
+
+   <p><strong>Declaration</strong>
+
+<pre class="format"><tt>typedef OV_DLLFNCEXPORT OV_RESULT OV_FNC_SETVAR(
+    OV_INSTPTR_ov_object pobj,
+    const OV_ELEMENT     *pelem
+    const OV_ANY         *pvarcurrprops
+);</tt>
+</pre>
+   <p><strong>Parameters</strong>
+
+     <dl>
+<dt><code>pobj</code><dd>Pointer to the object containing the variable element to be set. 
+<br><dt><code>pelem</code><dd>Pointer to a structure containing information about the variable element of the object
+of which the current properties are set. 
+<br><dt><code>pvarcurrprops</code><dd>Pointer to a structure containing the current properties of the variable which the
+object is asked to set. 
+</dl>
+
+   <p><strong>Return value</strong>
+
+   <p>Functions of this type must return <code>OV_ERR_OK</code> if setting the current properties
+of the variable succeeds or an error code otherwise. You should use <code>OV_ERR_BADVALUE</code>
+to indicate that the variable value is not accepted (e.g. out of bounds) and
+<code>OV_ERR_BADTYPE</code> to indicate that the given variable type is not accepted by
+the object.
+
+<!--  -->
+   </body></html>
+

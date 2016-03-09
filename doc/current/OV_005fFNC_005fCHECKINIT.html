@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+<title>OV_FNC_CHECKINIT - LibOV API Reference</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="LibOV API Reference">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Object.html#Object" title="Object">
+<link rel="prev" href="OV_005fFNC_005fCONSTRUCTOR.html#OV_005fFNC_005fCONSTRUCTOR" title="OV_FNC_CONSTRUCTOR">
+<link rel="next" href="OV_005fFNC_005fDESTRUCTOR.html#OV_005fFNC_005fDESTRUCTOR" title="OV_FNC_DESTRUCTOR">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body>
+<div class="node">
+<a name="OV_FNC_CHECKINIT"></a>
+<a name="OV_005fFNC_005fCHECKINIT"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="OV_005fFNC_005fDESTRUCTOR.html#OV_005fFNC_005fDESTRUCTOR">OV_FNC_DESTRUCTOR</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="OV_005fFNC_005fCONSTRUCTOR.html#OV_005fFNC_005fCONSTRUCTOR">OV_FNC_CONSTRUCTOR</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Object.html#Object">Object</a>
+<hr>
+</div>
+
+<h3 class="section">16.2 Function prototype for checking the initialization</h3>
+
+<p>The function prototype <code>OV_FNC_CHECKINIT</code> is used for defining a function of an
+object, which checks if the initialization resulted in a valid state of the object. 
+This function is called during instantiation of an object using the function
+<code>ov_class_createobject()</code>. If the function does not return <code>OV_ERR_OK</code>
+the object is destroyed immediately and no object is created.
+
+   <p><strong>Header file</strong>
+
+   <p><code>#include "ov.ovf"</code>
+
+   <p><strong>Declaration</strong>
+
+<pre class="format"><tt>typedef OV_DLLFNCEXPORT OV_RESULT OV_FNC_CHECKINIT(
+    OV_INSTPTR_ov_object pobj
+);</tt>
+</pre>
+   <p><strong>Parameters</strong>
+
+     <dl>
+<dt><code>pobj</code><dd>Pointer to the object of which the initialization is checked. 
+</dl>
+
+   <p><strong>Return value</strong>
+
+   <p>Functions of this type must return <code>OV_ERR_OK</code> if the initialzation was valid
+or an error code otherwise.
+
+<!--  -->
+   </body></html>
+
