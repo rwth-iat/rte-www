@@ -17,7 +17,7 @@ Binary development releases for Windows32, Linux32, Linux64 and Raspberry Pi. Fo
 Windows 32 Releases
 </h1>
 <p>
-In order to use the start scripts you need tclsh. fb_dbcommands is not included in the archives.
+In order to use the start scripts you need tclsh. <a href='./fb_dbcommands.exe'>fb_dbcommands</a> is not included in the archives.
 </p>
 <table style="border 1px solid gray;">
 <tr><th>File</th><th>Tag</th><th>Date</th><th>Size</th></tr>
