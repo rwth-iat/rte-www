@@ -1,5 +1,6 @@
-<tr><td><a href='././2016-03-09-08:21-932f734755_acpltRTE-win32.zip'>2016-03-09-08:21-932f734755_acpltRTE-win32.zip</a></td><td>932f734755</td><td>2016-03-09-08:21</td></tr>
-<tr><td><a href='././2016-03-09-09:10-4bbf375c4f_acpltRTE-win32.zip'>2016-03-09-09:10-4bbf375c4f_acpltRTE-win32.zip</a></td><td>4bbf375c4f</td><td>2016-03-09-09:10</td></tr>
-<tr><td><a href='././2016-03-09-09:19-57e5014b32_acpltRTE-win32.zip'>2016-03-09-09:19-57e5014b32_acpltRTE-win32.zip</a></td><td>57e5014b32</td><td>2016-03-09-09:19</td></tr>
-<tr><td><a href='././2016-03-09-09:35-033547a679_acpltRTE-win32.zip'>2016-03-09-09:35-033547a679_acpltRTE-win32.zip</a></td><td>033547a679</td><td>2016-03-09-09:35</td></tr>
-<tr><td><a href='././2016-03-09-09:38-52f5bd8c31_acpltRTE-win32.zip'>2016-03-09-09:38-52f5bd8c31_acpltRTE-win32.zip</a></td><td>52f5bd8c31</td><td>2016-03-09-09:38</td></tr>
+<tr><td><a href='././2016-03-09-08:21-932f734755_acpltRTE-win32.zip'>2016-03-09-08:21-932f734755_acpltRTE-win32.zip</a></td><td>932f734755</td><td>2016-03-09-08:21</td><td>7.3M</td></tr>
+<tr><td><a href='././2016-03-09-09:10-4bbf375c4f_acpltRTE-win32.zip'>2016-03-09-09:10-4bbf375c4f_acpltRTE-win32.zip</a></td><td>4bbf375c4f</td><td>2016-03-09-09:10</td><td>7.3M</td></tr>
+<tr><td><a href='././2016-03-09-09:19-57e5014b32_acpltRTE-win32.zip'>2016-03-09-09:19-57e5014b32_acpltRTE-win32.zip</a></td><td>57e5014b32</td><td>2016-03-09-09:19</td><td>7.3M</td></tr>
+<tr><td><a href='././2016-03-09-09:35-033547a679_acpltRTE-win32.zip'>2016-03-09-09:35-033547a679_acpltRTE-win32.zip</a></td><td>033547a679</td><td>2016-03-09-09:35</td><td>7.3M</td></tr>
+<tr><td><a href='././2016-03-09-09:38-52f5bd8c31_acpltRTE-win32.zip'>2016-03-09-09:38-52f5bd8c31_acpltRTE-win32.zip</a></td><td>52f5bd8c31</td><td>2016-03-09-09:38</td><td>7.3M</td></tr>
+<tr><td><a href='././2016-03-09-09:48-b95589e7ce_acpltRTE-win32.zip'>2016-03-09-09:48-b95589e7ce_acpltRTE-win32.zip</a></td><td>b95589e7ce</td><td>2016-03-09-09:48</td><td>7.3M</td></tr>
