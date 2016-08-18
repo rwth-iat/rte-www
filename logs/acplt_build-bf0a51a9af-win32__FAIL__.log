@@ -1,6 +1,0 @@
-make: Entering directory `/home/travis/build/acplt/rte/build/acplt.build/base/ov/source/libml'
-i686-w64-mingw32-gcc -m64 -Wall -O2 -DML_SYSTEM_UNIX -DDBG_TO_STDERR=0 -fPIC  -I. -c ml_malloc.c
-ml_malloc.c:1:0: warning: -fPIC ignored for target (all code is position independent) [enabled by default]
-ml_malloc.c:1:0: sorry, unimplemented: 64-bit mode not compiled in
-make: *** [ml_malloc.o] Error 1
-make: Leaving directory `/home/travis/build/acplt/rte/build/acplt.build/base/ov/source/libml'
