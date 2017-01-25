@@ -1,0 +1,735 @@
+make: Entering directory `/home/travis/build/acplt/rte/build/acplt.build/base/ov/source/libml'
+clang -m64 -Wall -O2 -DML_SYSTEM_UNIX -DDBG_TO_STDERR=0 -fPIC  -I. -c ml_malloc.c
+clang -m64 -Wall -O2 -DML_SYSTEM_UNIX -DDBG_TO_STDERR=0 -fPIC  -I. -c ml_free.c
+clang -m64 -Wall -O2 -DML_SYSTEM_UNIX -DDBG_TO_STDERR=0 -fPIC  -I. -c ml_realloc.c
+ar crv libml.a ml_malloc.o ml_free.o ml_realloc.o
+a - ml_malloc.o
+a - ml_free.o
+a - ml_realloc.o
+ranlib libml.a
+make: Leaving directory `/home/travis/build/acplt/rte/build/acplt.build/base/ov/source/libml'
+make: Entering directory `/home/travis/build/acplt/rte/build/acplt.build/base/plt/build/linux'
+g++ -m64 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -c -o alloc.o ../../src/alloc.cpp
+g++ -m64 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -c -o array.o ../../src/array.cpp
+g++ -m64 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -c -o container.o ../../src/container.cpp
+g++ -m64 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -c -o debug.o ../../src/debug.cpp
+g++ -m64 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -c -o handle.o ../../src/handle.cpp
+g++ -m64 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -c -o hashtable.o ../../src/hashtable.cpp
+g++ -m64 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -c -o list.o ../../src/list.cpp
+g++ -m64 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -c -o log.o ../../src/log.cpp
+../../src/log.cpp: In member function ‘void PltSyslog::log(int, const char*)’:
+../../src/log.cpp:224:25: warning: format not a string literal and no format arguments [-Wformat-security]
+g++ -m64 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -c -o logstream.o ../../src/logstream.cpp
+g++ -m64 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -c -o priorityqueue.o ../../src/priorityqueue.cpp
+g++ -m64 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -c -o rtti.o ../../src/rtti.cpp
+g++ -m64 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -c -o string.o ../../src/string.cpp
+g++ -m64 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -c -o time.o ../../src/time.cpp
+ar r libplt.a alloc.o array.o container.o debug.o handle.o hashtable.o list.o log.o logstream.o priorityqueue.o rtti.o string.o time.o
+ar: creating libplt.a
+ranlib libplt.a
+strip --strip-debug libplt.a
+make: Leaving directory `/home/travis/build/acplt/rte/build/acplt.build/base/plt/build/linux'
+make: Entering directory `/home/travis/build/acplt/rte/build/acplt.build/base/ks/build/linux'
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o array.o ../../src/array.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o conversions.o ../../src/conversions.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o path.o ../../src/path.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o props.o ../../src/props.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o propsv1.o ../../src/propsv1.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o register.o ../../src/register.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o result.o ../../src/result.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o rpc.o ../../src/rpc.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o histparams.o ../../src/histparams.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o objmgrparams.o ../../src/objmgrparams.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o serviceparams.o ../../src/serviceparams.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o string.o ../../src/string.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o selector.o ../../src/selector.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o time.o ../../src/time.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o value.o ../../src/value.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o xdr.o ../../src/xdr.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o templates.o ../../src/templates.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o mask.o ../../src/mask.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o event.o ../../src/event.cpp
+ar r libks.a array.o conversions.o path.o props.o propsv1.o register.o result.o rpc.o histparams.o objmgrparams.o serviceparams.o string.o selector.o time.o value.o xdr.o templates.o mask.o event.o
+ar: creating libks.a
+strip --strip-debug libks.a
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o avticket.o ../../src/avticket.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o inaddrset.o ../../src/inaddrset.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o hostinaddrset.o ../../src/hostinaddrset.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o manager.o ../../src/manager.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o server.o ../../src/server.cpp
+../../include/ks/server.h:98:14: warning: ‘Checking_PLT_USE_BUFFERED_STREAMS_Option’ defined but not used [-Wunused-variable]
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o simpleserver.o ../../src/simpleserver.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o svrbase.o ../../src/svrbase.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o svrobjects.o ../../src/svrobjects.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o svrrpcctx.o ../../src/svrrpcctx.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o svrsimpleobjects.o ../../src/svrsimpleobjects.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o svrtransport.o ../../src/svrtransport.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o xdrmemstream.o ../../src/xdrmemstream.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o rpcproto.o ../../src/rpcproto.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o connectionmgr.o ../../src/connectionmgr.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o connection.o ../../src/connection.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o xdrudpcon.o ../../src/xdrudpcon.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o xdrtcpcon.o ../../src/xdrtcpcon.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o interserver.o ../../src/interserver.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o histdomain.o ../../src/histdomain.cpp
+ar r libkssvr.a avticket.o inaddrset.o hostinaddrset.o manager.o server.o simpleserver.o svrbase.o svrobjects.o svrrpcctx.o svrsimpleobjects.o svrtransport.o xdrmemstream.o rpcproto.o connectionmgr.o connection.o xdrudpcon.o xdrtcpcon.o interserver.o histdomain.o
+ar: creating libkssvr.a
+strip --strip-debug libkssvr.a
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o avmodule.o ../../src/avmodule.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o avsimplemodule.o ../../src/avsimplemodule.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o client.o ../../src/client.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o clntpath.o ../../src/clntpath.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o commobject.o ../../src/commobject.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o hostent.o ../../src/hostent.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o history.o ../../src/history.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o package.o ../../src/package.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o sorter.o ../../src/sorter.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o variables.o ../../src/variables.cpp
+ar r libkscln.a avmodule.o avsimplemodule.o client.o clntpath.o commobject.o hostent.o history.o package.o sorter.o variables.o
+ar: creating libkscln.a
+strip --strip-debug libkscln.a
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o tmanager.o ../../examples/tmanager.cpp
+g++ -m64 -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -O2 -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -c -o tmanager1.o ../../examples/tmanager1.cpp
+MAKE=make perl ../../../plt/build/templ.pl g++ -m64  -o tmanager.exe tmanager.o tmanager1.o libkssvr.a libks.a ../../../plt/build/linux/libplt.a  -lstdc++
+Template linker (c) 1997, 2000 ACPLT
+Starting run 1...
+g++ -m64 -o tmanager.exe tmanager.o tmanager1.o libkssvr.a libks.a ../../../plt/build/linux/libplt.a -lstdc++
+
+Finished: All templates seem to be instantiated.
+strip --strip-debug tmanager.exe
+make: Leaving directory `/home/travis/build/acplt/rte/build/acplt.build/base/ks/build/linux'
+make: Entering directory `/home/travis/build/acplt/rte/build/acplt.build/base/fbs_dienste/build/linux'
+bison -t -d -ofb_parser.c ../../source/fb_parser.y
+../../source/fb_parser.y: conflicts: 6 shift/reduce, 2 reduce/reduce
+gcc -m64 -Wall -DOV_DEBUG -O2 -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c fb_parser.c -o fb_parser.o
+flex -ofb_scanner.c ../../source/fb_scanner.lex
+gcc -m64 -Wall -DOV_DEBUG -O2 -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c fb_scanner.c -o fb_scanner.o
+fb_scanner.c:1593:17: warning: ‘yyunput’ defined but not used [-Wunused-function]
+fb_scanner.c:1634:16: warning: ‘input’ defined but not used [-Wunused-function]
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_getserver.o ../../source/ifb_getserver.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_logerror.o ../../source/ifb_logerror.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_varprops.o ../../source/ifb_varprops.cpp
+../../source/ifb_varprops.cpp: In function ‘char* ifb_getValueLength(const KsVarCurrProps*)’:
+../../source/ifb_varprops.cpp:92:34: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘size_t {aka long unsigned int}’ [-Wformat]
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_readblockparam.o ../../source/ifb_readblockparam.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_getcondata.o ../../source/ifb_getcondata.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_getportdata.o ../../source/ifb_getportdata.cpp
+../../source/ifb_getportdata.cpp: In function ‘void GetPortProps(KsEngPropsHandle&, const KsVarCurrProps*, ObjProps&, long unsigned int)’:
+../../source/ifb_getportdata.cpp:200:21: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_createcomcon.o ../../source/ifb_createcomcon.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_setpar.o ../../source/ifb_setpar.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_av.o ../../source/ifb_av.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_delobj.o ../../source/ifb_delobj.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_crobj.o ../../source/ifb_crobj.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_tasklink.o ../../source/ifb_tasklink.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_rename.o ../../source/ifb_rename.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_delfulltu.o ../../source/ifb_delfulltu.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_dbsaveinstream.o ../../source/ifb_dbsaveinstream.cpp
+../../source/ifb_dbsaveinstream.cpp: In function ‘void ifb_writeLinkItem(KscServerBase*, KsString&, int, FbAssoParam&, PltString&)’:
+../../source/ifb_dbsaveinstream.cpp:73:21: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../../source/ifb_dbsaveinstream.cpp: In function ‘float get_serverVersion(KscServerBase*)’:
+../../source/ifb_dbsaveinstream.cpp:320:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../../source/ifb_dbsaveinstream.cpp: In function ‘KS_RESULT get_variable(KscServerBase*, KsGetEPParams&, PltString&)’:
+../../source/ifb_dbsaveinstream.cpp:536:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_memfre.o ../../source/ifb_memfre.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_importproject.o ../../source/ifb_importproject.cpp
+../../source/ifb_importproject.cpp: In function ‘KS_RESULT LoadDupl(KscServerBase*, PltString&)’:
+../../source/ifb_importproject.cpp:357:60: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘size_t {aka long unsigned int}’ [-Wformat]
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_aufraeumen.o ../../source/ifb_aufraeumen.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_importeval.o ../../source/ifb_importeval.cpp
+../../source/ifb_importeval.cpp: In function ‘int test_ConnectionExists(KscServerBase*, ConData&, PltString&)’:
+../../source/ifb_importeval.cpp:411:17: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../../source/ifb_importeval.cpp: In function ‘void checkParentDomainsInDB(KscServerBase*, PltList<PltString>&, Dienst_param*, PltString&)’:
+../../source/ifb_importeval.cpp:1141:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../../source/ifb_importeval.cpp:1151:40: warning: format not a string literal and no format arguments [-Wformat-security]
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_compproject.o ../../source/ifb_compproject.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_compeval.o ../../source/ifb_compeval.cpp
+../../source/ifb_compeval.cpp: In function ‘int value_compare(Variables*, Variables*)’:
+../../source/ifb_compeval.cpp:853:21: warning: case value ‘16’ not in enumerated type ‘DataType’ [-Wswitch]
+../../source/ifb_compeval.cpp:848:21: warning: case value ‘17’ not in enumerated type ‘DataType’ [-Wswitch]
+../../source/ifb_compeval.cpp:858:21: warning: case value ‘32’ not in enumerated type ‘DataType’ [-Wswitch]
+../../source/ifb_compeval.cpp:860:21: warning: case value ‘33’ not in enumerated type ‘DataType’ [-Wswitch]
+../../source/ifb_compeval.cpp:867:21: warning: case value ‘48’ not in enumerated type ‘DataType’ [-Wswitch]
+../../source/ifb_compeval.cpp:865:21: warning: case value ‘49’ not in enumerated type ‘DataType’ [-Wswitch]
+../../source/ifb_compeval.cpp:859:21: warning: case value ‘50’ not in enumerated type ‘DataType’ [-Wswitch]
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_updateproject.o ../../source/ifb_updateproject.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_updateeval.o ../../source/ifb_updateeval.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_dir.o ../../source/ifb_dir.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_selectsave.o ../../source/ifb_selectsave.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_dupl.o ../../source/ifb_dupl.cpp
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_cleandb.o ../../source/ifb_cleandb.cpp
+../../source/ifb_cleandb.cpp: In function ‘KS_RESULT clean_all_inst(KscServerBase*, PltString*)’:
+../../source/ifb_cleandb.cpp:169:25: warning: variable ‘lastErr’ set but not used [-Wunused-but-set-variable]
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o ifb_fileup.o ../../source/ifb_fileup.cpp
+../../source/ifb_fileup.cpp: In function ‘void getUpErrText(PltString&, PltString&)’:
+../../source/ifb_fileup.cpp:184:45: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+gcc -m64 -Wall -DOV_DEBUG -O2 -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c ../../source/lts_cfnc.c -o lts_cfnc.o
+ar rv ifbslib.a fb_parser.o fb_scanner.o ifb_getserver.o ifb_logerror.o ifb_varprops.o ifb_readblockparam.o ifb_getcondata.o ifb_getportdata.o ifb_createcomcon.o ifb_setpar.o ifb_av.o ifb_delobj.o ifb_crobj.o ifb_tasklink.o ifb_rename.o ifb_delfulltu.o ifb_dbsaveinstream.o ifb_memfre.o ifb_importproject.o ifb_aufraeumen.o ifb_importeval.o ifb_compproject.o ifb_compeval.o ifb_updateproject.o ifb_updateeval.o ifb_dir.o ifb_selectsave.o ifb_dupl.o ifb_cleandb.o ifb_fileup.o lts_cfnc.o
+ar: creating ifbslib.a
+a - fb_parser.o
+a - fb_scanner.o
+a - ifb_getserver.o
+a - ifb_logerror.o
+a - ifb_varprops.o
+a - ifb_readblockparam.o
+a - ifb_getcondata.o
+a - ifb_getportdata.o
+a - ifb_createcomcon.o
+a - ifb_setpar.o
+a - ifb_av.o
+a - ifb_delobj.o
+a - ifb_crobj.o
+a - ifb_tasklink.o
+a - ifb_rename.o
+a - ifb_delfulltu.o
+a - ifb_dbsaveinstream.o
+a - ifb_memfre.o
+a - ifb_importproject.o
+a - ifb_aufraeumen.o
+a - ifb_importeval.o
+a - ifb_compproject.o
+a - ifb_compeval.o
+a - ifb_updateproject.o
+a - ifb_updateeval.o
+a - ifb_dir.o
+a - ifb_selectsave.o
+a - ifb_dupl.o
+a - ifb_cleandb.o
+a - ifb_fileup.o
+a - lts_cfnc.o
+ranlib ifbslib.a
+strip --strip-debug ifbslib.a
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o fb_dbcommands.o ../../source/dbcommands.cpp
+../../source/dbcommands.cpp: In function ‘int main(int, char**)’:
+../../source/dbcommands.cpp:272:34: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o templ_for_exec.o ../../source/templ_for_exec.cpp
+MAKE=make perl ../templ.pl g++ -m64 -o fb_dbcommands fb_dbcommands.o templ_for_exec.o ifbslib.a ../../../../base/ks/build/linux/libkscln.a ../../../../base/ks/build/linux/libks.a ../../../../base/plt/build/linux/libplt.a -lstdc++ 
+Template linker (c) 1997 ACPLT
+Starting run 1...
+g++ -m64 -o fb_dbcommands fb_dbcommands.o templ_for_exec.o ifbslib.a ../../../../base/ks/build/linux/libkscln.a ../../../../base/ks/build/linux/libks.a ../../../../base/plt/build/linux/libplt.a -lstdc++
+
+Finished: All templates seem to be instantiated.
+strip --strip-debug fb_dbcommands
+g++ -m64 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_LINUX=1 -DOV_SYSTEM_LINUX=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I. -c -o fb_init.o ../../source/fb_init.cpp
+../../source/fb_init.cpp: In function ‘int main(int, char**)’:
+../../source/fb_init.cpp:20:22: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+MAKE=make perl ../templ.pl g++ -m64 -o fb_init fb_init.o templ_for_exec.o ifbslib.a ../../../../base/ks/build/linux/libkscln.a ../../../../base/ks/build/linux/libks.a ../../../../base/plt/build/linux/libplt.a -lstdc++ 
+Template linker (c) 1997 ACPLT
+Starting run 1...
+g++ -m64 -o fb_init fb_init.o templ_for_exec.o ifbslib.a ../../../../base/ks/build/linux/libkscln.a ../../../../base/ks/build/linux/libks.a ../../../../base/plt/build/linux/libplt.a -lstdc++
+
+Finished: All templates seem to be instantiated.
+strip --strip-debug fb_init
+make: Leaving directory `/home/travis/build/acplt/rte/build/acplt.build/base/fbs_dienste/build/linux'
+make: Entering directory `/home/travis/build/acplt/rte/build/acplt.build/base/ov/build/linux'
+bison -t -d -oov_ovmparser.c ../../source/codegen/ov_ovmparser.y
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ov_ovmparser.c -o ov_ovmparser.o
+flex -oov_ovmscanner.c ../../source/codegen/ov_ovmscanner.lex
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ov_ovmscanner.c -o ov_ovmscanner.o
+ov_ovmscanner.c:2391:48: warning: implicit declaration of function 'fileno' is invalid in C99 [-Wimplicit-function-declaration]
+        b->yy_is_interactive = file ? (isatty( fileno(file) ) > 0) : 0;
+                                               ^
+ov_ovmscanner.c:2143:17: warning: unused function 'yyunput' [-Wunused-function]
+    static void yyunput (int c, register char * yy_bp )
+                ^
+ov_ovmscanner.c:2184:16: warning: function 'input' is not needed and will not be emitted [-Wunneeded-internal-declaration]
+    static int input  (void)
+               ^
+3 warnings generated.
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/codegen/ov_codegen.c -o ov_codegen.o
+clang -m64  -o ov_codegen ov_ovmparser.o ov_ovmscanner.o ov_codegen.o  -ldl
+strip --strip-debug ov_codegen
+./ov_codegen -I ../../model/ -f ../../model/ov.ovm -l ov
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ov.c -o ov.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_association.c -o ov_association.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_childrelationship.c -o ov_childrelationship.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_class.c -o ov_class.o
+../../source/libov/ov_class.c:76:10: warning: implicit declaration of function 'strdup' is invalid in C99 [-Wimplicit-function-declaration]
+        libid = Ov_HeapStrdup(identifier);
+                ^
+../../include/libov/ov_macros.h:599:28: note: expanded from macro 'Ov_HeapStrdup'
+#define Ov_HeapStrdup(ptr)      strdup(ptr)
+                                ^
+../../source/libov/ov_class.c:76:8: warning: incompatible integer to pointer conversion assigning to 'OV_STRING' (aka 'char *') from 'int' [-Wint-conversion]
+        libid = Ov_HeapStrdup(identifier);
+              ^ ~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_construction.c -o ov_construction.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_containment.c -o ov_containment.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_database.c -o ov_database.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_debug.c -o ov_debug.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_element.c -o ov_element.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_embedment.c -o ov_embedment.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_inheritance.c -o ov_inheritance.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_instantiation.c -o ov_instantiation.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_library.c -o ov_library.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_logfile.c -o ov_logfile.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_malloc.c -o ov_malloc.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_memstack.c -o ov_memstack.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_object.c -o ov_object.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_operation.c -o ov_operation.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_parentrelationship.c -o ov_parentrelationship.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_part.c -o ov_part.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_path.c -o ov_path.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_result.c -o ov_result.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_scheduler.c -o ov_scheduler.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_string.c -o ov_string.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_structure.c -o ov_structure.o
+../../source/libov/ov_structure.c:62:10: warning: implicit declaration of function 'strdup' is invalid in C99 [-Wimplicit-function-declaration]
+        libid = Ov_HeapStrdup(identifier);
+                ^
+../../include/libov/ov_macros.h:599:28: note: expanded from macro 'Ov_HeapStrdup'
+#define Ov_HeapStrdup(ptr)      strdup(ptr)
+                                ^
+../../source/libov/ov_structure.c:62:8: warning: incompatible integer to pointer conversion assigning to 'OV_STRING' (aka 'char *') from 'int' [-Wint-conversion]
+        libid = Ov_HeapStrdup(identifier);
+              ^ ~~~~~~~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_supervise.c -o ov_supervise.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_time.c -o ov_time.o
+../../source/libov/ov_time.c:388:12: warning: implicit declaration of function 'timegm' is invalid in C99 [-Wimplicit-function-declaration]
+                                secs = timegm(&tm);
+                                       ^
+1 warning generated.
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_variable.c -o ov_variable.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_vector.c -o ov_vector.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_vendortree.c -o ov_vendortree.o
+clang -m64 -shared -o libov.so ov.o ov_association.o ov_childrelationship.o ov_class.o ov_construction.o ov_containment.o ov_database.o ov_debug.o ov_element.o ov_embedment.o ov_inheritance.o ov_instantiation.o ov_library.o ov_logfile.o ov_malloc.o ov_memstack.o ov_object.o ov_operation.o ov_parentrelationship.o ov_part.o ov_path.o ov_result.o ov_scheduler.o ov_string.o ov_structure.o ov_supervise.o ov_time.o ov_variable.o ov_vector.o ov_vendortree.o ../../source/libml/libml.a -ldl
+ar rv libov.a ov.o ov_association.o ov_childrelationship.o ov_class.o ov_construction.o ov_containment.o ov_database.o ov_debug.o ov_element.o ov_embedment.o ov_inheritance.o ov_instantiation.o ov_library.o ov_logfile.o ov_malloc.o ov_memstack.o ov_object.o ov_operation.o ov_parentrelationship.o ov_part.o ov_path.o ov_result.o ov_scheduler.o ov_string.o ov_structure.o ov_supervise.o ov_time.o ov_variable.o ov_vector.o ov_vendortree.o
+ar: creating libov.a
+a - ov.o
+a - ov_association.o
+a - ov_childrelationship.o
+a - ov_class.o
+a - ov_construction.o
+a - ov_containment.o
+a - ov_database.o
+a - ov_debug.o
+a - ov_element.o
+a - ov_embedment.o
+a - ov_inheritance.o
+a - ov_instantiation.o
+a - ov_library.o
+a - ov_logfile.o
+a - ov_malloc.o
+a - ov_memstack.o
+a - ov_object.o
+a - ov_operation.o
+a - ov_parentrelationship.o
+a - ov_part.o
+a - ov_path.o
+a - ov_result.o
+a - ov_scheduler.o
+a - ov_string.o
+a - ov_structure.o
+a - ov_supervise.o
+a - ov_time.o
+a - ov_variable.o
+a - ov_vector.o
+a - ov_vendortree.o
+ranlib libov.a
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/dbutil/ov_dbutil.c -o ov_dbutil.o
+clang -m64  -rdynamic -o ov_dbutil ov_dbutil.o libov.so  -ldl
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/runtimeserver/ovksxdr.c -o ovksxdr.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/runtimeserver/ov_runtimeserver.c -o ov_runtimeserver.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/runtimeserver/ov_serverlibs.c -o ov_serverlibs.o
+clang -m64  -o ov_runtimeserver ovksxdr.o ov_runtimeserver.o ov_serverlibs.o libov.so  -ldl
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/acplt_makmak_builder/acplt_builder.c -o acplt_builder.o
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/acplt_makmak_builder/common.c -o common.o
+clang -m64  -o acplt_builder acplt_builder.o common.o  ov_ovmparser.o ov_ovmscanner.o -ldl
+strip --strip-debug acplt_builder
+clang -m64 -g -Wall -Winit-self -Wno-attributes -std=c99 -fno-strict-aliasing -fPIC -O0 -fvisibility=hidden   -DPLT_SYSTEM_LINUX=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG  -DOV_SYSTEM_LINUX=1    -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/acplt_makmak_builder/acplt_makmak.c -o acplt_makmak.o
+clang -m64  -o acplt_makmak acplt_makmak.o common.o  -ldl
+strip --strip-debug acplt_makmak
+make: Leaving directory `/home/travis/build/acplt/rte/build/acplt.build/base/ov/build/linux'
+acplt_makmak -l ksbase -o 
+Working library ksbase located in /home/travis/build/acplt/rte/build/acplt/dev/ksbase/build/linux/../..
+Libpath /home/travis/build/acplt/rte/build/acplt/dev/ksbase/build/linux/../..
+DevModel /home/travis/build/acplt/rte/build/acplt/dev/ksbase/build/linux/../../../../dev/
+DevBin /home/travis/build/acplt/rte/build/acplt/dev/ksbase/build/linux/../../../../addonlibs/
+SysModel /home/travis/build/acplt/rte/build/acplt/dev/ksbase/build/linux/../../../../system/sysdevbase/
+SysBin /home/travis/build/acplt/rte/build/acplt/dev/ksbase/build/linux/../../../../system/sysbin/
+All model inclusions resolved:
+tclsh ../prebuild.tcl ksbase -o
+make EXTRA_CC_FLAGS='-DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter' EXTRA_LIBS='' LD_FLAGS='' TARGET='debug' -f gcc.mk debug
+make[1]: Entering directory `/home/travis/build/acplt/rte/build/acplt/dev/ksbase/build/linux'
+sed -i -e 's///' ../../../../system/sysdevbase/ov/model/ov.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../model/ -f ../../../../system/sysdevbase/ov/model/ov.ovm -l ov
+sed -i -e 's///' ../../model/ksbase.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../model/ -f ../../model/ksbase.ovm -l ksbase
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ksbase.o ksbase.c
+ksbase.c:1753:17: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+    "Lehrstuhl f<FC>r Prozessleittechnik, RWTH Aachen University",
+                ^~~~
+1 warning generated.
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o AssocChannelClientHandler.o ../../source/AssocChannelClientHandler.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o AssocChannelDataHandler.o ../../source/AssocChannelDataHandler.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o AssocClientToTicketGenerator.o ../../source/AssocClientToTicketGenerator.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o AssocComTaskList.o ../../source/AssocComTaskList.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o AssocCurrentChannel.o ../../source/AssocCurrentChannel.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o Channel.o ../../source/Channel.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ClientBase.o ../../source/ClientBase.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ClientHandler.o ../../source/ClientHandler.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ClientTicketGenerator.o ../../source/ClientTicketGenerator.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ComTask.o ../../source/ComTask.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ksbase_helper.o ../../source/ksbase_helper.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ksbase_open.o ../../source/ksbase_open.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ks_logfile.o ../../source/ks_logfile.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o Manager.o ../../source/Manager.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o NoneTicketAuthenticator.o ../../source/NoneTicketAuthenticator.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o NoneTicketGenerator.o ../../source/NoneTicketGenerator.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ovks_backend_createobject.o ../../source/ovks_backend_createobject.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ovks_backend_deleteobject.o ../../source/ovks_backend_deleteobject.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ovks_backend_exgdata.o ../../source/ovks_backend_exgdata.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ovks_backend_getcanonicalpath.o ../../source/ovks_backend_getcanonicalpath.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ovks_backend_getep.o ../../source/ovks_backend_getep.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ovks_backend_gethist.o ../../source/ovks_backend_gethist.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ovks_backend_getpp.o ../../source/ovks_backend_getpp.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ovks_backend_getvar.o ../../source/ovks_backend_getvar.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ovks_backend_link.o ../../source/ovks_backend_link.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ovks_backend_renameobject.o ../../source/ovks_backend_renameobject.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ovks_backend_setvar.o ../../source/ovks_backend_setvar.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ovks_backend_unlink.o ../../source/ovks_backend_unlink.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ov_ksserver_backend.o ../../source/ov_ksserver_backend.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ProtocolIdentificator.o ../../source/ProtocolIdentificator.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o RootComTask.o ../../source/RootComTask.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o ServerRep.o ../../source/ServerRep.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS_COMPILE=1 -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_KS_TO_OV=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksbase=ov_library_open_ksbase_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../model/ -I../../include/ -I. -c -o TicketAuthenticator.o ../../source/TicketAuthenticator.c
+ar rv ksbase.a ksbase.o AssocChannelClientHandler.o AssocChannelDataHandler.o AssocClientToTicketGenerator.o AssocComTaskList.o AssocCurrentChannel.o Channel.o ClientBase.o ClientHandler.o ClientTicketGenerator.o ComTask.o ksbase_helper.o ksbase_open.o ks_logfile.o Manager.o NoneTicketAuthenticator.o NoneTicketGenerator.o ovks_backend_createobject.o ovks_backend_deleteobject.o ovks_backend_exgdata.o ovks_backend_getcanonicalpath.o ovks_backend_getep.o ovks_backend_gethist.o ovks_backend_getpp.o ovks_backend_getvar.o ovks_backend_link.o ovks_backend_renameobject.o ovks_backend_setvar.o ovks_backend_unlink.o ov_ksserver_backend.o ProtocolIdentificator.o RootComTask.o ServerRep.o TicketAuthenticator.o
+ar: creating ksbase.a
+a - ksbase.o
+a - AssocChannelClientHandler.o
+a - AssocChannelDataHandler.o
+a - AssocClientToTicketGenerator.o
+a - AssocComTaskList.o
+a - AssocCurrentChannel.o
+a - Channel.o
+a - ClientBase.o
+a - ClientHandler.o
+a - ClientTicketGenerator.o
+a - ComTask.o
+a - ksbase_helper.o
+a - ksbase_open.o
+a - ks_logfile.o
+a - Manager.o
+a - NoneTicketAuthenticator.o
+a - NoneTicketGenerator.o
+a - ovks_backend_createobject.o
+a - ovks_backend_deleteobject.o
+a - ovks_backend_exgdata.o
+a - ovks_backend_getcanonicalpath.o
+a - ovks_backend_getep.o
+a - ovks_backend_gethist.o
+a - ovks_backend_getpp.o
+a - ovks_backend_getvar.o
+a - ovks_backend_link.o
+a - ovks_backend_renameobject.o
+a - ovks_backend_setvar.o
+a - ovks_backend_unlink.o
+a - ov_ksserver_backend.o
+a - ProtocolIdentificator.o
+a - RootComTask.o
+a - ServerRep.o
+a - TicketAuthenticator.o
+ranlib ksbase.a
+clang -shared -m64 -o ksbase.so ksbase.o AssocChannelClientHandler.o AssocChannelDataHandler.o AssocClientToTicketGenerator.o AssocComTaskList.o AssocCurrentChannel.o Channel.o ClientBase.o ClientHandler.o ClientTicketGenerator.o ComTask.o ksbase_helper.o ksbase_open.o ks_logfile.o Manager.o NoneTicketAuthenticator.o NoneTicketGenerator.o ovks_backend_createobject.o ovks_backend_deleteobject.o ovks_backend_exgdata.o ovks_backend_getcanonicalpath.o ovks_backend_getep.o ovks_backend_gethist.o ovks_backend_getpp.o ovks_backend_getvar.o ovks_backend_link.o ovks_backend_renameobject.o ovks_backend_setvar.o ovks_backend_unlink.o ov_ksserver_backend.o ProtocolIdentificator.o RootComTask.o ServerRep.o TicketAuthenticator.o  
+cp ksbase.so ../../../../system/addonlibs/
+make[1]: Leaving directory `/home/travis/build/acplt/rte/build/acplt/dev/ksbase/build/linux'
+tclsh ../postbuild.tcl ksbase
+acplt_makmak -l TCPbind -o 
+Working library TCPbind located in /home/travis/build/acplt/rte/build/acplt/dev/TCPbind/build/linux/../..
+Libpath /home/travis/build/acplt/rte/build/acplt/dev/TCPbind/build/linux/../..
+DevModel /home/travis/build/acplt/rte/build/acplt/dev/TCPbind/build/linux/../../../../dev/
+DevBin /home/travis/build/acplt/rte/build/acplt/dev/TCPbind/build/linux/../../../../addonlibs/
+SysModel /home/travis/build/acplt/rte/build/acplt/dev/TCPbind/build/linux/../../../../system/sysdevbase/
+SysBin /home/travis/build/acplt/rte/build/acplt/dev/TCPbind/build/linux/../../../../system/sysbin/
+All model inclusions resolved:
+ksbase in /home/travis/build/acplt/rte/build/acplt/dev/TCPbind/build/linux/../../../../dev/
+tclsh ../prebuild.tcl TCPbind -o
+make EXTRA_CC_FLAGS='-DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DTCPBIND_USE_NONBLOCK_ADDRINFO=0  -Wextra -Wno-unused-parameter ' EXTRA_LIBS='' LD_FLAGS='-lpthread' TARGET='debug' -f gcc.mk debug
+make[1]: Entering directory `/home/travis/build/acplt/rte/build/acplt/dev/TCPbind/build/linux'
+sed -i -e 's///' ../../../../system/sysdevbase/ov/model/ov.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../../ksbase/model/ -I ../../model/ -f ../../../../system/sysdevbase/ov/model/ov.ovm -l ov
+sed -i -e 's///' ../../../ksbase/model/ksbase.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../../ksbase/model/ -I ../../model/ -f ../../../ksbase/model/ksbase.ovm -l ksbase
+sed -i -e 's///' ../../model/TCPbind.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../../ksbase/model/ -I ../../model/ -f ../../model/TCPbind.ovm -l TCPbind
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DTCPBIND_USE_NONBLOCK_ADDRINFO=0  -Wextra -Wno-unused-parameter  -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_TCPbind=ov_library_open_TCPbind_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o TCPbind.o TCPbind.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DTCPBIND_USE_NONBLOCK_ADDRINFO=0  -Wextra -Wno-unused-parameter  -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_TCPbind=ov_library_open_TCPbind_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o aresWorker.o ../../source/aresWorker.c
+../../source/aresWorker.c:194:8: warning: implicit declaration of function 'close' is invalid in C99 [-Wimplicit-function-declaration]
+                                                        TCPBIND_CLOSE_SOCKET(pCurrElem->socket);
+                                                        ^
+../../model/TCPbind.ovt:34:31: note: expanded from macro 'TCPBIND_CLOSE_SOCKET'
+ #define TCPBIND_CLOSE_SOCKET close
+                              ^
+../../source/aresWorker.c:232:3: warning: implicit declaration of function 'nanosleep' is invalid in C99 [-Wimplicit-function-declaration]
+                nanosleep(&s, NULL);
+                ^
+2 warnings generated.
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DTCPBIND_USE_NONBLOCK_ADDRINFO=0  -Wextra -Wno-unused-parameter  -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_TCPbind=ov_library_open_TCPbind_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o AssocSpecificClientHandler.o ../../source/AssocSpecificClientHandler.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DTCPBIND_USE_NONBLOCK_ADDRINFO=0  -Wextra -Wno-unused-parameter  -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_TCPbind=ov_library_open_TCPbind_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o TCPbind_open.o ../../source/TCPbind_open.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DTCPBIND_USE_NONBLOCK_ADDRINFO=0  -Wextra -Wno-unused-parameter  -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_TCPbind=ov_library_open_TCPbind_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o TCPChannel.o ../../source/TCPChannel.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DTCPBIND_USE_NONBLOCK_ADDRINFO=0  -Wextra -Wno-unused-parameter  -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_TCPbind=ov_library_open_TCPbind_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o TCPListener.o ../../source/TCPListener.c
+ar rv TCPbind.a TCPbind.o aresWorker.o AssocSpecificClientHandler.o TCPbind_open.o TCPChannel.o TCPListener.o
+ar: creating TCPbind.a
+a - TCPbind.o
+a - aresWorker.o
+a - AssocSpecificClientHandler.o
+a - TCPbind_open.o
+a - TCPChannel.o
+a - TCPListener.o
+ranlib TCPbind.a
+cp ../../../../system/addonlibs//ksbase.so ksbase.so
+clang -shared -m64 -o TCPbind.so TCPbind.o aresWorker.o AssocSpecificClientHandler.o TCPbind_open.o TCPChannel.o TCPListener.o ksbase.so -lpthread
+cp TCPbind.so ../../../../system/addonlibs/
+make[1]: Leaving directory `/home/travis/build/acplt/rte/build/acplt/dev/TCPbind/build/linux'
+tclsh ../postbuild.tcl TCPbind
+acplt_makmak -l UDPbind -o  
+Working library UDPbind located in /home/travis/build/acplt/rte/build/acplt/dev/UDPbind/build/linux/../..
+Libpath /home/travis/build/acplt/rte/build/acplt/dev/UDPbind/build/linux/../..
+DevModel /home/travis/build/acplt/rte/build/acplt/dev/UDPbind/build/linux/../../../../dev/
+DevBin /home/travis/build/acplt/rte/build/acplt/dev/UDPbind/build/linux/../../../../addonlibs/
+SysModel /home/travis/build/acplt/rte/build/acplt/dev/UDPbind/build/linux/../../../../system/sysdevbase/
+SysBin /home/travis/build/acplt/rte/build/acplt/dev/UDPbind/build/linux/../../../../system/sysbin/
+All model inclusions resolved:
+ksbase in /home/travis/build/acplt/rte/build/acplt/dev/UDPbind/build/linux/../../../../dev/
+tclsh ../prebuild.tcl UDPbind -o 
+make MAKMAKOPTIONS='-o ' EXTRA_CC_FLAGS='-Wextra -Wno-unused-parameter' EXTRA_LIBS='' LD_FLAGS='' TARGET='debug' -f gcc.mk debug
+make[1]: Entering directory `/home/travis/build/acplt/rte/build/acplt/dev/UDPbind/build/linux'
+sed -i -e 's///' ../../../../system/sysdevbase/ov/model/ov.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../../ksbase/model/ -I ../../model/ -f ../../../../system/sysdevbase/ov/model/ov.ovm -l ov
+sed -i -e 's///' ../../../ksbase/model/ksbase.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../../ksbase/model/ -I ../../model/ -f ../../../ksbase/model/ksbase.ovm -l ksbase
+sed -i -e 's///' ../../model/UDPbind.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../../ksbase/model/ -I ../../model/ -f ../../model/UDPbind.ovm -l UDPbind
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_UDPbind=ov_library_open_UDPbind_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o UDPbind.o UDPbind.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_UDPbind=ov_library_open_UDPbind_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o AssocSpecificClientHandler.o ../../source/AssocSpecificClientHandler.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_UDPbind=ov_library_open_UDPbind_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o library_open.o ../../source/library_open.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_UDPbind=ov_library_open_UDPbind_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o UDPChannel.o ../../source/UDPChannel.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_UDPbind=ov_library_open_UDPbind_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o UDPListener.o ../../source/UDPListener.c
+ar rv UDPbind.a UDPbind.o AssocSpecificClientHandler.o library_open.o UDPChannel.o UDPListener.o
+ar: creating UDPbind.a
+a - UDPbind.o
+a - AssocSpecificClientHandler.o
+a - library_open.o
+a - UDPChannel.o
+a - UDPListener.o
+ranlib UDPbind.a
+cp ../../../../system/addonlibs//ksbase.so ksbase.so
+clang -shared -m64 -o UDPbind.so UDPbind.o AssocSpecificClientHandler.o library_open.o UDPChannel.o UDPListener.o ksbase.so 
+cp UDPbind.so ../../../../system/addonlibs/
+make[1]: Leaving directory `/home/travis/build/acplt/rte/build/acplt/dev/UDPbind/build/linux'
+tclsh ../postbuild.tcl UDPbind
+acplt_makmak -l ksxdr -o 
+Working library ksxdr located in /home/travis/build/acplt/rte/build/acplt/dev/ksxdr/build/linux/../..
+Libpath /home/travis/build/acplt/rte/build/acplt/dev/ksxdr/build/linux/../..
+DevModel /home/travis/build/acplt/rte/build/acplt/dev/ksxdr/build/linux/../../../../dev/
+DevBin /home/travis/build/acplt/rte/build/acplt/dev/ksxdr/build/linux/../../../../addonlibs/
+SysModel /home/travis/build/acplt/rte/build/acplt/dev/ksxdr/build/linux/../../../../system/sysdevbase/
+SysBin /home/travis/build/acplt/rte/build/acplt/dev/ksxdr/build/linux/../../../../system/sysbin/
+All model inclusions resolved:
+ksbase in /home/travis/build/acplt/rte/build/acplt/dev/ksxdr/build/linux/../../../../dev/
+tclsh ../prebuild.tcl ksxdr -o
+make EXTRA_CC_FLAGS='-DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter' EXTRA_LIBS='' LD_FLAGS='' TARGET='debug' -f gcc.mk debug
+make[1]: Entering directory `/home/travis/build/acplt/rte/build/acplt/dev/ksxdr/build/linux'
+sed -i -e 's///' ../../../../system/sysdevbase/ov/model/ov.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../../ksbase/model/ -I ../../model/ -f ../../../../system/sysdevbase/ov/model/ov.ovm -l ov
+sed -i -e 's///' ../../../ksbase/model/ksbase.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../../ksbase/model/ -I ../../model/ -f ../../../ksbase/model/ksbase.ovm -l ksbase
+sed -i -e 's///' ../../model/ksxdr.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../../ksbase/model/ -I ../../model/ -f ../../model/ksxdr.ovm -l ksxdr
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o ksxdr.o ksxdr.c
+ksxdr.c:1091:17: warning: illegal character encoding in string literal [-Winvalid-source-encoding]
+    "Lehrstuhl f<FC>r Prozessleittechnik, RWTH Aachen University",
+                ^~~~
+1 warning generated.
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o KSDATAPACKET_xdrhandling.o ../../source/KSDATAPACKET_xdrhandling.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o KSDATAPACKET_xdrhandling_ov_specific.o ../../source/KSDATAPACKET_xdrhandling_ov_specific.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o ksxdr_createObject.o ../../source/ksxdr_createObject.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o ksxdr_deleteObject.o ../../source/ksxdr_deleteObject.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o ksxdr_getCanonicalPath.o ../../source/ksxdr_getCanonicalPath.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o ksxdr_getEP.o ../../source/ksxdr_getEP.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o ksxdr_getPP.o ../../source/ksxdr_getPP.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o ksxdr_getserver.o ../../source/ksxdr_getserver.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o ksxdr_getVar.o ../../source/ksxdr_getVar.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o ksxdr_link.o ../../source/ksxdr_link.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o ksxdr_open.o ../../source/ksxdr_open.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o ksxdr_register.o ../../source/ksxdr_register.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o ksxdr_renameObject.o ../../source/ksxdr_renameObject.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o ksxdr_setVar.o ../../source/ksxdr_setVar.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o ksxdr_unlink.o ../../source/ksxdr_unlink.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o ksxdr_unregister.o ../../source/ksxdr_unregister.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o PMAskList.o ../../source/PMAskList.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o xdrClient_exploreFuncs.o ../../source/xdrClient_exploreFuncs.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o xdrClient_genericfuncs.o ../../source/xdrClient_genericfuncs.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o xdrClientHandler.o ../../source/xdrClientHandler.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o xdrClient_main.o ../../source/xdrClient_main.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o xdrClient_managerfuncs.o ../../source/xdrClient_managerfuncs.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o xdrClient_objectFuncs.o ../../source/xdrClient_objectFuncs.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o xdrClient_VariableFuncs.o ../../source/xdrClient_VariableFuncs.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o xdrIdentificator.o ../../source/xdrIdentificator.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o xdrManagerCom.o ../../source/xdrManagerCom.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DLOG_KS=0 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_ksxdr=ov_library_open_ksxdr_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o xdrSimpleTicketAuthenticator.o ../../source/xdrSimpleTicketAuthenticator.c
+ar rv ksxdr.a ksxdr.o KSDATAPACKET_xdrhandling.o KSDATAPACKET_xdrhandling_ov_specific.o ksxdr_createObject.o ksxdr_deleteObject.o ksxdr_getCanonicalPath.o ksxdr_getEP.o ksxdr_getPP.o ksxdr_getserver.o ksxdr_getVar.o ksxdr_link.o ksxdr_open.o ksxdr_register.o ksxdr_renameObject.o ksxdr_setVar.o ksxdr_unlink.o ksxdr_unregister.o PMAskList.o xdrClient_exploreFuncs.o xdrClient_genericfuncs.o xdrClientHandler.o xdrClient_main.o xdrClient_managerfuncs.o xdrClient_objectFuncs.o xdrClient_VariableFuncs.o xdrIdentificator.o xdrManagerCom.o xdrSimpleTicketAuthenticator.o
+ar: creating ksxdr.a
+a - ksxdr.o
+a - KSDATAPACKET_xdrhandling.o
+a - KSDATAPACKET_xdrhandling_ov_specific.o
+a - ksxdr_createObject.o
+a - ksxdr_deleteObject.o
+a - ksxdr_getCanonicalPath.o
+a - ksxdr_getEP.o
+a - ksxdr_getPP.o
+a - ksxdr_getserver.o
+a - ksxdr_getVar.o
+a - ksxdr_link.o
+a - ksxdr_open.o
+a - ksxdr_register.o
+a - ksxdr_renameObject.o
+a - ksxdr_setVar.o
+a - ksxdr_unlink.o
+a - ksxdr_unregister.o
+a - PMAskList.o
+a - xdrClient_exploreFuncs.o
+a - xdrClient_genericfuncs.o
+a - xdrClientHandler.o
+a - xdrClient_main.o
+a - xdrClient_managerfuncs.o
+a - xdrClient_objectFuncs.o
+a - xdrClient_VariableFuncs.o
+a - xdrIdentificator.o
+a - xdrManagerCom.o
+a - xdrSimpleTicketAuthenticator.o
+ranlib ksxdr.a
+cp ../../../../system/addonlibs//ksbase.so ksbase.so
+clang -shared -m64 -o ksxdr.so ksxdr.o KSDATAPACKET_xdrhandling.o KSDATAPACKET_xdrhandling_ov_specific.o ksxdr_createObject.o ksxdr_deleteObject.o ksxdr_getCanonicalPath.o ksxdr_getEP.o ksxdr_getPP.o ksxdr_getserver.o ksxdr_getVar.o ksxdr_link.o ksxdr_open.o ksxdr_register.o ksxdr_renameObject.o ksxdr_setVar.o ksxdr_unlink.o ksxdr_unregister.o PMAskList.o xdrClient_exploreFuncs.o xdrClient_genericfuncs.o xdrClientHandler.o xdrClient_main.o xdrClient_managerfuncs.o xdrClient_objectFuncs.o xdrClient_VariableFuncs.o xdrIdentificator.o xdrManagerCom.o xdrSimpleTicketAuthenticator.o ksbase.so 
+cp ksxdr.so ../../../../system/addonlibs/
+make[1]: Leaving directory `/home/travis/build/acplt/rte/build/acplt/dev/ksxdr/build/linux'
+tclsh ../postbuild.tcl ksxdr
+acplt_makmak -l kshttp -o 
+Working library kshttp located in /home/travis/build/acplt/rte/build/acplt/dev/kshttp/build/linux/../..
+Libpath /home/travis/build/acplt/rte/build/acplt/dev/kshttp/build/linux/../..
+DevModel /home/travis/build/acplt/rte/build/acplt/dev/kshttp/build/linux/../../../../dev/
+DevBin /home/travis/build/acplt/rte/build/acplt/dev/kshttp/build/linux/../../../../addonlibs/
+SysModel /home/travis/build/acplt/rte/build/acplt/dev/kshttp/build/linux/../../../../system/sysdevbase/
+SysBin /home/travis/build/acplt/rte/build/acplt/dev/kshttp/build/linux/../../../../system/sysbin/
+All model inclusions resolved:
+ksbase in /home/travis/build/acplt/rte/build/acplt/dev/kshttp/build/linux/../../../../dev/
+tclsh ../prebuild.tcl kshttp -o
+== Begin processing static files ==
+Building c header...done
+Including file: index.html...done
+Including file: sse.html...done
+== End processing static files ==
+make EXTRA_CC_FLAGS='-Wextra -Wno-unused-parameter' EXTRA_LIBS='' LD_FLAGS='' TARGET='debug' -f gcc.mk debug
+make[1]: Entering directory `/home/travis/build/acplt/rte/build/acplt/dev/kshttp/build/linux'
+sed -i -e 's///' ../../../../system/sysdevbase/ov/model/ov.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../../ksbase/model/ -I ../../model/ -f ../../../../system/sysdevbase/ov/model/ov.ovm -l ov
+sed -i -e 's///' ../../../ksbase/model/ksbase.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../../ksbase/model/ -I ../../model/ -f ../../../ksbase/model/ksbase.ovm -l ksbase
+sed -i -e 's///' ../../model/kshttp.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../../ksbase/model/ -I ../../model/ -f ../../model/kshttp.ovm -l kshttp
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o kshttp.o kshttp.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o argshandling.o ../../source/argshandling.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o authenticatedsession.o ../../source/authenticatedsession.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o authorization.o ../../source/authorization.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o base64_encode.o ../../source/base64_encode.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o crc32.o ../../source/crc32.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o generated_static_index.o ../../source/generated_static_index.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o gzip.o ../../source/gzip.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o httpClient_genericClient.o ../../source/httpClient_genericClient.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o httpClient_genericfuncs.o ../../source/httpClient_genericfuncs.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o httpclienthandler.o ../../source/httpclienthandler.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o httpClientHandlerExtension.o ../../source/httpClientHandlerExtension.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o httpClient_main.o ../../source/httpClient_main.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o httpClient_managerfuncs.o ../../source/httpClient_managerfuncs.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o httpIdentificator.o ../../source/httpIdentificator.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o httpManagerCom.o ../../source/httpManagerCom.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o httpserver_httpgenerics.o ../../source/httpserver_httpgenerics.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o httpSimpleTicketAuthenticator.o ../../source/httpSimpleTicketAuthenticator.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o library_open.o ../../source/library_open.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o md5.o ../../source/md5.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o outputformat.o ../../source/outputformat.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o service_createObject.o ../../source/service_createObject.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o service_deleteObject.o ../../source/service_deleteObject.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o service_getep.o ../../source/service_getep.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o service_getlogfile.o ../../source/service_getlogfile.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o service_getserver.o ../../source/service_getserver.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o service_getvar.o ../../source/service_getvar.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o service_getvarpush.o ../../source/service_getvarpush.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o service_link.o ../../source/service_link.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o service_register.o ../../source/service_register.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o service_renameObject.o ../../source/service_renameObject.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o service_setvar.o ../../source/service_setvar.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o service_unlink.o ../../source/service_unlink.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o service_unregister.o ../../source/service_unregister.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o staticfile.o ../../source/staticfile.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o urldecode.o ../../source/urldecode.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o zadler32.o ../../source/zadler32.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o zdeflate.o ../../source/zdeflate.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o ztrees.o ../../source/ztrees.c
+clang -g -std=c99 -m64 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_kshttp=ov_library_open_kshttp_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o zutil.o ../../source/zutil.c
+ar rv kshttp.a kshttp.o argshandling.o authenticatedsession.o authorization.o base64_encode.o crc32.o generated_static_index.o gzip.o httpClient_genericClient.o httpClient_genericfuncs.o httpclienthandler.o httpClientHandlerExtension.o httpClient_main.o httpClient_managerfuncs.o httpIdentificator.o httpManagerCom.o httpserver_httpgenerics.o httpSimpleTicketAuthenticator.o library_open.o md5.o outputformat.o service_createObject.o service_deleteObject.o service_getep.o service_getlogfile.o service_getserver.o service_getvar.o service_getvarpush.o service_link.o service_register.o service_renameObject.o service_setvar.o service_unlink.o service_unregister.o staticfile.o urldecode.o zadler32.o zdeflate.o ztrees.o zutil.o
+ar: creating kshttp.a
+a - kshttp.o
+a - argshandling.o
+a - authenticatedsession.o
+a - authorization.o
+a - base64_encode.o
+a - crc32.o
+a - generated_static_index.o
+a - gzip.o
+a - httpClient_genericClient.o
+a - httpClient_genericfuncs.o
+a - httpclienthandler.o
+a - httpClientHandlerExtension.o
+a - httpClient_main.o
+a - httpClient_managerfuncs.o
+a - httpIdentificator.o
+a - httpManagerCom.o
+a - httpserver_httpgenerics.o
+a - httpSimpleTicketAuthenticator.o
+a - library_open.o
+a - md5.o
+a - outputformat.o
+a - service_createObject.o
+a - service_deleteObject.o
+a - service_getep.o
+a - service_getlogfile.o
+a - service_getserver.o
+a - service_getvar.o
+a - service_getvarpush.o
+a - service_link.o
+a - service_register.o
+a - service_renameObject.o
+a - service_setvar.o
+a - service_unlink.o
+a - service_unregister.o
+a - staticfile.o
+a - urldecode.o
+a - zadler32.o
+a - zdeflate.o
+a - ztrees.o
+a - zutil.o
+ranlib kshttp.a
+cp ../../../../system/addonlibs//ksbase.so ksbase.so
+clang -shared -m64 -o kshttp.so kshttp.o argshandling.o authenticatedsession.o authorization.o base64_encode.o crc32.o generated_static_index.o gzip.o httpClient_genericClient.o httpClient_genericfuncs.o httpclienthandler.o httpClientHandlerExtension.o httpClient_main.o httpClient_managerfuncs.o httpIdentificator.o httpManagerCom.o httpserver_httpgenerics.o httpSimpleTicketAuthenticator.o library_open.o md5.o outputformat.o service_createObject.o service_deleteObject.o service_getep.o service_getlogfile.o service_getserver.o service_getvar.o service_getvarpush.o service_link.o service_register.o service_renameObject.o service_setvar.o service_unlink.o service_unregister.o staticfile.o urldecode.o zadler32.o zdeflate.o ztrees.o zutil.o ksbase.so 
+cp kshttp.so ../../../../system/addonlibs/
+make[1]: Leaving directory `/home/travis/build/acplt/rte/build/acplt/dev/kshttp/build/linux'
+tclsh ../postbuild.tcl kshttp
+Removing generated static files include...done
+acplt_makmak -l opcua -o 
+Working library opcua located in /home/travis/build/acplt/rte/build/acplt/dev/opcua/build/linux/../..
+Libpath /home/travis/build/acplt/rte/build/acplt/dev/opcua/build/linux/../..
+DevModel /home/travis/build/acplt/rte/build/acplt/dev/opcua/build/linux/../../../../dev/
+DevBin /home/travis/build/acplt/rte/build/acplt/dev/opcua/build/linux/../../../../addonlibs/
+SysModel /home/travis/build/acplt/rte/build/acplt/dev/opcua/build/linux/../../../../system/sysdevbase/
+SysBin /home/travis/build/acplt/rte/build/acplt/dev/opcua/build/linux/../../../../system/sysbin/
+Error: .ovm model of included library fb could not be located
+tclsh ../prebuild.tcl opcua -o
+make MAKMAKOPTIONS='-o' EXTRA_CC_FLAGS='-DUA_EXTERNAL_NAMESPACES=1 -DLOG_KS=1 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_UA=1 -DLOG_UA_TO_OV=1 -DSTATIC_LINKING=1 -DDEBUG=1 -D_XOPEN_SOURCE=500 -D_GNU_SOURCE -Wextra -Wno-unused-parameter -Wno-declaration-after-statement -Wno-unused-function' EXTRA_LIBS='' LD_FLAGS='' TARGET='debug' -f gcc.mk debug
+make[1]: Entering directory `/home/travis/build/acplt/rte/build/acplt/dev/opcua/build/linux'
+make[1]: gcc.mk: No such file or directory
+make[1]: *** No rule to make target `gcc.mk'.  Stop.
+make[1]: Leaving directory `/home/travis/build/acplt/rte/build/acplt/dev/opcua/build/linux'
+make: *** [debug] Error 2
