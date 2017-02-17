@@ -539,17 +539,17 @@ gcc -g -std=c99 -m32 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  
 ../../source/nodeStoreFunction_write.c:49:2: warning: (near initialization for ‘value.value.valueunion’) [-Wmissing-field-initializers]
 gcc -g -std=c99 -m32 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DUA_EXTERNAL_NAMESPACES=1 -DLOG_KS=1 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_UA=1 -DLOG_UA_TO_OV=1 -DSTATIC_LINKING=1 -DDEBUG=1 -D_XOPEN_SOURCE=500 -D_GNU_SOURCE -Wextra -Wno-unused-parameter -Wno-declaration-after-statement -Wno-unused-function -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_opcua=ov_library_open_opcua_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o nodeStoreInterface2.o ../../source/nodeStoreInterface2.c
 ../../source/nodeStoreInterface2.c: In function ‘OV_NodeStore2_getNode’:
-../../source/nodeStoreInterface2.c:686:2: warning: missing initializer [-Wmissing-field-initializers]
-../../source/nodeStoreInterface2.c:686:2: warning: (near initialization for ‘value.value.valueunion’) [-Wmissing-field-initializers]
-../../source/nodeStoreInterface2.c:686:2: warning: missing initializer [-Wmissing-field-initializers]
-../../source/nodeStoreInterface2.c:686:2: warning: (near initialization for ‘value.time.usecs’) [-Wmissing-field-initializers]
-../../source/nodeStoreInterface2.c:687:2: warning: missing initializer [-Wmissing-field-initializers]
-../../source/nodeStoreInterface2.c:687:2: warning: (near initialization for ‘emptyAny.value.valueunion’) [-Wmissing-field-initializers]
-../../source/nodeStoreInterface2.c:687:2: warning: missing initializer [-Wmissing-field-initializers]
-../../source/nodeStoreInterface2.c:687:2: warning: (near initialization for ‘emptyAny.time.usecs’) [-Wmissing-field-initializers]
+../../source/nodeStoreInterface2.c:688:2: warning: missing initializer [-Wmissing-field-initializers]
+../../source/nodeStoreInterface2.c:688:2: warning: (near initialization for ‘value.value.valueunion’) [-Wmissing-field-initializers]
+../../source/nodeStoreInterface2.c:688:2: warning: missing initializer [-Wmissing-field-initializers]
+../../source/nodeStoreInterface2.c:688:2: warning: (near initialization for ‘value.time.usecs’) [-Wmissing-field-initializers]
+../../source/nodeStoreInterface2.c:689:2: warning: missing initializer [-Wmissing-field-initializers]
+../../source/nodeStoreInterface2.c:689:2: warning: (near initialization for ‘emptyAny.value.valueunion’) [-Wmissing-field-initializers]
+../../source/nodeStoreInterface2.c:689:2: warning: missing initializer [-Wmissing-field-initializers]
+../../source/nodeStoreInterface2.c:689:2: warning: (near initialization for ‘emptyAny.time.usecs’) [-Wmissing-field-initializers]
 ../../source/nodeStoreInterface2.c: In function ‘OV_NodeStore2_replaceNode’:
-../../source/nodeStoreInterface2.c:1283:2: warning: missing initializer [-Wmissing-field-initializers]
-../../source/nodeStoreInterface2.c:1283:2: warning: (near initialization for ‘value.value.valueunion’) [-Wmissing-field-initializers]
+../../source/nodeStoreInterface2.c:1286:2: warning: missing initializer [-Wmissing-field-initializers]
+../../source/nodeStoreInterface2.c:1286:2: warning: (near initialization for ‘value.value.valueunion’) [-Wmissing-field-initializers]
 gcc -g -std=c99 -m32 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DUA_EXTERNAL_NAMESPACES=1 -DLOG_KS=1 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_UA=1 -DLOG_UA_TO_OV=1 -DSTATIC_LINKING=1 -DDEBUG=1 -D_XOPEN_SOURCE=500 -D_GNU_SOURCE -Wextra -Wno-unused-parameter -Wno-declaration-after-statement -Wno-unused-function -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_opcua=ov_library_open_opcua_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o nodeStoreInterface.o ../../source/nodeStoreInterface.c
 gcc -g -std=c99 -m32 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DUA_EXTERNAL_NAMESPACES=1 -DLOG_KS=1 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_UA=1 -DLOG_UA_TO_OV=1 -DSTATIC_LINKING=1 -DDEBUG=1 -D_XOPEN_SOURCE=500 -D_GNU_SOURCE -Wextra -Wno-unused-parameter -Wno-declaration-after-statement -Wno-unused-function -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_opcua=ov_library_open_opcua_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o objectNode.o ../../source/objectNode.c
 gcc -g -std=c99 -m32 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -DUA_EXTERNAL_NAMESPACES=1 -DLOG_KS=1 -DLOG_KS_ERROR=1 -DLOG_KS_WARNING=1 -DLOG_UA=1 -DLOG_UA_TO_OV=1 -DSTATIC_LINKING=1 -DDEBUG=1 -D_XOPEN_SOURCE=500 -D_GNU_SOURCE -Wextra -Wno-unused-parameter -Wno-declaration-after-statement -Wno-unused-function -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_opcua=ov_library_open_opcua_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o objectTypeNode.o ../../source/objectTypeNode.c
