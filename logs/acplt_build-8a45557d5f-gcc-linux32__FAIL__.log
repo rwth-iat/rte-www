@@ -1971,3 +1971,32 @@ gcc -shared -m32 -o openAASDiscoveryServer.so openAASDiscoveryServer.o Discovery
 cp openAASDiscoveryServer.so ../../../../system/addonlibs/
 make[1]: Leaving directory `/home/travis/build/acplt/rte/build/acplt/dev/openAASDiscoveryServer/build/linux'
 tclsh ../postbuild.tcl openAASDiscoveryServer
+acplt_makmak -l raspi  
+Working library raspi located in /home/travis/build/acplt/rte/build/acplt/dev/raspi/build/linux/../..
+Libpath /home/travis/build/acplt/rte/build/acplt/dev/raspi/build/linux/../..
+DevModel /home/travis/build/acplt/rte/build/acplt/dev/raspi/build/linux/../../../../dev/
+DevBin /home/travis/build/acplt/rte/build/acplt/dev/raspi/build/linux/../../../../addonlibs/
+SysModel /home/travis/build/acplt/rte/build/acplt/dev/raspi/build/linux/../../../../system/sysdevbase/
+SysBin /home/travis/build/acplt/rte/build/acplt/dev/raspi/build/linux/../../../../system/sysbin/
+All model inclusions resolved:
+ksbase in /home/travis/build/acplt/rte/build/acplt/dev/raspi/build/linux/../../../../system/sysdevbase/
+fb in /home/travis/build/acplt/rte/build/acplt/dev/raspi/build/linux/../../../../system/sysdevbase/
+tclsh ../prebuild.tcl raspi 
+make MAKMAKOPTIONS='' EXTRA_CC_FLAGS='-lwiringPi ' EXTRA_LIBS='' LD_FLAGS='' TARGET='debug' -f gcc.mk debug
+make[1]: Entering directory `/home/travis/build/acplt/rte/build/acplt/dev/raspi/build/linux'
+sed -i -e 's///' ../../../../system/sysdevbase/ov/model/ov.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../../../system/sysdevbase/ksbase/model/ -I ../../../../system/sysdevbase/fb/model/ -I ../../model/ -f ../../../../system/sysdevbase/ov/model/ov.ovm -l ov
+sed -i -e 's///' ../../../../system/sysdevbase/ksbase/model/ksbase.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../../../system/sysdevbase/ksbase/model/ -I ../../../../system/sysdevbase/fb/model/ -I ../../model/ -f ../../../../system/sysdevbase/ksbase/model/ksbase.ovm -l ksbase
+sed -i -e 's///' ../../../../system/sysdevbase/fb/model/fb.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../../../system/sysdevbase/ksbase/model/ -I ../../../../system/sysdevbase/fb/model/ -I ../../model/ -f ../../../../system/sysdevbase/fb/model/fb.ovm -l fb
+sed -i -e 's///' ../../model/raspi.ovm
+../../../../system/sysbin/ov_codegen -I ../../../../system/sysdevbase/ov/model/ -I ../../../../system/sysdevbase/ksbase/model/ -I ../../../../system/sysdevbase/fb/model/ -I ../../model/ -f ../../model/raspi.ovm -l raspi
+gcc -g -std=c99 -m32 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -lwiringPi  -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../../system/sysdevbase/ksbase/model/ -I../../../../system/sysdevbase/ksbase/include/ -I../../../../system/sysdevbase/fb/model/ -I../../../../system/sysdevbase/fb/include/ -I../../model/ -I../../include/ -I. -c -o raspi.o raspi.c
+gcc -g -std=c99 -m32 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -lwiringPi  -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../../system/sysdevbase/ksbase/model/ -I../../../../system/sysdevbase/ksbase/include/ -I../../../../system/sysdevbase/fb/model/ -I../../../../system/sysdevbase/fb/include/ -I../../model/ -I../../include/ -I. -c -o gpio.o ../../source/gpio.c
+gcc -g -std=c99 -m32 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  -lwiringPi  -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../../system/sysdevbase/ksbase/model/ -I../../../../system/sysdevbase/ksbase/include/ -I../../../../system/sysdevbase/fb/model/ -I../../../../system/sysdevbase/fb/include/ -I../../model/ -I../../include/ -I. -c -o gpioIn.o ../../source/gpioIn.c
+../../source/gpioIn.c:26:22: fatal error: wiringPi.h: No such file or directory
+compilation terminated.
+make[1]: *** [gpioIn.o] Error 1
+make[1]: Leaving directory `/home/travis/build/acplt/rte/build/acplt/dev/raspi/build/linux'
+make: *** [debug] Error 2
