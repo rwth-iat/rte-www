@@ -1721,13 +1721,6 @@ gcc -g -std=c99 -m32 -fPIC -Wdeclaration-after-statement -Wall -Wno-attributes  
 ../../source/HMIHelperPVSL.c:151:26: error: invalid type argument of ‘->’ (have ‘int’)
 ../../source/HMIHelperPVSL.c:154:26: error: invalid type argument of ‘->’ (have ‘int’)
 ../../source/HMIHelperPVSL.c:158:26: error: invalid type argument of ‘->’ (have ‘int’)
-../../source/HMIHelperPVSL.c:262:29: error: invalid type argument of ‘->’ (have ‘int’)
-../../source/HMIHelperPVSL.c:264:29: error: invalid type argument of ‘->’ (have ‘int’)
-../../source/HMIHelperPVSL.c:268:28: error: invalid type argument of ‘->’ (have ‘int’)
-../../source/HMIHelperPVSL.c:272:31: error: invalid type argument of ‘->’ (have ‘int’)
-../../source/HMIHelperPVSL.c:276:28: error: invalid type argument of ‘->’ (have ‘int’)
-../../source/HMIHelperPVSL.c:280:28: error: invalid type argument of ‘->’ (have ‘int’)
-../../source/HMIHelperPVSL.c:284:28: error: invalid type argument of ‘->’ (have ‘int’)
 ../../source/HMIHelperPVSL.c: At top level:
 cc1: warning: unrecognized command line option "-Wno-unused-functio" [enabled by default]
 make[1]: *** [HMIHelperPVSL.o] Error 1
