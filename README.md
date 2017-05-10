@@ -1,6 +1,6 @@
 # rte-www
 Repository to hold the documentation (generated from texinfo) for acplt/rte.
-An link to documentation: [API Reference](http://acplt.github.io/rte-www/doc/current/)
+Link to documentation: [API Reference](http://acplt.github.io/rte-www/doc/current/)
 
 ## releases
 Here you'll find the latest 10 releases (of the 10 latest building commits) for linux (32 and 64 bit), windows 32 and Raspberry Pi.
