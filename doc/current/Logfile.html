@@ -1,53 +1,92 @@
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
 <head>
-<title>Logfile - LibOV API Reference</title>
-<meta http-equiv="Content-Type" content="text/html">
-<meta name="description" content="LibOV API Reference">
-<meta name="generator" content="makeinfo 4.13">
-<link title="Top" rel="start" href="index.html#Top">
-<link rel="prev" href="Library.html#Library" title="Library">
-<link rel="next" href="Malloc.html#Malloc" title="Malloc">
-<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
-<meta http-equiv="Content-Style-Type" content="text/css">
-<style type="text/css"><!--
-  pre.display { font-family:inherit }
-  pre.format  { font-family:inherit }
-  pre.smalldisplay { font-family:inherit; font-size:smaller }
-  pre.smallformat  { font-family:inherit; font-size:smaller }
-  pre.smallexample { font-size:smaller }
-  pre.smalllisp    { font-size:smaller }
-  span.sc    { font-variant:small-caps }
-  span.roman { font-family:serif; font-weight:normal; } 
-  span.sansserif { font-family:sans-serif; font-weight:normal; } 
---></style>
-</head>
-<body>
-<div class="node">
-<a name="Logfile"></a>
-<p>
-Next:&nbsp;<a rel="next" accesskey="n" href="Malloc.html#Malloc">Malloc</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="Library.html#Library">Library</a>,
-Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
-<hr>
-</div>
+<title>LibOV API Reference: Logfile</title>
 
+<meta name="description" content="LibOV API Reference: Logfile">
+<meta name="keywords" content="LibOV API Reference: Logfile">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="index.html#Top" rel="up" title="Top">
+<link href="ov_005flogfile_005fopen_0028_0029.html#ov_005flogfile_005fopen_0028_0029" rel="next" title="ov_logfile_open()">
+<link href="ov_005flibrary_005fsetenv_0028_0029.html#ov_005flibrary_005fsetenv_0028_0029" rel="prev" title="ov_library_setenv()">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Logfile"></a>
+<div class="header">
+<p>
+Next: <a href="Malloc.html#Malloc" accesskey="n" rel="next">Malloc</a>, Previous: <a href="Library.html#Library" accesskey="p" rel="prev">Library</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<a name="Functions-associated-with-logfiles"></a>
 <h2 class="chapter">13 Functions associated with logfiles</h2>
 
-<ul class="menu">
-<li><a accesskey="1" href="ov_005flogfile_005fopen_0028_0029.html#ov_005flogfile_005fopen_0028_0029">ov_logfile_open()</a>:           Open/create a logfile. 
-<li><a accesskey="2" href="ov_005flogfile_005fclose_0028_0029.html#ov_005flogfile_005fclose_0028_0029">ov_logfile_close()</a>:          Close the logfile. 
-<li><a accesskey="3" href="ov_005flogfile_005flogtostdout_0028_0029.html#ov_005flogfile_005flogtostdout_0028_0029">ov_logfile_logtostdout()</a>:    Log to stdout. 
-<li><a accesskey="4" href="ov_005flogfile_005flogtostderr_0028_0029.html#ov_005flogfile_005flogtostderr_0028_0029">ov_logfile_logtostderr()</a>:    Log to stderr. 
-<li><a accesskey="5" href="ov_005flogfile_005flogtontlog_0028_0029.html#ov_005flogfile_005flogtontlog_0028_0029">ov_logfile_logtontlog()</a>:     Log to the NT logger (Windows NT only). 
-<li><a accesskey="6" href="ov_005flogfile_005fprint_0028_0029.html#ov_005flogfile_005fprint_0028_0029">ov_logfile_print()</a>:          Print text to logfile. 
-<li><a accesskey="7" href="ov_005flogfile_005finfo_0028_0029.html#ov_005flogfile_005finfo_0028_0029">ov_logfile_info()</a>:           Print info to logfile. 
-<li><a accesskey="8" href="ov_005flogfile_005fdebug_0028_0029.html#ov_005flogfile_005fdebug_0028_0029">ov_logfile_debug()</a>:          Print debug info to logfile. 
-<li><a accesskey="9" href="ov_005flogfile_005fwarning_0028_0029.html#ov_005flogfile_005fwarning_0028_0029">ov_logfile_warning()</a>:        Print warning to logfile. 
-<li><a href="ov_005flogfile_005ferror_0028_0029.html#ov_005flogfile_005ferror_0028_0029">ov_logfile_error()</a>:          Print error to logfile. 
-<li><a href="ov_005flogfile_005falert_0028_0029.html#ov_005flogfile_005falert_0028_0029">ov_logfile_alert()</a>:          Print alert to logfile. 
-<li><a href="ov_005flogfile_005fgetmessages_0028_0029.html#ov_005flogfile_005fgetmessages_0028_0029">ov_logfile_getmessages()</a>:    Get messages from the logfile. 
-</ul>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="ov_005flogfile_005fopen_0028_0029.html#ov_005flogfile_005fopen_0028_0029" accesskey="1">ov_logfile_open()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Open/create a logfile.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flogfile_005fclose_0028_0029.html#ov_005flogfile_005fclose_0028_0029" accesskey="2">ov_logfile_close()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Close the logfile.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flogfile_005flogtostdout_0028_0029.html#ov_005flogfile_005flogtostdout_0028_0029" accesskey="3">ov_logfile_logtostdout()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Log to stdout.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flogfile_005flogtostderr_0028_0029.html#ov_005flogfile_005flogtostderr_0028_0029" accesskey="4">ov_logfile_logtostderr()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Log to stderr.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flogfile_005flogtontlog_0028_0029.html#ov_005flogfile_005flogtontlog_0028_0029" accesskey="5">ov_logfile_logtontlog()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Log to the NT logger (Windows NT only).
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flogfile_005fprint_0028_0029.html#ov_005flogfile_005fprint_0028_0029" accesskey="6">ov_logfile_print()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Print text to logfile.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flogfile_005finfo_0028_0029.html#ov_005flogfile_005finfo_0028_0029" accesskey="7">ov_logfile_info()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Print info to logfile.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flogfile_005fdebug_0028_0029.html#ov_005flogfile_005fdebug_0028_0029" accesskey="8">ov_logfile_debug()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Print debug info to logfile.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flogfile_005fwarning_0028_0029.html#ov_005flogfile_005fwarning_0028_0029" accesskey="9">ov_logfile_warning()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Print warning to logfile.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flogfile_005ferror_0028_0029.html#ov_005flogfile_005ferror_0028_0029">ov_logfile_error()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Print error to logfile.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flogfile_005falert_0028_0029.html#ov_005flogfile_005falert_0028_0029">ov_logfile_alert()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Print alert to logfile.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flogfile_005fgetmessages_0028_0029.html#ov_005flogfile_005fgetmessages_0028_0029">ov_logfile_getmessages()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Get messages from the logfile.
+</td></tr>
+</table>
 
-<!--  -->
-</body></html>
 
+
+
+
+</body>
+</html>

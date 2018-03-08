@@ -1,45 +1,76 @@
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
 <head>
-<title>Vector - LibOV API Reference</title>
-<meta http-equiv="Content-Type" content="text/html">
-<meta name="description" content="LibOV API Reference">
-<meta name="generator" content="makeinfo 4.13">
-<link title="Top" rel="start" href="index.html#Top">
-<link rel="prev" href="Variable.html#Variable" title="Variable">
-<link rel="next" href="Vendortree.html#Vendortree" title="Vendortree">
-<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
-<meta http-equiv="Content-Style-Type" content="text/css">
-<style type="text/css"><!--
-  pre.display { font-family:inherit }
-  pre.format  { font-family:inherit }
-  pre.smalldisplay { font-family:inherit; font-size:smaller }
-  pre.smallformat  { font-family:inherit; font-size:smaller }
-  pre.smallexample { font-size:smaller }
-  pre.smalllisp    { font-size:smaller }
-  span.sc    { font-variant:small-caps }
-  span.roman { font-family:serif; font-weight:normal; } 
-  span.sansserif { font-family:sans-serif; font-weight:normal; } 
---></style>
-</head>
-<body>
-<div class="node">
-<a name="Vector"></a>
-<p>
-Next:&nbsp;<a rel="next" accesskey="n" href="Vendortree.html#Vendortree">Vendortree</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="Variable.html#Variable">Variable</a>,
-Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
-<hr>
-</div>
+<title>LibOV API Reference: Vector</title>
 
+<meta name="description" content="LibOV API Reference: Vector">
+<meta name="keywords" content="LibOV API Reference: Vector">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="index.html#Top" rel="up" title="Top">
+<link href="ov_005fvector_005fsetstaticvalue_0028_0029.html#ov_005fvector_005fsetstaticvalue_0028_0029" rel="next" title="ov_vector_setstaticvalue()">
+<link href="ov_005fvariable_005fcanunload_0028_0029.html#ov_005fvariable_005fcanunload_0028_0029" rel="prev" title="ov_variable_canunload()">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Vector"></a>
+<div class="header">
+<p>
+Next: <a href="Vendortree.html#Vendortree" accesskey="n" rel="next">Vendortree</a>, Previous: <a href="Variable.html#Variable" accesskey="p" rel="prev">Variable</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<a name="Functions-associated-with-vector-variables"></a>
 <h2 class="chapter">27 Functions associated with vector variables</h2>
 
-<ul class="menu">
-<li><a accesskey="1" href="ov_005fvector_005fsetstaticvalue_0028_0029.html#ov_005fvector_005fsetstaticvalue_0028_0029">ov_vector_setstaticvalue()</a>:      Set the value of a static vector variable. 
-<li><a accesskey="2" href="ov_005fvector_005fsetdynamicvalue_0028_0029.html#ov_005fvector_005fsetdynamicvalue_0028_0029">ov_vector_setdynamicvalue()</a>:     Set the value of a dynamic vector variable. 
-<li><a accesskey="3" href="ov_005fvector_005fsetdynamicveclen_0028_0029.html#ov_005fvector_005fsetdynamicveclen_0028_0029">ov_vector_setdynamicveclen()</a>:    Set the vector length of a dynamic vector variable value. 
-<li><a accesskey="4" href="ov_005fvector_005fcompare_0028_0029.html#ov_005fvector_005fcompare_0028_0029">ov_vector_compare()</a>:             Compare two vector variable values. 
-</ul>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="ov_005fvector_005fsetstaticvalue_0028_0029.html#ov_005fvector_005fsetstaticvalue_0028_0029" accesskey="1">ov_vector_setstaticvalue()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Set the value of a static vector variable.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005fvector_005fsetdynamicvalue_0028_0029.html#ov_005fvector_005fsetdynamicvalue_0028_0029" accesskey="2">ov_vector_setdynamicvalue()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Set the value of a dynamic vector variable.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005fvector_005fsetdynamicveclen_0028_0029.html#ov_005fvector_005fsetdynamicveclen_0028_0029" accesskey="3">ov_vector_setdynamicveclen()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Set the vector length of a dynamic vector variable value.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005fvector_005fcompare_0028_0029.html#ov_005fvector_005fcompare_0028_0029" accesskey="4">ov_vector_compare()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Compare two vector variable values.
+</td></tr>
+</table>
 
-<!--  -->
-</body></html>
 
+
+
+
+</body>
+</html>

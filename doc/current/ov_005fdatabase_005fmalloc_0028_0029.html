@@ -1,78 +1,107 @@
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
 <head>
-<title>ov_database_malloc() - LibOV API Reference</title>
-<meta http-equiv="Content-Type" content="text/html">
-<meta name="description" content="LibOV API Reference">
-<meta name="generator" content="makeinfo 4.13">
-<link title="Top" rel="start" href="index.html#Top">
-<link rel="up" href="Database.html#Database" title="Database">
-<link rel="prev" href="ov_005fdatabase_005fshutdown_0028_0029.html#ov_005fdatabase_005fshutdown_0028_0029" title="ov_database_shutdown()">
-<link rel="next" href="ov_005fdatabase_005frealloc_0028_0029.html#ov_005fdatabase_005frealloc_0028_0029" title="ov_database_realloc()">
-<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
-<meta http-equiv="Content-Style-Type" content="text/css">
-<style type="text/css"><!--
-  pre.display { font-family:inherit }
-  pre.format  { font-family:inherit }
-  pre.smalldisplay { font-family:inherit; font-size:smaller }
-  pre.smallformat  { font-family:inherit; font-size:smaller }
-  pre.smallexample { font-size:smaller }
-  pre.smalllisp    { font-size:smaller }
-  span.sc    { font-variant:small-caps }
-  span.roman { font-family:serif; font-weight:normal; } 
-  span.sansserif { font-family:sans-serif; font-weight:normal; } 
---></style>
-</head>
-<body>
-<div class="node">
-<a name="ov_database_malloc()"></a>
-<a name="ov_005fdatabase_005fmalloc_0028_0029"></a>
-<p>
-Next:&nbsp;<a rel="next" accesskey="n" href="ov_005fdatabase_005frealloc_0028_0029.html#ov_005fdatabase_005frealloc_0028_0029">ov_database_realloc()</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="ov_005fdatabase_005fshutdown_0028_0029.html#ov_005fdatabase_005fshutdown_0028_0029">ov_database_shutdown()</a>,
-Up:&nbsp;<a rel="up" accesskey="u" href="Database.html#Database">Database</a>
-<hr>
-</div>
+<title>LibOV API Reference: ov_database_malloc()</title>
 
+<meta name="description" content="LibOV API Reference: ov_database_malloc()">
+<meta name="keywords" content="LibOV API Reference: ov_database_malloc()">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Database.html#Database" rel="up" title="Database">
+<link href="ov_005fdatabase_005frealloc_0028_0029.html#ov_005fdatabase_005frealloc_0028_0029" rel="next" title="ov_database_realloc()">
+<link href="ov_005fdatabase_005fshutdown_0028_0029.html#ov_005fdatabase_005fshutdown_0028_0029" rel="prev" title="ov_database_shutdown()">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="ov_005fdatabase_005fmalloc_0028_0029"></a>
+<div class="header">
+<p>
+Next: <a href="ov_005fdatabase_005frealloc_0028_0029.html#ov_005fdatabase_005frealloc_0028_0029" accesskey="n" rel="next">ov_database_realloc()</a>, Previous: <a href="ov_005fdatabase_005fshutdown_0028_0029.html#ov_005fdatabase_005fshutdown_0028_0029" accesskey="p" rel="prev">ov_database_shutdown()</a>, Up: <a href="Database.html#Database" accesskey="u" rel="up">Database</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<a name="Allocate-persistent-database-memory"></a>
 <h3 class="section">10.7 Allocate persistent database memory</h3>
 
 <p>Similar to the ANSI C <code>malloc()</code> function, <code>ov_database_malloc()</code>
 allocates a memory block of a given size and returns its pointer. While
-<code>malloc()</code> allocates the memory on the system heap,
+<code>malloc()</code> allocates the memory on the system heap, 
 <code>ov_database_malloc()</code> allocates the memory in the persistent database.
-
-   <p>If there's no memory block available in the database, the system tries to
+</p>
+<p>If there&rsquo;s no memory block available in the database, the system tries to
 increase the database file and map the new part of the file to memory. If
 does not succeed, the function fails.
-
-   <p><strong>Header file</strong>
-
-   <p><code>#include "libov/ov_database.h"</code>
-
-   <p><strong>Declaration</strong>
-
+</p>
+<p><strong>Header file</strong>
+</p>
+<p><code>#include &quot;libov/ov_database.h&quot;</code>
+</p>
+<p><strong>Declaration</strong>
+</p>
+<div class="format">
 <pre class="format"><tt>OV_DLLFNCEXPORT OV_POINTER ov_database_malloc(
     OV_UINT size
 );</tt>
-</pre>
-   <p><strong>Parameters</strong>
+</pre></div>
 
-     <dl>
-<dt><code>size</code><dd>The amount of persistent memory to allocate in the database (in bytes). 
+<p><strong>Parameters</strong>
+</p>
+<dl compact="compact">
+<dt><code><code>size</code></code></dt>
+<dd><p>The amount of persistent memory to allocate in the database (in bytes).
+</p></dd>
 </dl>
 
-   <p><strong>Return value</strong>
-
-   <p>The function returns a pointer to the allocated memory block if it succeeds
+<p><strong>Return value</strong>
+</p>
+<p>The function returns a pointer to the allocated memory block if it succeeds 
 or <code>NULL</code> otherwise.
-
-   <p><strong>Remarks</strong>
-
-   <p>Even if <code>ov_database_getfree()</code> returns a value greater than
+</p>
+<p><strong>Remarks</strong>
+</p>
+<p>Even if <code>ov_database_getfree()</code> returns a value greater than 
 <code>size</code> the function may return <code>NULL</code> if no block of the
 given size is available due to fragmentation.
+</p>
+<p>If no database is mapped, the function always returns <code>NULL</code>.
+</p>
 
-   <p>If no database is mapped, the function always returns <code>NULL</code>.
 
-<!--  -->
-   </body></html>
 
+
+</body>
+</html>

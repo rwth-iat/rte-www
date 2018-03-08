@@ -1,84 +1,121 @@
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
 <head>
-<title>Supervise - LibOV API Reference</title>
-<meta http-equiv="Content-Type" content="text/html">
-<meta name="description" content="LibOV API Reference">
-<meta name="generator" content="makeinfo 4.13">
-<link title="Top" rel="start" href="index.html#Top">
-<link rel="prev" href="Structure.html#Structure" title="Structure">
-<link rel="next" href="Time.html#Time" title="Time">
-<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
-<meta http-equiv="Content-Style-Type" content="text/css">
-<style type="text/css"><!--
-  pre.display { font-family:inherit }
-  pre.format  { font-family:inherit }
-  pre.smalldisplay { font-family:inherit; font-size:smaller }
-  pre.smallformat  { font-family:inherit; font-size:smaller }
-  pre.smallexample { font-size:smaller }
-  pre.smalllisp    { font-size:smaller }
-  span.sc    { font-variant:small-caps }
-  span.roman { font-family:serif; font-weight:normal; } 
-  span.sansserif { font-family:sans-serif; font-weight:normal; } 
---></style>
-</head>
-<body>
-<div class="node">
-<a name="Supervise"></a>
-<p>
-Next:&nbsp;<a rel="next" accesskey="n" href="Time.html#Time">Time</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="Structure.html#Structure">Structure</a>,
-Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
-<hr>
-</div>
+<title>LibOV API Reference: Supervise</title>
 
+<meta name="description" content="LibOV API Reference: Supervise">
+<meta name="keywords" content="LibOV API Reference: Supervise">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="index.html#Top" rel="up" title="Top">
+<link href="Example-code.html#Example-code" rel="next" title="Example code">
+<link href="ov_005fstructure_005fcanunload_0028_0029.html#ov_005fstructure_005fcanunload_0028_0029" rel="prev" title="ov_structure_canunload()">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Supervise"></a>
+<div class="header">
+<p>
+Next: <a href="Time.html#Time" accesskey="n" rel="next">Time</a>, Previous: <a href="Structure.html#Structure" accesskey="p" rel="prev">Structure</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<a name="Execution-time-supervision-functions"></a>
 <h2 class="chapter">24 Execution time supervision functions</h2>
 
-<p>The purpose of these functions is to supervise the duration of execution of methods implemented by the user. 
+<p>The purpose of these functions is to supervise the duration of execution of methods implemented by the user.
 Using this mechanism, the duration of execution of a certain function is limited to a certain value, which may
-be freely chosen. Before the function is actually called, a timer is started with the duration limit as timeout. 
+be freely chosen. Before the function is actually called, a timer is started with the duration limit as timeout.
 Then the function is called. If the timer does not time out during the function call, the timer will be stopped and
 nothing else happens. But if there is a timeout, the function will be aborted by brute force and the function will
 return immediately. Note that this may have side effects!
-
-   <p><strong>Attention:</strong>
-     <ul>
-<li>The supervision code is <em>not reentrant</em>. If you call <code>ov_supervise_start()</code> while the supervision mechanism
+</p>
+<p><strong>Attention:</strong>
+</p><ul>
+<li> The supervision code is <em>not reentrant</em>. If you call <code>ov_supervise_start()</code> while the supervision mechanism
 is already running, you will get an error.
 
-     <li>Under certain circumstances variables of the function calling the supervision functions have to be declared as volatile,
+</li><li> Under certain circumstances variables of the function calling the supervision functions have to be declared as volatile,
 because they may be optimized away when the <code>longjmp()</code> function is called.
 
-     <li>Under Windows NT each call of the supervise routines has to come from the <em>same thread</em>. 
-</ul>
+</li><li> Under Windows NT each call of the supervise routines has to come from the <em>same thread</em>.
+</li></ul>
 
-   <p><strong>Resources used:</strong>
-     <ul>
-<li>Unix: <code>ITIMER_REAL</code> and <code>SIGALRM</code>
+<p><strong>Resources used:</strong>
+</p><ul>
+<li> Unix: <code>ITIMER_REAL</code> and <code>SIGALRM</code>
 
-     <li>NT: an invisible timer window
-</ul>
+</li><li> NT: an invisible timer window
+</li></ul>
 
-   <p><strong>Side effects:</strong>
+<p><strong>Side effects:</strong>
 Currently unknown &ndash; it seems to work, but you should <em>not rely on it</em>.
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="Example-code.html#Example-code" accesskey="1">Example code</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">for the execution time supervision functions.
+</td></tr>
+</table>
 
-<ul class="menu">
-<li><a accesskey="1" href="Example-code.html#Example-code">Example code</a>:             for the execution time supervision functions. 
-</ul>
+<p>Datatypes:
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="OV_005fJUMPBUFFER.html#OV_005fJUMPBUFFER" accesskey="1">OV_JUMPBUFFER</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Datatype describing the stack frame before calling the user function.
+</td></tr>
+</table>
 
-   <p>Datatypes:
+<p>Functions:
+</p>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="ov_005fsupervise_005fsetjmp_0028_0029.html#ov_005fsupervise_005fsetjmp_0028_0029" accesskey="1">ov_supervise_setjmp()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Wrapper macro for the setjmp function/macro.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005fsupervise_005fstart_0028_0029.html#ov_005fsupervise_005fstart_0028_0029" accesskey="2">ov_supervise_start()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Start the supervision of a user function.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005fsupervise_005fend_0028_0029.html#ov_005fsupervise_005fend_0028_0029" accesskey="3">ov_supervise_end()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Finish supervising a user function.
+</td></tr>
+</table>
 
-<ul class="menu">
-<li><a accesskey="1" href="OV_005fJUMPBUFFER.html#OV_005fJUMPBUFFER">OV_JUMPBUFFER</a>:            Datatype describing the stack frame before calling the user function. 
-</ul>
 
-   <p>Functions:
+<hr>
+<div class="header">
+<p>
+Next: <a href="Time.html#Time" accesskey="n" rel="next">Time</a>, Previous: <a href="Structure.html#Structure" accesskey="p" rel="prev">Structure</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
 
-<ul class="menu">
-<li><a accesskey="1" href="ov_005fsupervise_005fsetjmp_0028_0029.html#ov_005fsupervise_005fsetjmp_0028_0029">ov_supervise_setjmp()</a>:    Wrapper macro for the setjmp function/macro. 
-<li><a accesskey="2" href="ov_005fsupervise_005fstart_0028_0029.html#ov_005fsupervise_005fstart_0028_0029">ov_supervise_start()</a>:     Start the supervision of a user function. 
-<li><a accesskey="3" href="ov_005fsupervise_005fend_0028_0029.html#ov_005fsupervise_005fend_0028_0029">ov_supervise_end()</a>:       Finish supervising a user function. 
-</ul>
 
-<!--  -->
-   </body></html>
 
+</body>
+</html>

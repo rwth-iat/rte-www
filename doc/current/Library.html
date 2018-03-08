@@ -1,49 +1,84 @@
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
 <head>
-<title>Library - LibOV API Reference</title>
-<meta http-equiv="Content-Type" content="text/html">
-<meta name="description" content="LibOV API Reference">
-<meta name="generator" content="makeinfo 4.13">
-<link title="Top" rel="start" href="index.html#Top">
-<link rel="prev" href="Element.html#Element" title="Element">
-<link rel="next" href="Logfile.html#Logfile" title="Logfile">
-<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
-<meta http-equiv="Content-Style-Type" content="text/css">
-<style type="text/css"><!--
-  pre.display { font-family:inherit }
-  pre.format  { font-family:inherit }
-  pre.smalldisplay { font-family:inherit; font-size:smaller }
-  pre.smallformat  { font-family:inherit; font-size:smaller }
-  pre.smallexample { font-size:smaller }
-  pre.smalllisp    { font-size:smaller }
-  span.sc    { font-variant:small-caps }
-  span.roman { font-family:serif; font-weight:normal; } 
-  span.sansserif { font-family:sans-serif; font-weight:normal; } 
---></style>
-</head>
-<body>
-<div class="node">
-<a name="Library"></a>
-<p>
-Next:&nbsp;<a rel="next" accesskey="n" href="Logfile.html#Logfile">Logfile</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="Element.html#Element">Element</a>,
-Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
-<hr>
-</div>
+<title>LibOV API Reference: Library</title>
 
+<meta name="description" content="LibOV API Reference: Library">
+<meta name="keywords" content="LibOV API Reference: Library">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="index.html#Top" rel="up" title="Top">
+<link href="ov_005flibrary_005fsearch_0028_0029.html#ov_005flibrary_005fsearch_0028_0029" rel="next" title="ov_library_search()">
+<link href="ov_005felement_005fgetidentifier_0028_0029.html#ov_005felement_005fgetidentifier_0028_0029" rel="prev" title="ov_element_getidentifier()">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="Library"></a>
+<div class="header">
+<p>
+Next: <a href="Logfile.html#Logfile" accesskey="n" rel="next">Logfile</a>, Previous: <a href="Element.html#Element" accesskey="p" rel="prev">Element</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<a name="Functions-associated-with-libraries"></a>
 <h2 class="chapter">12 Functions associated with libraries</h2>
 
-<ul class="menu">
-<li><a accesskey="1" href="ov_005flibrary_005fsearch_0028_0029.html#ov_005flibrary_005fsearch_0028_0029">ov_library_search()</a>:       Search for a library object with given identifier. 
-<li><a accesskey="2" href="ov_005flibrary_005fopen_0028_0029.html#ov_005flibrary_005fopen_0028_0029">ov_library_open()</a>:         Open a library which is either a DLL/shared library or statically linked. 
-<li><a accesskey="3" href="ov_005flibrary_005fclose_0028_0029.html#ov_005flibrary_005fclose_0028_0029">ov_library_close()</a>:        Close a library file if it is a DLL/shared library. 
-<li><a accesskey="4" href="ov_005flibrary_005fload_0028_0029.html#ov_005flibrary_005fload_0028_0029">ov_library_load()</a>:         Load a library and its definitions into the database. 
-<li><a accesskey="5" href="ov_005flibrary_005fcompare_0028_0029.html#ov_005flibrary_005fcompare_0028_0029">ov_library_compare()</a>:      Compare a library with its definition. 
-<li><a accesskey="6" href="ov_005flibrary_005fcanunload_0028_0029.html#ov_005flibrary_005fcanunload_0028_0029">ov_library_canunload()</a>:    Test if we can unload a library and its definitions from the database. 
-<li><a accesskey="7" href="ov_005flibrary_005fgetenv_0028_0029.html#ov_005flibrary_005fgetenv_0028_0029">ov_library_getenv()</a>:       Get environment variable with library path. 
-<li><a accesskey="8" href="ov_005flibrary_005fsetenv_0028_0029.html#ov_005flibrary_005fsetenv_0028_0029">ov_library_setenv()</a>:       Set environment variable with library path. 
-</ul>
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top">&bull; <a href="ov_005flibrary_005fsearch_0028_0029.html#ov_005flibrary_005fsearch_0028_0029" accesskey="1">ov_library_search()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Search for a library object with given identifier.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flibrary_005fopen_0028_0029.html#ov_005flibrary_005fopen_0028_0029" accesskey="2">ov_library_open()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Open a library which is either a DLL/shared library or statically linked.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flibrary_005fclose_0028_0029.html#ov_005flibrary_005fclose_0028_0029" accesskey="3">ov_library_close()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Close a library file if it is a DLL/shared library.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flibrary_005fload_0028_0029.html#ov_005flibrary_005fload_0028_0029" accesskey="4">ov_library_load()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Load a library and its definitions into the database.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flibrary_005fcompare_0028_0029.html#ov_005flibrary_005fcompare_0028_0029" accesskey="5">ov_library_compare()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Compare a library with its definition.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flibrary_005fcanunload_0028_0029.html#ov_005flibrary_005fcanunload_0028_0029" accesskey="6">ov_library_canunload()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Test if we can unload a library and its definitions from the database.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flibrary_005fgetenv_0028_0029.html#ov_005flibrary_005fgetenv_0028_0029" accesskey="7">ov_library_getenv()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Get environment variable with library path.
+</td></tr>
+<tr><td align="left" valign="top">&bull; <a href="ov_005flibrary_005fsetenv_0028_0029.html#ov_005flibrary_005fsetenv_0028_0029" accesskey="8">ov_library_setenv()</a>:</td><td>&nbsp;&nbsp;</td><td align="left" valign="top">Set environment variable with library path.
+</td></tr>
+</table>
 
-<!--  -->
-</body></html>
 
+
+
+
+</body>
+</html>

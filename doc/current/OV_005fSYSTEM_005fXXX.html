@@ -1,65 +1,90 @@
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
 <head>
-<title>OV_SYSTEM_XXX - LibOV API Reference</title>
-<meta http-equiv="Content-Type" content="text/html">
-<meta name="description" content="LibOV API Reference">
-<meta name="generator" content="makeinfo 4.13">
-<link title="Top" rel="start" href="index.html#Top">
-<link rel="up" href="Preprocessor-symbols.html#Preprocessor-symbols" title="Preprocessor symbols">
-<link rel="prev" href="OV_005fCOMPILER_005fXXX.html#OV_005fCOMPILER_005fXXX" title="OV_COMPILER_XXX">
-<link rel="next" href="OV_005fDEBUG.html#OV_005fDEBUG" title="OV_DEBUG">
-<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
-<meta http-equiv="Content-Style-Type" content="text/css">
-<style type="text/css"><!--
-  pre.display { font-family:inherit }
-  pre.format  { font-family:inherit }
-  pre.smalldisplay { font-family:inherit; font-size:smaller }
-  pre.smallformat  { font-family:inherit; font-size:smaller }
-  pre.smallexample { font-size:smaller }
-  pre.smalllisp    { font-size:smaller }
-  span.sc    { font-variant:small-caps }
-  span.roman { font-family:serif; font-weight:normal; } 
-  span.sansserif { font-family:sans-serif; font-weight:normal; } 
---></style>
-</head>
-<body>
-<div class="node">
-<a name="OV_SYSTEM_XXX"></a>
-<a name="OV_005fSYSTEM_005fXXX"></a>
-<p>
-Next:&nbsp;<a rel="next" accesskey="n" href="OV_005fDEBUG.html#OV_005fDEBUG">OV_DEBUG</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="OV_005fCOMPILER_005fXXX.html#OV_005fCOMPILER_005fXXX">OV_COMPILER_XXX</a>,
-Up:&nbsp;<a rel="up" accesskey="u" href="Preprocessor-symbols.html#Preprocessor-symbols">Preprocessor symbols</a>
-<hr>
-</div>
+<title>LibOV API Reference: OV_SYSTEM_XXX</title>
 
+<meta name="description" content="LibOV API Reference: OV_SYSTEM_XXX">
+<meta name="keywords" content="LibOV API Reference: OV_SYSTEM_XXX">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="Preprocessor-symbols.html#Preprocessor-symbols" rel="up" title="Preprocessor symbols">
+<link href="OV_005fDEBUG.html#OV_005fDEBUG" rel="next" title="OV_DEBUG">
+<link href="OV_005fCOMPILER_005fXXX.html#OV_005fCOMPILER_005fXXX" rel="prev" title="OV_COMPILER_XXX">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="OV_005fSYSTEM_005fXXX"></a>
+<div class="header">
+<p>
+Next: <a href="OV_005fDEBUG.html#OV_005fDEBUG" accesskey="n" rel="next">OV_DEBUG</a>, Previous: <a href="OV_005fCOMPILER_005fXXX.html#OV_005fCOMPILER_005fXXX" accesskey="p" rel="prev">OV_COMPILER_XXX</a>, Up: <a href="Preprocessor-symbols.html#Preprocessor-symbols" accesskey="u" rel="up">Preprocessor symbols</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<a name="Definition-of-the-target-operating-system"></a>
 <h3 class="section">3.2 Definition of the target operating system</h3>
 
-<p>The preprocessor symbol <code>OV_SYSTEM_</code><em>SYSTEM</em> defines for which
-target operating system the library is compiled (symbol is defined as
-<code>1</code>) and for which ones not (symbol is defined as <code>0</code>).
-
-   <p>If the target operating system is any Unix system (e.g. Linux, HP-UX,
-Solaris, ...), the more generic symbol <code>OV_SYSTEM_UNIX</code> is defined
-as <code>1</code> and defined as <code>0</code> otherwise.
-
-   <p>For instance, if you are compiling on a Linux system, the following
+<p>The preprocessor symbol <code>OV_SYSTEM_<em>SYSTEM</em></code> defines for which 
+target operating system the library is compiled (symbol is defined as 
+<code>1</code>) and for which ones not (symbol is defined as <code>0</code>). 
+</p>
+<p>If the target operating system is any Unix system (e.g. Linux, HP-UX, 
+Solaris, ...), the more generic symbol <code>OV_SYSTEM_UNIX</code> is defined 
+as <code>1</code> and defined as <code>0</code> otherwise. 
+</p>
+<p>For instance, if you are compiling on a Linux system, the following 
 symbols are defined:
-
+</p>
+<div class="format">
 <pre class="format"><tt>#define OV_SYSTEM_UNIX  1
 #define OV_SYSTEM_LINUX 1
 #define OV_SYSTEM_NT    0</tt>
-</pre>
-   <p>Usually, you should define the appropriate target operating system when
+</pre></div>
+
+<p>Usually, you should define the appropriate target operating system when
 calling the compiler, e.g.
-
-   <p><code>gcc -Wall -O2 -DOV_SYSTEM_LINUX=1 -c foo.c -o foo.o</code>
-
-   <p>All <code>OV_SYSTEM_</code><em>SYSTEM</em> symbols not defined are automatically
-defined as <code>0</code> in the configuration header file
+</p>
+<p><code>gcc -Wall -O2 -DOV_SYSTEM_LINUX=1 -c foo.c -o foo.o</code>
+</p>
+<p>All <code>OV_SYSTEM_<em>SYSTEM</em></code> symbols not defined are automatically
+defined as <code>0</code> in the configuration header file 
 <code>libov/ov_config.h</code>.
-
-   <p>Available Symbols:
+</p>
+<p>Available Symbols:
+</p><div class="format">
 <pre class="format"><tt>OV_SYSTEM_NT
 OV_SYSTEM_HPUX
 OV_SYSTEM_LINUX
@@ -67,7 +92,11 @@ OV_SYSTEM_OPENVMS
 OV_SYSTEM_SOLARIS
 OV_SYSTEM_MC164
 OV_SYSTEM_RMOS</tt>
-</pre>
-   <!--  -->
-   </body></html>
+</pre></div>
 
+
+
+
+
+</body>
+</html>

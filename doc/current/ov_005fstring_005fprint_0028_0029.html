@@ -1,64 +1,91 @@
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Created by GNU Texinfo 5.2, http://www.gnu.org/software/texinfo/ -->
 <head>
-<title>ov_string_print() - LibOV API Reference</title>
-<meta http-equiv="Content-Type" content="text/html">
-<meta name="description" content="LibOV API Reference">
-<meta name="generator" content="makeinfo 4.13">
-<link title="Top" rel="start" href="index.html#Top">
-<link rel="up" href="String.html#String" title="String">
-<link rel="prev" href="ov_005fstring_005fappend_0028_0029.html#ov_005fstring_005fappend_0028_0029" title="ov_string_append()">
-<link rel="next" href="ov_005fstring_005fmatch_0028_0029.html#ov_005fstring_005fmatch_0028_0029" title="ov_string_match()">
-<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
-<meta http-equiv="Content-Style-Type" content="text/css">
-<style type="text/css"><!--
-  pre.display { font-family:inherit }
-  pre.format  { font-family:inherit }
-  pre.smalldisplay { font-family:inherit; font-size:smaller }
-  pre.smallformat  { font-family:inherit; font-size:smaller }
-  pre.smallexample { font-size:smaller }
-  pre.smalllisp    { font-size:smaller }
-  span.sc    { font-variant:small-caps }
-  span.roman { font-family:serif; font-weight:normal; } 
-  span.sansserif { font-family:sans-serif; font-weight:normal; } 
---></style>
-</head>
-<body>
-<div class="node">
-<a name="ov_string_print()"></a>
-<a name="ov_005fstring_005fprint_0028_0029"></a>
-<p>
-Next:&nbsp;<a rel="next" accesskey="n" href="ov_005fstring_005fmatch_0028_0029.html#ov_005fstring_005fmatch_0028_0029">ov_string_match()</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="ov_005fstring_005fappend_0028_0029.html#ov_005fstring_005fappend_0028_0029">ov_string_append()</a>,
-Up:&nbsp;<a rel="up" accesskey="u" href="String.html#String">String</a>
-<hr>
-</div>
+<title>LibOV API Reference: ov_string_print()</title>
 
+<meta name="description" content="LibOV API Reference: ov_string_print()">
+<meta name="keywords" content="LibOV API Reference: ov_string_print()">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="String.html#String" rel="up" title="String">
+<link href="ov_005fstring_005fmatch_0028_0029.html#ov_005fstring_005fmatch_0028_0029" rel="next" title="ov_string_match()">
+<link href="ov_005fstring_005fappend_0028_0029.html#ov_005fstring_005fappend_0028_0029" rel="prev" title="ov_string_append()">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.indentedblock {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smallindentedblock {margin-left: 3.2em; font-size: smaller}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style:oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:nowrap}
+span.nolinebreak {white-space:nowrap}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+<a name="ov_005fstring_005fprint_0028_0029"></a>
+<div class="header">
+<p>
+Next: <a href="ov_005fstring_005fmatch_0028_0029.html#ov_005fstring_005fmatch_0028_0029" accesskey="n" rel="next">ov_string_match()</a>, Previous: <a href="ov_005fstring_005fappend_0028_0029.html#ov_005fstring_005fappend_0028_0029" accesskey="p" rel="prev">ov_string_append()</a>, Up: <a href="String.html#String" accesskey="u" rel="up">String</a> &nbsp; [<a href="ov_005fvendortree_005fgetstructures_0028_0029.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>]</p>
+</div>
+<hr>
+<a name="Formatted-print-to-a-string"></a>
 <h3 class="section">22.6 Formatted print to a string</h3>
 
 <p><strong>Header file</strong>
-
-   <p><code>#include "libov/ov_string.h"</code>
-
-   <p><strong>Declaration</strong>
-
+</p>
+<p><code>#include &quot;libov/ov_string.h&quot;</code>
+</p>
+<p><strong>Declaration</strong>
+</p>
+<div class="format">
 <pre class="format"><tt>OV_DLLFNCEXPORT OV_RESULT ov_string_print(
     OV_STRING         *pstring,
     const OV_STRING   format,
     ...
 );</tt>
-</pre>
-   <p><strong>Parameters</strong>
+</pre></div>
 
-     <dl>
-<dt><code>pstring</code>
-<br><dt><code>format</code>
-<br><dt><code>...</code><dd>
+<p><strong>Parameters</strong>
+</p>
+<dl compact="compact">
+<dt><code>pstring</code></dt>
+<dt><code>format</code></dt>
+<dt><code>...</code></dt>
 </dl>
 
-   <p><strong>Return value</strong>
+<p><strong>Return value</strong>
+</p>
+<p><strong>Remarks</strong>
+</p>
 
-   <p><strong>Remarks</strong>
 
-<!--  -->
-   </body></html>
 
+
+</body>
+</html>
