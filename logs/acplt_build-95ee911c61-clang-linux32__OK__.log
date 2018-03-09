@@ -592,18 +592,18 @@ fb.c:1956:16: warning: illegal character encoding in string literal [-Winvalid-s
                ^~~~
 1 warning generated.
 clang -g -std=c99 -m32 -fPIC -Wall -Wno-attributes  -DFB_OEM_LICENCE=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_fb=ov_library_open_fb_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o ControlChart.o ../../source/ControlChart.c
-../../source/ControlChart.c:267:24: warning: unused variable 'en' [-Wunused-variable]
-        OV_INSTPTR_fb_intport en=NULL;
-                              ^
-../../source/ControlChart.c:265:29: warning: unused variable 'pinst' [-Wunused-variable]
-        OV_INSTPTR_fb_controlchart pinst = Ov_StaticPtrCast(fb_controlchart, pfb);
-                                   ^
 ../../source/ControlChart.c:268:27: warning: unused variable 'stringport' [-Wunused-variable]
         OV_INSTPTR_fb_stringport stringport=NULL;
                                  ^
 ../../source/ControlChart.c:266:13: warning: unused variable 'iterator' [-Wunused-variable]
         OV_UINT    iterator = 0;
                    ^
+../../source/ControlChart.c:267:24: warning: unused variable 'en' [-Wunused-variable]
+        OV_INSTPTR_fb_intport en=NULL;
+                              ^
+../../source/ControlChart.c:265:29: warning: unused variable 'pinst' [-Wunused-variable]
+        OV_INSTPTR_fb_controlchart pinst = Ov_StaticPtrCast(fb_controlchart, pfb);
+                                   ^
 4 warnings generated.
 clang -g -std=c99 -m32 -fPIC -Wall -Wno-attributes  -DFB_OEM_LICENCE=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_fb=ov_library_open_fb_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o fb_connection.o ../../source/fb_connection.c
 clang -g -std=c99 -m32 -fPIC -Wall -Wno-attributes  -DFB_OEM_LICENCE=1 -Wextra -Wno-unused-parameter -fvisibility=hidden -DOV_SYSTEM_LINUX=1 -DPLT_SYSTEM_LINUX=1 -Dov_library_open_fb=ov_library_open_fb_old -I../../../../system/sysdevbase/ov/include/ -I../../../../system/sysdevbase/ov/model/ -I../../../ksbase/model/ -I../../../ksbase/include/ -I../../model/ -I../../include/ -I. -c -o fb_connectionlinks.o ../../source/fb_connectionlinks.c
