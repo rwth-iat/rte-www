@@ -1,0 +1,1018 @@
+make: Entering directory `/home/travis/build/acplt/rte/build/acplt.build/base/ov/source/libml'
+i686-w64-mingw32-gcc -m32 -Wall -O0 -g -DML_SYSTEM_UNIX -DDBG_TO_STDERR=0 -fPIC  -I. -c ml_malloc.c
+ml_malloc.c:1:0: warning: -fPIC ignored for target (all code is position independent) [enabled by default]
+ /******************************************************************************
+ ^
+i686-w64-mingw32-gcc -m32 -Wall -O0 -g -DML_SYSTEM_UNIX -DDBG_TO_STDERR=0 -fPIC  -I. -c ml_free.c
+ml_free.c:1:0: warning: -fPIC ignored for target (all code is position independent) [enabled by default]
+ /******************************************************************************
+ ^
+i686-w64-mingw32-gcc -m32 -Wall -O0 -g -DML_SYSTEM_UNIX -DDBG_TO_STDERR=0 -fPIC  -I. -c ml_realloc.c
+ml_realloc.c:1:0: warning: -fPIC ignored for target (all code is position independent) [enabled by default]
+ /******************************************************************************
+ ^
+ml_realloc.c: In function ‘ml_rundupFileSize’:
+ml_realloc.c:113:5: warning: implicit declaration of function ‘getpagesize’ [-Wimplicit-function-declaration]
+     pageSize = getpagesize();
+     ^
+i686-w64-mingw32-ar crv libml.a ml_malloc.o ml_free.o ml_realloc.o
+a - ml_malloc.o
+a - ml_free.o
+a - ml_realloc.o
+i686-w64-mingw32-ranlib libml.a
+make: Leaving directory `/home/travis/build/acplt/rte/build/acplt.build/base/ov/source/libml'
+i686-w64-mingw32-gcc -c -I..    clnt_raw.c
+clnt_raw.c:59:8: warning: extra tokens at end of #endif directive [enabled by default]
+ #endif WIN32
+        ^
+i686-w64-mingw32-gcc -c -I..    xdr.c
+xdr.c:56:7: warning: conflicting types for built-in function ‘malloc’ [enabled by default]
+ char *malloc();
+       ^
+In file included from xdr.c:58:0:
+xdr.c: In function ‘xdr_bytes’:
+../rpc/types.h:66:30: warning: incompatible implicit declaration of built-in function ‘free’ [enabled by default]
+ #define mem_free(ptr, bsize) free(ptr)
+                              ^
+xdr.c:439:4: note: in expansion of macro ‘mem_free’
+    mem_free(sp, nodesize);
+    ^
+xdr.c: In function ‘xdr_string’:
+xdr.c:539:10: warning: incompatible implicit declaration of built-in function ‘strlen’ [enabled by default]
+   size = strlen(sp);
+          ^
+In file included from xdr.c:58:0:
+../rpc/types.h:66:30: warning: incompatible implicit declaration of built-in function ‘free’ [enabled by default]
+ #define mem_free(ptr, bsize) free(ptr)
+                              ^
+xdr.c:576:3: note: in expansion of macro ‘mem_free’
+   mem_free(sp, nodesize);
+   ^
+i686-w64-mingw32-gcc -c -I..    clnt_tcp.c
+clnt_tcp.c: In function ‘clnttcp_create’:
+clnt_tcp.c:193:69: warning: passing argument 4 of ‘setsockopt’ from incompatible pointer type [enabled by default]
+   setsockopt(*sockp, SOL_SOCKET, SO_LINGER, &slinger, sizeof(struct linger));
+                                                                     ^
+In file included from /usr/share/mingw-w64/include/windows.h:92:0,
+                 from ../rpc/rpc.h:62,
+                 from clnt_tcp.c:65:
+/usr/share/mingw-w64/include/winsock.h:303:34: note: expected ‘const char *’ but argument is of type ‘struct linger *’
+   WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+                                  ^
+clnt_tcp.c: In function ‘readtcp’:
+clnt_tcp.c:477:11: warning: passing argument 3 of ‘select’ from incompatible pointer type [enabled by default]
+           &(ct->ct_wait))) {
+           ^
+In file included from /usr/share/mingw-w64/include/windows.h:92:0,
+                 from ../rpc/rpc.h:62,
+                 from clnt_tcp.c:65:
+/usr/share/mingw-w64/include/winsock.h:299:34: note: expected ‘struct fd_set *’ but argument is of type ‘int *’
+   WINSOCK_API_LINKAGE int WSAAPI select(int nfds,fd_set *readfds,fd_set *writefds,fd_set *exceptfds,const PTIMEVAL timeout);
+                                  ^
+clnt_tcp.c:477:11: warning: passing argument 4 of ‘select’ from incompatible pointer type [enabled by default]
+           &(ct->ct_wait))) {
+           ^
+In file included from /usr/share/mingw-w64/include/windows.h:92:0,
+                 from ../rpc/rpc.h:62,
+                 from clnt_tcp.c:65:
+/usr/share/mingw-w64/include/winsock.h:299:34: note: expected ‘struct fd_set *’ but argument is of type ‘int *’
+   WINSOCK_API_LINKAGE int WSAAPI select(int nfds,fd_set *readfds,fd_set *writefds,fd_set *exceptfds,const PTIMEVAL timeout);
+                                  ^
+i686-w64-mingw32-gcc -c -I..    clnt_udp.c
+clnt_udp.c: In function ‘clntudp_bufcreate’:
+clnt_udp.c:213:3: warning: passing argument 3 of ‘ioctlsocket’ from incompatible pointer type [enabled by default]
+   (void)ioctlsocket(*sockp, FIONBIO, (char *) &dontblock);
+   ^
+In file included from /usr/share/mingw-w64/include/windows.h:92:0,
+                 from ../rpc/rpc.h:62,
+                 from clnt_udp.c:52:
+/usr/share/mingw-w64/include/winsock.h:281:34: note: expected ‘u_long *’ but argument is of type ‘char *’
+   WINSOCK_API_LINKAGE int WSAAPI ioctlsocket(SOCKET s,__LONG32 cmd,u_long *argp);
+                                  ^
+clnt_udp.c: In function ‘clntudp_call’:
+clnt_udp.c:338:11: warning: passing argument 3 of ‘select’ from incompatible pointer type [enabled by default]
+           (int *)NULL, &(cu->cu_wait))) {
+           ^
+In file included from /usr/share/mingw-w64/include/windows.h:92:0,
+                 from ../rpc/rpc.h:62,
+                 from clnt_udp.c:52:
+/usr/share/mingw-w64/include/winsock.h:299:34: note: expected ‘struct fd_set *’ but argument is of type ‘int *’
+   WINSOCK_API_LINKAGE int WSAAPI select(int nfds,fd_set *readfds,fd_set *writefds,fd_set *exceptfds,const PTIMEVAL timeout);
+                                  ^
+clnt_udp.c:338:11: warning: passing argument 4 of ‘select’ from incompatible pointer type [enabled by default]
+           (int *)NULL, &(cu->cu_wait))) {
+           ^
+In file included from /usr/share/mingw-w64/include/windows.h:92:0,
+                 from ../rpc/rpc.h:62,
+                 from clnt_udp.c:52:
+/usr/share/mingw-w64/include/winsock.h:299:34: note: expected ‘struct fd_set *’ but argument is of type ‘int *’
+   WINSOCK_API_LINKAGE int WSAAPI select(int nfds,fd_set *readfds,fd_set *writefds,fd_set *exceptfds,const PTIMEVAL timeout);
+                                  ^
+i686-w64-mingw32-gcc -c -I..    pmap_rmt.c
+pmap_rmt.c: In function ‘clnt_broadcast’:
+pmap_rmt.c:291:2: warning: passing argument 4 of ‘setsockopt’ from incompatible pointer type [enabled by default]
+  if (setsockopt(sock, SOL_SOCKET, SO_BROADCAST, &on, sizeof (on)) < 0) {
+  ^
+In file included from /usr/share/mingw-w64/include/windows.h:92:0,
+                 from ../rpc/rpc.h:62,
+                 from pmap_rmt.c:52:
+/usr/share/mingw-w64/include/winsock.h:303:34: note: expected ‘const char *’ but argument is of type ‘int *’
+   WINSOCK_API_LINKAGE int WSAAPI setsockopt(SOCKET s,int level,int optname,const char *optval,int optlen);
+                                  ^
+pmap_rmt.c:363:11: warning: passing argument 3 of ‘select’ from incompatible pointer type [enabled by default]
+           (int *)NULL, &t)) {
+           ^
+In file included from /usr/share/mingw-w64/include/windows.h:92:0,
+                 from ../rpc/rpc.h:62,
+                 from pmap_rmt.c:52:
+/usr/share/mingw-w64/include/winsock.h:299:34: note: expected ‘struct fd_set *’ but argument is of type ‘int *’
+   WINSOCK_API_LINKAGE int WSAAPI select(int nfds,fd_set *readfds,fd_set *writefds,fd_set *exceptfds,const PTIMEVAL timeout);
+                                  ^
+pmap_rmt.c:363:11: warning: passing argument 4 of ‘select’ from incompatible pointer type [enabled by default]
+           (int *)NULL, &t)) {
+           ^
+In file included from /usr/share/mingw-w64/include/windows.h:92:0,
+                 from ../rpc/rpc.h:62,
+                 from pmap_rmt.c:52:
+/usr/share/mingw-w64/include/winsock.h:299:34: note: expected ‘struct fd_set *’ but argument is of type ‘int *’
+   WINSOCK_API_LINKAGE int WSAAPI select(int nfds,fd_set *readfds,fd_set *writefds,fd_set *exceptfds,const PTIMEVAL timeout);
+                                  ^
+i686-w64-mingw32-gcc -c -I..    rpc_prot.c
+i686-w64-mingw32-gcc -c -I..    svc_autu.c
+i686-w64-mingw32-gcc -c -I..    svc_auth.c
+i686-w64-mingw32-gcc -c -I..    svc_raw.c
+i686-w64-mingw32-gcc -c -I..    svc_run.c
+svc_run.c: In function ‘svc_run’:
+svc_run.c:80:19: warning: passing argument 3 of ‘select’ from incompatible pointer type [enabled by default]
+           (struct timeval *)0)) {
+                   ^
+In file included from /usr/share/mingw-w64/include/windows.h:92:0,
+                 from ../rpc/rpc.h:62,
+                 from svc_run.c:50:
+/usr/share/mingw-w64/include/winsock.h:299:34: note: expected ‘struct fd_set *’ but argument is of type ‘int *’
+   WINSOCK_API_LINKAGE int WSAAPI select(int nfds,fd_set *readfds,fd_set *writefds,fd_set *exceptfds,const PTIMEVAL timeout);
+                                  ^
+svc_run.c:80:19: warning: passing argument 4 of ‘select’ from incompatible pointer type [enabled by default]
+           (struct timeval *)0)) {
+                   ^
+In file included from /usr/share/mingw-w64/include/windows.h:92:0,
+                 from ../rpc/rpc.h:62,
+                 from svc_run.c:50:
+/usr/share/mingw-w64/include/winsock.h:299:34: note: expected ‘struct fd_set *’ but argument is of type ‘int *’
+   WINSOCK_API_LINKAGE int WSAAPI select(int nfds,fd_set *readfds,fd_set *writefds,fd_set *exceptfds,const PTIMEVAL timeout);
+                                  ^
+i686-w64-mingw32-gcc -c -I..    svc_tcp.c
+svc_tcp.c: In function ‘readtcp’:
+svc_tcp.c:368:7: warning: passing argument 3 of ‘select’ from incompatible pointer type [enabled by default]
+       &wait_per_try) <= 0) {
+       ^
+In file included from /usr/share/mingw-w64/include/windows.h:92:0,
+                 from ../rpc/rpc.h:62,
+                 from svc_tcp.c:56:
+/usr/share/mingw-w64/include/winsock.h:299:34: note: expected ‘struct fd_set *’ but argument is of type ‘int *’
+   WINSOCK_API_LINKAGE int WSAAPI select(int nfds,fd_set *readfds,fd_set *writefds,fd_set *exceptfds,const PTIMEVAL timeout);
+                                  ^
+svc_tcp.c:368:7: warning: passing argument 4 of ‘select’ from incompatible pointer type [enabled by default]
+       &wait_per_try) <= 0) {
+       ^
+In file included from /usr/share/mingw-w64/include/windows.h:92:0,
+                 from ../rpc/rpc.h:62,
+                 from svc_tcp.c:56:
+/usr/share/mingw-w64/include/winsock.h:299:34: note: expected ‘struct fd_set *’ but argument is of type ‘int *’
+   WINSOCK_API_LINKAGE int WSAAPI select(int nfds,fd_set *readfds,fd_set *writefds,fd_set *exceptfds,const PTIMEVAL timeout);
+                                  ^
+i686-w64-mingw32-gcc -c -I..    svc_udp.c
+i686-w64-mingw32-gcc -c -I..    xdr_mem.c
+i686-w64-mingw32-gcc -c -I..    xdr_rec.c
+i686-w64-mingw32-gcc -c -I..    auth_non.c
+auth_non.c: In function ‘authnone_create’:
+auth_non.c:89:35: warning: incompatible implicit declaration of built-in function ‘calloc’ [enabled by default]
+   ap = (struct authnone_private *)calloc(1, sizeof (*ap));
+                                   ^
+i686-w64-mingw32-gcc -c -I..    auth_uni.c
+i686-w64-mingw32-gcc -c -I..    authunix.c
+i686-w64-mingw32-gcc -c -I..    bindresv.c
+bindresv.c: In function ‘bindresvport’:
+bindresv.c:80:3: warning: passing argument 1 of ‘bzero’ from incompatible pointer type [enabled by default]
+   bzero(sin, sizeof (*sin));
+   ^
+In file included from ../rpc/rpc.h:81:0,
+                 from bindresv.c:47:
+../rpc/bcopy.h:18:6: note: expected ‘char *’ but argument is of type ‘struct sockaddr_in *’
+ void bzero(char*,int);
+      ^
+bindresv.c:106:37: warning: passing argument 2 of ‘bind’ from incompatible pointer type [enabled by default]
+   res = bind(sd, sin, sizeof(struct sockaddr_in));
+                                     ^
+In file included from /usr/share/mingw-w64/include/windows.h:92:0,
+                 from ../rpc/rpc.h:62,
+                 from bindresv.c:47:
+/usr/share/mingw-w64/include/winsock.h:278:34: note: expected ‘const struct sockaddr *’ but argument is of type ‘struct sockaddr_in *’
+   WINSOCK_API_LINKAGE int WSAAPI bind(SOCKET s,const struct sockaddr *name,int namelen);
+                                  ^
+i686-w64-mingw32-gcc -c -I..    clnt_gen.c
+i686-w64-mingw32-gcc -c -I..    clnt_per.c
+clnt_per.c: In function ‘clnt_sperror’:
+clnt_per.c:98:9: warning: incompatible implicit declaration of built-in function ‘strlen’ [enabled by default]
+  str += strlen(str);
+         ^
+In file included from clnt_per.c:53:0:
+clnt_per.c: In function ‘clnt_spcreateerror’:
+clnt_per.c:263:13: warning: ‘_sys_nerr’ redeclared without dllimport attribute after being referenced with dll linkage [enabled by default]
+  extern int sys_nerr;
+             ^
+clnt_per.c:272:9: warning: incompatible implicit declaration of built-in function ‘strcat’ [enabled by default]
+  (void) strcat(str, clnt_sperrno(rpc_createerr.cf_stat));
+         ^
+clnt_per.c:291:24: warning: incompatible implicit declaration of built-in function ‘strlen’ [enabled by default]
+    (void) sprintf(&str[strlen(str)], "Error %d",
+                        ^
+i686-w64-mingw32-gcc -c -I..    clnt_sim.c
+i686-w64-mingw32-gcc -c -I..    get_myad.c
+i686-w64-mingw32-gcc -c -I..    getrpcen.c
+i686-w64-mingw32-gcc -c -I..    getrpcpo.c
+i686-w64-mingw32-gcc -c -I..    pmap_cln.c
+i686-w64-mingw32-gcc -c -I..    pmap_get.c
+i686-w64-mingw32-gcc -c -I..    pmap_gma.c
+i686-w64-mingw32-gcc -c -I..    pmap_pro.c
+i686-w64-mingw32-gcc -c -I..    pmap_pr.c
+i686-w64-mingw32-gcc -c -I..    rpc_call.c
+i686-w64-mingw32-gcc -c -I..    rpc_comm.c
+i686-w64-mingw32-gcc -c -I..    svc_simp.c
+i686-w64-mingw32-gcc -c -I..    xdr_arra.c
+In file included from xdr_arra.c:56:0:
+xdr_arra.c: In function ‘xdr_array’:
+../rpc/types.h:65:19: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+ #define mem_alloc malloc
+                   ^
+xdr_arra.c:103:22: note: in expansion of macro ‘mem_alloc’
+    *addrp = target = mem_alloc(nodesize);
+                      ^
+xdr_arra.c:113:4: warning: incompatible implicit declaration of built-in function ‘bzero’ [enabled by default]
+    bzero(target, nodesize);
+    ^
+In file included from xdr_arra.c:56:0:
+../rpc/types.h:66:30: warning: incompatible implicit declaration of built-in function ‘free’ [enabled by default]
+ #define mem_free(ptr, bsize) free(ptr)
+                              ^
+xdr_arra.c:132:3: note: in expansion of macro ‘mem_free’
+   mem_free(*addrp, nodesize);
+   ^
+i686-w64-mingw32-gcc -c -I..    xdr_floa.c
+i686-w64-mingw32-gcc -c -I..    xdr_refe.c
+In file included from xdr_refe.c:55:0:
+xdr_refe.c: In function ‘xdr_reference’:
+../rpc/types.h:65:19: warning: incompatible implicit declaration of built-in function ‘malloc’ [enabled by default]
+ #define mem_alloc malloc
+                   ^
+xdr_refe.c:85:26: note: in expansion of macro ‘mem_alloc’
+    *pp = loc = (caddr_t) mem_alloc(size);
+                          ^
+xdr_refe.c:95:4: warning: incompatible implicit declaration of built-in function ‘bzero’ [enabled by default]
+    bzero(loc, (int)size);
+    ^
+In file included from xdr_refe.c:55:0:
+../rpc/types.h:66:30: warning: incompatible implicit declaration of built-in function ‘free’ [enabled by default]
+ #define mem_free(ptr, bsize) free(ptr)
+                              ^
+xdr_refe.c:102:3: note: in expansion of macro ‘mem_free’
+   mem_free(loc, size);
+   ^
+i686-w64-mingw32-gcc -c -I..    xdr_stdi.c
+i686-w64-mingw32-gcc -c -I..    svc.c
+svc.c: In function ‘xprt_register’:
+svc.c:119:3: warning: passing argument 1 of ‘bcopy’ from incompatible pointer type [enabled by default]
+   bcopy(old_xports, xports, sizeof_xports * sizeof(SVCXPRT *));
+   ^
+In file included from ../rpc/rpc.h:81:0,
+                 from svc.c:56:
+../rpc/bcopy.h:14:6: note: expected ‘char *’ but argument is of type ‘struct SVCXPRT **’
+ void bcopy(char *,char*,int);
+      ^
+svc.c:119:3: warning: passing argument 2 of ‘bcopy’ from incompatible pointer type [enabled by default]
+   bcopy(old_xports, xports, sizeof_xports * sizeof(SVCXPRT *));
+   ^
+In file included from ../rpc/rpc.h:81:0,
+                 from svc.c:56:
+../rpc/bcopy.h:14:6: note: expected ‘char *’ but argument is of type ‘struct SVCXPRT **’
+ void bcopy(char *,char*,int);
+      ^
+i686-w64-mingw32-gcc -c -I..    bcopy.c
+bcopy.c: In function ‘bcopy’:
+bcopy.c:28:8: warning: argument ‘s1’ doesn’t match built-in prototype [enabled by default]
+  char *s1, *s2;
+        ^
+bcopy.c:28:13: warning: argument ‘s2’ doesn’t match built-in prototype [enabled by default]
+  char *s1, *s2;
+             ^
+bcopy.c:29:6: warning: argument ‘len’ doesn’t match built-in prototype [enabled by default]
+  int len;
+      ^
+bcopy.c: In function ‘bzero’:
+bcopy.c:41:8: warning: argument ‘s’ doesn’t match built-in prototype [enabled by default]
+  char *s;
+        ^
+bcopy.c:42:6: warning: argument ‘len’ doesn’t match built-in prototype [enabled by default]
+  int len;
+      ^
+bcopy.c: In function ‘bcmp’:
+bcopy.c:56:8: warning: argument ‘s1’ doesn’t match built-in prototype [enabled by default]
+  char *s1, *s2;
+        ^
+bcopy.c:56:13: warning: argument ‘s2’ doesn’t match built-in prototype [enabled by default]
+  char *s1, *s2;
+             ^
+bcopy.c:57:6: warning: argument ‘len’ doesn’t match built-in prototype [enabled by default]
+  int len;
+      ^
+i686-w64-mingw32-gcc -c -I..    nt.c
+nt.c: In function ‘nt_rpc_report’:
+nt.c:66:13: warning: passing argument 8 of ‘ReportEventA’ from incompatible pointer type [enabled by default]
+             NULL);                // no raw data
+             ^
+In file included from /usr/share/mingw-w64/include/windows.h:70:0,
+                 from ../rpc/rpc.h:62,
+                 from nt.c:10:
+/usr/share/mingw-w64/include/winbase.h:2103:28: note: expected ‘const CHAR **’ but argument is of type ‘CHAR **’
+   WINADVAPI WINBOOL WINAPI ReportEventA (HANDLE hEventLog, WORD wType, WORD wCategory, DWORD dwEventID, PSID lpUserSid, WORD wNumStrings, DWORD dwDataSize, LPCSTR *lpStrings, LPVOID lpRawData);
+                            ^
+i686-w64-mingw32-gcc -shared -o oncrpc.dll -Wl,--output-def,oncrpc.def  clnt_raw.o xdr.o clnt_tcp.o clnt_udp.o pmap_rmt.o rpc_prot.o svc_autu.o svc_auth.o svc_raw.o svc_run.o svc_tcp.o svc_udp.o xdr_mem.o xdr_rec.o auth_non.o auth_uni.o authunix.o bindresv.o clnt_gen.o clnt_per.o clnt_sim.o get_myad.o getrpcen.o getrpcpo.o pmap_cln.o pmap_get.o pmap_gma.o pmap_pro.o pmap_pr.o rpc_call.o rpc_comm.o svc_simp.o xdr_arra.o xdr_floa.o xdr_refe.o xdr_stdi.o svc.o bcopy.o nt.o  -lwsock32 -ladvapi32
+cp oncrpc.dll ../bin
+cp oncrpc.dll ../rpcgen
+i686-w64-mingw32-ar crv oncrpc.a clnt_raw.o xdr.o clnt_tcp.o clnt_udp.o pmap_rmt.o rpc_prot.o svc_autu.o svc_auth.o svc_raw.o svc_run.o svc_tcp.o svc_udp.o xdr_mem.o xdr_rec.o auth_non.o auth_uni.o authunix.o bindresv.o clnt_gen.o clnt_per.o clnt_sim.o get_myad.o getrpcen.o getrpcpo.o pmap_cln.o pmap_get.o pmap_gma.o pmap_pro.o pmap_pr.o rpc_call.o rpc_comm.o svc_simp.o xdr_arra.o xdr_floa.o xdr_refe.o xdr_stdi.o svc.o bcopy.o nt.o
+a - clnt_raw.o
+a - xdr.o
+a - clnt_tcp.o
+a - clnt_udp.o
+a - pmap_rmt.o
+a - rpc_prot.o
+a - svc_autu.o
+a - svc_auth.o
+a - svc_raw.o
+a - svc_run.o
+a - svc_tcp.o
+a - svc_udp.o
+a - xdr_mem.o
+a - xdr_rec.o
+a - auth_non.o
+a - auth_uni.o
+a - authunix.o
+a - bindresv.o
+a - clnt_gen.o
+a - clnt_per.o
+a - clnt_sim.o
+a - get_myad.o
+a - getrpcen.o
+a - getrpcpo.o
+a - pmap_cln.o
+a - pmap_get.o
+a - pmap_gma.o
+a - pmap_pro.o
+a - pmap_pr.o
+a - rpc_call.o
+a - rpc_comm.o
+a - svc_simp.o
+a - xdr_arra.o
+a - xdr_floa.o
+a - xdr_refe.o
+a - xdr_stdi.o
+a - svc.o
+a - bcopy.o
+a - nt.o
+cp oncrpc.a ../bin
+make: Entering directory `/home/travis/build/acplt/rte/build/acplt.build/base/plt/build/cygwin'
+../unix.mk:87: .depend: No such file or directory
+touch .depend
+make: Leaving directory `/home/travis/build/acplt/rte/build/acplt.build/base/plt/build/cygwin'
+make: Entering directory `/home/travis/build/acplt/rte/build/acplt.build/base/plt/build/cygwin'
+i686-w64-mingw32-g++ -m32 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DCYGWIN  -I/cygdrive/c/MinGW32/include -O2 -Wall -DNDEBUG  -c -o alloc.o ../../src/alloc.cpp
+i686-w64-mingw32-g++ -m32 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DCYGWIN  -I/cygdrive/c/MinGW32/include -O2 -Wall -DNDEBUG  -c -o array.o ../../src/array.cpp
+i686-w64-mingw32-g++ -m32 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DCYGWIN  -I/cygdrive/c/MinGW32/include -O2 -Wall -DNDEBUG  -c -o container.o ../../src/container.cpp
+i686-w64-mingw32-g++ -m32 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DCYGWIN  -I/cygdrive/c/MinGW32/include -O2 -Wall -DNDEBUG  -c -o debug.o ../../src/debug.cpp
+i686-w64-mingw32-g++ -m32 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DCYGWIN  -I/cygdrive/c/MinGW32/include -O2 -Wall -DNDEBUG  -c -o handle.o ../../src/handle.cpp
+i686-w64-mingw32-g++ -m32 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DCYGWIN  -I/cygdrive/c/MinGW32/include -O2 -Wall -DNDEBUG  -c -o hashtable.o ../../src/hashtable.cpp
+i686-w64-mingw32-g++ -m32 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DCYGWIN  -I/cygdrive/c/MinGW32/include -O2 -Wall -DNDEBUG  -c -o list.o ../../src/list.cpp
+i686-w64-mingw32-g++ -m32 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DCYGWIN  -I/cygdrive/c/MinGW32/include -O2 -Wall -DNDEBUG  -c -o log.o ../../src/log.cpp
+i686-w64-mingw32-g++ -m32 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DCYGWIN  -I/cygdrive/c/MinGW32/include -O2 -Wall -DNDEBUG  -c -o logstream.o ../../src/logstream.cpp
+i686-w64-mingw32-g++ -m32 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DCYGWIN  -I/cygdrive/c/MinGW32/include -O2 -Wall -DNDEBUG  -c -o priorityqueue.o ../../src/priorityqueue.cpp
+i686-w64-mingw32-g++ -m32 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DCYGWIN  -I/cygdrive/c/MinGW32/include -O2 -Wall -DNDEBUG  -c -o rtti.o ../../src/rtti.cpp
+i686-w64-mingw32-g++ -m32 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DCYGWIN  -I/cygdrive/c/MinGW32/include -O2 -Wall -DNDEBUG  -c -o string.o ../../src/string.cpp
+i686-w64-mingw32-g++ -m32 -I. -I../../include  -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DCYGWIN  -I/cygdrive/c/MinGW32/include -O2 -Wall -DNDEBUG  -c -o time.o ../../src/time.cpp
+i686-w64-mingw32-ar r libplt.a alloc.o array.o container.o debug.o handle.o hashtable.o list.o log.o logstream.o priorityqueue.o rtti.o string.o time.o
+i686-w64-mingw32-ar: creating libplt.a
+i686-w64-mingw32-ranlib libplt.a
+i686-w64-mingw32-strip --strip-debug libplt.a
+make: Leaving directory `/home/travis/build/acplt/rte/build/acplt.build/base/plt/build/cygwin'
+make: Entering directory `/home/travis/build/acplt/rte/build/acplt.build/base/ks/build/cygwin'
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o array.o ../../src/array.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o conversions.o ../../src/conversions.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o path.o ../../src/path.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o props.o ../../src/props.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o propsv1.o ../../src/propsv1.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o register.o ../../src/register.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o result.o ../../src/result.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o rpc.o ../../src/rpc.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o histparams.o ../../src/histparams.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o objmgrparams.o ../../src/objmgrparams.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o serviceparams.o ../../src/serviceparams.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o string.o ../../src/string.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o selector.o ../../src/selector.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o time.o ../../src/time.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o value.o ../../src/value.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o xdr.o ../../src/xdr.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o templates.o ../../src/templates.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o mask.o ../../src/mask.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o event.o ../../src/event.cpp
+i686-w64-mingw32-ar r libks.a array.o conversions.o path.o props.o propsv1.o register.o result.o rpc.o histparams.o objmgrparams.o serviceparams.o string.o selector.o time.o value.o xdr.o templates.o mask.o event.o
+i686-w64-mingw32-ar: creating libks.a
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o avticket.o ../../src/avticket.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o inaddrset.o ../../src/inaddrset.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o hostinaddrset.o ../../src/hostinaddrset.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o manager.o ../../src/manager.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o server.o ../../src/server.cpp
+In file included from ../../src/server.cpp:34:0:
+../../include/ks/server.h:98:14: warning: ‘Checking_PLT_USE_BUFFERED_STREAMS_Option’ defined but not used [-Wunused-variable]
+ static void *Checking_PLT_USE_BUFFERED_STREAMS_Option = 
+              ^
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o simpleserver.o ../../src/simpleserver.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o svrbase.o ../../src/svrbase.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o svrobjects.o ../../src/svrobjects.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o svrrpcctx.o ../../src/svrrpcctx.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o svrsimpleobjects.o ../../src/svrsimpleobjects.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o svrtransport.o ../../src/svrtransport.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o xdrmemstream.o ../../src/xdrmemstream.cpp
+../../src/xdrmemstream.cpp:383:13: warning: extra tokens at end of #undef directive [enabled by default]
+  #undef FUNC(rt, p)
+             ^
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o rpcproto.o ../../src/rpcproto.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o connectionmgr.o ../../src/connectionmgr.cpp
+In file included from /usr/share/mingw-w64/include/winsock.h:36:0,
+                 from ../../../plt/include/plt/time.h:33,
+                 from ../../include/ks/connectionmgr.h:39,
+                 from ../../src/connectionmgr.cpp:34:
+../../src/connectionmgr.cpp: In member function ‘void KssConnectionManager::trackCnxIoMode(_KssConnectionItem&, KssConnection::ConnectionIoMode)’:
+../../src/connectionmgr.cpp:214:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+          FD_CLR(fd, &_readable_fdset);
+                 ^
+../../src/connectionmgr.cpp:232:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+          FD_CLR(fd, &_writeable_fdset);
+                 ^
+../../src/connectionmgr.cpp: In member function ‘bool KssConnectionManager::removeConnection(KssConnection&)’:
+../../src/connectionmgr.cpp:905:13: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      FD_CLR(fd, &_readable_fdset);
+             ^
+../../src/connectionmgr.cpp:906:9: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  FD_CLR(fd, &_writeable_fdset);
+         ^
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o connection.o ../../src/connection.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o xdrudpcon.o ../../src/xdrudpcon.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o xdrtcpcon.o ../../src/xdrtcpcon.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o interserver.o ../../src/interserver.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o histdomain.o ../../src/histdomain.cpp
+i686-w64-mingw32-ar r libkssvr.a avticket.o inaddrset.o hostinaddrset.o manager.o server.o simpleserver.o svrbase.o svrobjects.o svrrpcctx.o svrsimpleobjects.o svrtransport.o xdrmemstream.o rpcproto.o connectionmgr.o connection.o xdrudpcon.o xdrtcpcon.o interserver.o histdomain.o
+i686-w64-mingw32-ar: creating libkssvr.a
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o avmodule.o ../../src/avmodule.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o avsimplemodule.o ../../src/avsimplemodule.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o client.o ../../src/client.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o clntpath.o ../../src/clntpath.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o commobject.o ../../src/commobject.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o hostent.o ../../src/hostent.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o history.o ../../src/history.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o package.o ../../src/package.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o sorter.o ../../src/sorter.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o variables.o ../../src/variables.cpp
+i686-w64-mingw32-ar r libkscln.a avmodule.o avsimplemodule.o client.o clntpath.o commobject.o hostent.o history.o package.o sorter.o variables.o
+i686-w64-mingw32-ar: creating libkscln.a
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o tmanager.o ../../examples/tmanager.cpp
+i686-w64-mingw32-g++ -I . -I../../include -I../../../plt/include -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DFD_SETSIZE=128 -DWIN32 -I/cygdrive/c/MinGW32/include -g -Wall -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -I../../../../oncrpc -c -o tmanager1.o ../../examples/tmanager1.cpp
+MAKE=make perl ../../../plt/build/templ.pl i686-w64-mingw32-g++ -L/cygdrive/c/MinGW32/lib -o tmanager.exe tmanager.o tmanager1.o libkssvr.a libks.a ../../../plt/build/cygwin/libplt.a ../../../../oncrpc/bin/oncrpc.a -lwsock32 
+Template linker (c) 1997, 2000 ACPLT
+Starting run 1...
+i686-w64-mingw32-g++ -L/cygdrive/c/MinGW32/lib -o tmanager.exe tmanager.o tmanager1.o libkssvr.a libks.a ../../../plt/build/cygwin/libplt.a ../../../../oncrpc/bin/oncrpc.a -lwsock32
+
+Finished: All templates seem to be instantiated.
+make: Leaving directory `/home/travis/build/acplt/rte/build/acplt.build/base/ks/build/cygwin'
+make: Entering directory `/home/travis/build/acplt/rte/build/acplt.build/base/fbs_dienste/build/cygwin'
+../unix.mk:241: .depend: No such file or directory
+touch .depend
+make: Leaving directory `/home/travis/build/acplt/rte/build/acplt.build/base/fbs_dienste/build/cygwin'
+make: Entering directory `/home/travis/build/acplt/rte/build/acplt.build/base/fbs_dienste/build/cygwin'
+bison -t -d -ofb_parser.c ../../source/fb_parser.y
+../../source/fb_parser.y: warning: 6 shift/reduce conflicts [-Wconflicts-sr]
+../../source/fb_parser.y: warning: 2 reduce/reduce conflicts [-Wconflicts-rr]
+i686-w64-mingw32-gcc -m32 -Wall -DOV_DEBUG -O2 -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c fb_parser.c -o fb_parser.o
+flex -ofb_scanner.c ../../source/fb_scanner.lex
+i686-w64-mingw32-gcc -m32 -Wall -DOV_DEBUG -O2 -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c fb_scanner.c -o fb_scanner.o
+fb_scanner.c:1593:17: warning: ‘yyunput’ defined but not used [-Wunused-function]
+     static void yyunput (int c, register char * yy_bp )
+                 ^
+fb_scanner.c:1634:16: warning: ‘input’ defined but not used [-Wunused-function]
+     static int input  (void)
+                ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_getserver.o ../../source/ifb_getserver.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_getserver.cpp:37:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_getserver.cpp:37:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_logerror.o ../../source/ifb_logerror.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_logerror.cpp:37:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_logerror.cpp:37:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_varprops.o ../../source/ifb_varprops.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_varprops.cpp:32:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_varprops.cpp:32:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_readblockparam.o ../../source/ifb_readblockparam.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_readblockparam.cpp:40:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_readblockparam.cpp:40:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_getcondata.o ../../source/ifb_getcondata.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_getcondata.cpp:38:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_getcondata.cpp:38:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_getportdata.o ../../source/ifb_getportdata.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_getportdata.cpp:36:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_getportdata.cpp:36:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+../../source/ifb_getportdata.cpp: In function ‘void GetPortProps(KsEngPropsHandle&, const KsVarCurrProps*, ObjProps&, long unsigned int)’:
+../../source/ifb_getportdata.cpp:200:21: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                     );
+                     ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_createcomcon.o ../../source/ifb_createcomcon.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_createcomcon.cpp:35:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_createcomcon.cpp:35:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_setpar.o ../../source/ifb_setpar.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_setpar.cpp:35:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_setpar.cpp:35:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_av.o ../../source/ifb_av.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_av.cpp:35:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_av.cpp:35:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_delobj.o ../../source/ifb_delobj.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_delobj.cpp:36:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_delobj.cpp:36:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_crobj.o ../../source/ifb_crobj.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_crobj.cpp:36:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_crobj.cpp:36:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_tasklink.o ../../source/ifb_tasklink.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_tasklink.cpp:35:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_tasklink.cpp:35:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_rename.o ../../source/ifb_rename.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_rename.cpp:35:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_rename.cpp:35:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_delfulltu.o ../../source/ifb_delfulltu.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_delfulltu.cpp:36:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_delfulltu.cpp:36:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_dbsaveinstream.o ../../source/ifb_dbsaveinstream.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_dbsaveinstream.cpp:36:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_dbsaveinstream.cpp:36:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+../../source/ifb_dbsaveinstream.cpp: In function ‘void ifb_writeLinkItem(KscServerBase*, KsString&, int, FbAssoParam&, PltString&)’:
+../../source/ifb_dbsaveinstream.cpp:73:21: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                     );
+                     ^
+../../source/ifb_dbsaveinstream.cpp: In function ‘float get_serverVersion(KscServerBase*)’:
+../../source/ifb_dbsaveinstream.cpp:320:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                        );
+                        ^
+../../source/ifb_dbsaveinstream.cpp: In function ‘KS_RESULT get_variable(KscServerBase*, KsGetEPParams&, PltString&)’:
+../../source/ifb_dbsaveinstream.cpp:536:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                                 );
+                                 ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_memfre.o ../../source/ifb_memfre.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_memfre.cpp:41:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_memfre.cpp:41:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_importproject.o ../../source/ifb_importproject.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_importproject.cpp:40:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_importproject.cpp:40:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_aufraeumen.o ../../source/ifb_aufraeumen.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_aufraeumen.cpp:40:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_aufraeumen.cpp:40:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_importeval.o ../../source/ifb_importeval.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_importeval.cpp:36:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_importeval.cpp:36:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+../../source/ifb_importeval.cpp: In function ‘int test_ConnectionExists(KscServerBase*, ConData&, PltString&)’:
+../../source/ifb_importeval.cpp:411:17: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 );
+                 ^
+../../source/ifb_importeval.cpp: In function ‘void checkParentDomainsInDB(KscServerBase*, PltList<PltString>&, Dienst_param*, PltString&)’:
+../../source/ifb_importeval.cpp:1141:22: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  pNewInst.Class_name = "/acplt/ov/domain";
+                      ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_compproject.o ../../source/ifb_compproject.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_compproject.cpp:41:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_compproject.cpp:41:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_compeval.o ../../source/ifb_compeval.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_compeval.cpp:40:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_compeval.cpp:40:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+../../source/ifb_compeval.cpp: In function ‘int value_compare(Variables*, Variables*)’:
+../../source/ifb_compeval.cpp:853:21: warning: case value ‘16’ not in enumerated type ‘DataType’ [-Wswitch]
+                     case KS_VT_INT             :        if(((long)atol(ov->val)) !=
+                     ^
+../../source/ifb_compeval.cpp:848:21: warning: case value ‘17’ not in enumerated type ‘DataType’ [-Wswitch]
+                     case KS_VT_UINT             :  if(((unsigned long)atol(ov->val)) !=
+                     ^
+../../source/ifb_compeval.cpp:858:21: warning: case value ‘32’ not in enumerated type ‘DataType’ [-Wswitch]
+                     case KS_VT_SINGLE         :
+                     ^
+../../source/ifb_compeval.cpp:860:21: warning: case value ‘33’ not in enumerated type ‘DataType’ [-Wswitch]
+                     case KS_VT_DOUBLE         :        if( atof(ov->val) !=
+                     ^
+../../source/ifb_compeval.cpp:867:21: warning: case value ‘48’ not in enumerated type ‘DataType’ [-Wswitch]
+                     case KS_VT_STRING        :        if(strcmp(ov->val,nv->val)) {
+                     ^
+../../source/ifb_compeval.cpp:865:21: warning: case value ‘49’ not in enumerated type ‘DataType’ [-Wswitch]
+                     case KS_VT_TIME            :
+                     ^
+../../source/ifb_compeval.cpp:859:21: warning: case value ‘50’ not in enumerated type ‘DataType’ [-Wswitch]
+                     case KS_VT_TIME_SPAN :
+                     ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_updateproject.o ../../source/ifb_updateproject.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_updateproject.cpp:41:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_updateproject.cpp:41:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_updateeval.o ../../source/ifb_updateeval.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_updateeval.cpp:41:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_updateeval.cpp:41:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_dir.o ../../source/ifb_dir.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_dir.cpp:36:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_dir.cpp:36:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_selectsave.o ../../source/ifb_selectsave.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_selectsave.cpp:37:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_selectsave.cpp:37:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_dupl.o ../../source/ifb_dupl.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_dupl.cpp:36:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_dupl.cpp:36:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_cleandb.o ../../source/ifb_cleandb.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_cleandb.cpp:37:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_cleandb.cpp:37:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+../../source/ifb_cleandb.cpp: In function ‘KS_RESULT clean_all_inst(KscServerBase*, PltString*)’:
+../../source/ifb_cleandb.cpp:169:25: warning: variable ‘lastErr’ set but not used [-Wunused-but-set-variable]
+     KS_RESULT           lastErr = KS_ERR_OK;
+                         ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o ifb_fileup.o ../../source/ifb_fileup.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/ifb_fileup.cpp:36:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/ifb_fileup.cpp:36:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+../../source/ifb_fileup.cpp: In function ‘void getUpErrText(PltString&, PltString&)’:
+../../source/ifb_fileup.cpp:184:45: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     ifb_getValueOnly(cp, Out, 1,0,0,0,"",0,0);
+                                             ^
+i686-w64-mingw32-gcc -m32 -Wall -DOV_DEBUG -O2 -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c ../../source/lts_cfnc.c -o lts_cfnc.o
+i686-w64-mingw32-ar rv ifbslib.a fb_parser.o fb_scanner.o ifb_getserver.o ifb_logerror.o ifb_varprops.o ifb_readblockparam.o ifb_getcondata.o ifb_getportdata.o ifb_createcomcon.o ifb_setpar.o ifb_av.o ifb_delobj.o ifb_crobj.o ifb_tasklink.o ifb_rename.o ifb_delfulltu.o ifb_dbsaveinstream.o ifb_memfre.o ifb_importproject.o ifb_aufraeumen.o ifb_importeval.o ifb_compproject.o ifb_compeval.o ifb_updateproject.o ifb_updateeval.o ifb_dir.o ifb_selectsave.o ifb_dupl.o ifb_cleandb.o ifb_fileup.o lts_cfnc.o
+i686-w64-mingw32-ar: creating ifbslib.a
+a - fb_parser.o
+a - fb_scanner.o
+a - ifb_getserver.o
+a - ifb_logerror.o
+a - ifb_varprops.o
+a - ifb_readblockparam.o
+a - ifb_getcondata.o
+a - ifb_getportdata.o
+a - ifb_createcomcon.o
+a - ifb_setpar.o
+a - ifb_av.o
+a - ifb_delobj.o
+a - ifb_crobj.o
+a - ifb_tasklink.o
+a - ifb_rename.o
+a - ifb_delfulltu.o
+a - ifb_dbsaveinstream.o
+a - ifb_memfre.o
+a - ifb_importproject.o
+a - ifb_aufraeumen.o
+a - ifb_importeval.o
+a - ifb_compproject.o
+a - ifb_compeval.o
+a - ifb_updateproject.o
+a - ifb_updateeval.o
+a - ifb_dir.o
+a - ifb_selectsave.o
+a - ifb_dupl.o
+a - ifb_cleandb.o
+a - ifb_fileup.o
+a - lts_cfnc.o
+i686-w64-mingw32-ranlib ifbslib.a
+i686-w64-mingw32-strip --strip-debug ifbslib.a
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o fb_dbcommands.o ../../source/dbcommands.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/dbcommands.cpp:2:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/dbcommands.cpp:2:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+../../source/dbcommands.cpp: In function ‘int main(int, char**)’:
+../../source/dbcommands.cpp:272:34: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     char*           servername = "localhost/fb_database";
+                                  ^
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o templ_for_exec.o ../../source/templ_for_exec.cpp
+In file included from ../../source/templ_for_exec.cpp:36:0:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+MAKE=make perl ../templ.pl i686-w64-mingw32-g++ -m32 -static -o fb_dbcommands.exe fb_dbcommands.o templ_for_exec.o ifbslib.a ../../../../base/ks/build/cygwin/libkscln.a ../../../../base/ks/build/cygwin/libks.a ../../../../base/plt/build/cygwin/libplt.a ../../../../oncrpc/bin/oncrpc.a  -lstdc++ -lwsock32 -ladvapi32 -luser32
+Template linker (c) 1997 ACPLT
+Starting run 1...
+i686-w64-mingw32-g++ -m32 -static -o fb_dbcommands.exe fb_dbcommands.o templ_for_exec.o ifbslib.a ../../../../base/ks/build/cygwin/libkscln.a ../../../../base/ks/build/cygwin/libks.a ../../../../base/plt/build/cygwin/libplt.a ../../../../oncrpc/bin/oncrpc.a -lstdc++ -lwsock32 -ladvapi32 -luser32
+
+Finished: All templates seem to be instantiated.
+i686-w64-mingw32-strip --strip-debug fb_dbcommands.exe
+i686-w64-mingw32-g++ -m32 -DNDEBUG -Wall -O2 -fno-implicit-templates -DPLT_SYSTEM_NT=1 -DOV_SYSTEM_NT=1 -DNDEBUG -DPLT_USE_BUFFERED_STREAMS=1 -DFD_SETSIZE=128 -I../../include/ -I../../../../fbs_dienste/source/include/ -I../../../../base/ov/include/ -I../../../../base/plt/include/ -I../../../../base/ks/include/ -I../../../../oncrpc/ -I. -c -o fb_init.o ../../source/fb_init.cpp
+In file included from ../../include/ifbslibdef.h:126:0,
+                 from ../../source/fb_init.cpp:5:
+../../include/ifbslib_params.h: In copy constructor ‘FbAssoParam::FbAssoParam(FbAssoParam&)’:
+../../include/ifbslib_params.h:312:1: warning: ‘FbAssoParam::identifier’ is initialized with itself [-Winit-self]
+ FbAssoParam::FbAssoParam(FbAssoParam &orig):
+ ^
+In file included from ../../source/fb_init.cpp:5:0:
+../../include/ifbslibdef.h: At global scope:
+../../include/ifbslibdef.h:232:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                            );
+                            ^
+../../source/fb_init.cpp: In function ‘int main(int, char**)’:
+../../source/fb_init.cpp:20:22: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     char      *pHS = "localhost/ov_server"; // Host/Server
+                      ^
+MAKE=make perl ../templ.pl i686-w64-mingw32-g++ -m32 -o fb_init.exe fb_init.o templ_for_exec.o ifbslib.a ../../../../base/ks/build/cygwin/libkscln.a ../../../../base/ks/build/cygwin/libks.a ../../../../base/plt/build/cygwin/libplt.a ../../../../oncrpc/bin/oncrpc.a  -lstdc++ -lwsock32 -ladvapi32 -luser32
+Template linker (c) 1997 ACPLT
+Starting run 1...
+i686-w64-mingw32-g++ -m32 -o fb_init.exe fb_init.o templ_for_exec.o ifbslib.a ../../../../base/ks/build/cygwin/libkscln.a ../../../../base/ks/build/cygwin/libks.a ../../../../base/plt/build/cygwin/libplt.a ../../../../oncrpc/bin/oncrpc.a -lstdc++ -lwsock32 -ladvapi32 -luser32
+
+Finished: All templates seem to be instantiated.
+i686-w64-mingw32-strip --strip-debug fb_init.exe
+make: Leaving directory `/home/travis/build/acplt/rte/build/acplt.build/base/fbs_dienste/build/cygwin'
+make: Entering directory `/home/travis/build/acplt/rte/build/acplt.build/base/ov/build/cygwin'
+bison -t -d -oov_ovmparser.c ../../source/codegen/ov_ovmparser.y
+i686-w64-mingw32-gcc -g -m32 -Wall -Wno-attributes -Wstrict-aliasing=2 -fno-strict-aliasing -O0  -DWIN32 -DFD_SETSIZE=128 -DPLT_SYSTEM_NT=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG -DOV_V2SERVER -DOV_SYNC_NTMUTEX=1 -DOV_SYSTEM_NT=1   -I../../../../oncrpc/ -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ov_ovmparser.c -o ov_ovmparser.o
+flex -oov_ovmscanner.c ../../source/codegen/ov_ovmscanner.lex
+i686-w64-mingw32-gcc -g -m32 -Wall -Wno-attributes -Wstrict-aliasing=2 -fno-strict-aliasing -O0  -DWIN32 -DFD_SETSIZE=128 -DPLT_SYSTEM_NT=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG -DOV_V2SERVER -DOV_SYNC_NTMUTEX=1 -DOV_SYSTEM_NT=1   -I../../../../oncrpc/ -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ov_ovmscanner.c -o ov_ovmscanner.o
+ov_ovmscanner.c:2145:17: warning: ‘yyunput’ defined but not used [-Wunused-function]
+     static void yyunput (int c, register char * yy_bp )
+                 ^
+ov_ovmscanner.c:2186:16: warning: ‘input’ defined but not used [-Wunused-function]
+     static int input  (void)
+                ^
+i686-w64-mingw32-gcc -g -m32 -Wall -Wno-attributes -Wstrict-aliasing=2 -fno-strict-aliasing -O0  -DWIN32 -DFD_SETSIZE=128 -DPLT_SYSTEM_NT=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG -DOV_V2SERVER -DOV_SYNC_NTMUTEX=1 -DOV_SYSTEM_NT=1   -I../../../../oncrpc/ -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/codegen/ov_codegen.c -o ov_codegen.o
+i686-w64-mingw32-windres --preprocessor cpp --define _WIN32 --define OV_USE_WINDRES  --include-dir ../../source/codegen/  --include-dir ../../source/builder/  --include-dir ../../source/libov/  --include-dir ../../source/dbutil/  --include-dir ../../source/libovks/  --include-dir ../../source/server/  --include-dir ../../source/runtimeserver/  --include-dir ../../source/ntservice/  --include-dir ../../source/kshist/  --include-dir ../../source/dynov/  --include-dir ../../source/tasklib/  --include-dir ../../source/dbdump/  --include-dir ../../source/dbparse/  --include-dir ../../source/ovxiparse/  --include-dir ../../source/makmak/  --include-dir ../../source/dbinfo/  --include-dir ../../source/libinfo/  --include-dir ../../source/example/  --include-dir ../../../ks/src/  --include-dir ../../source/acplt_makmak_builder/  --include-dir ../../include/ -i ../../source/codegen/ov_codegen.rc -o ov_codegen_res.o
+i686-w64-mingw32-gcc   -o ov_codegen ov_ovmparser.o ov_ovmscanner.o ov_codegen.o ov_codegen_res.o 
+ov_codegen -I ../../model/ -f ../../model/ov.ovm -l ov
+i686-w64-mingw32-gcc -g -m32 -Wall -Wno-attributes -Wstrict-aliasing=2 -fno-strict-aliasing -O0  -DWIN32 -DFD_SETSIZE=128 -DPLT_SYSTEM_NT=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG -DOV_V2SERVER -DOV_SYNC_NTMUTEX=1 -DOV_SYSTEM_NT=1   -I../../../../oncrpc/ -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ov.c -o ov.o
+i686-w64-mingw32-gcc -g -m32 -Wall -Wno-attributes -Wstrict-aliasing=2 -fno-strict-aliasing -O0  -DWIN32 -DFD_SETSIZE=128 -DPLT_SYSTEM_NT=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG -DOV_V2SERVER -DOV_SYNC_NTMUTEX=1 -DOV_SYSTEM_NT=1   -I../../../../oncrpc/ -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_association.c -o ov_association.o
+i686-w64-mingw32-gcc -g -m32 -Wall -Wno-attributes -Wstrict-aliasing=2 -fno-strict-aliasing -O0  -DWIN32 -DFD_SETSIZE=128 -DPLT_SYSTEM_NT=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG -DOV_V2SERVER -DOV_SYNC_NTMUTEX=1 -DOV_SYSTEM_NT=1   -I../../../../oncrpc/ -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_childrelationship.c -o ov_childrelationship.o
+i686-w64-mingw32-gcc -g -m32 -Wall -Wno-attributes -Wstrict-aliasing=2 -fno-strict-aliasing -O0  -DWIN32 -DFD_SETSIZE=128 -DPLT_SYSTEM_NT=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG -DOV_V2SERVER -DOV_SYNC_NTMUTEX=1 -DOV_SYSTEM_NT=1   -I../../../../oncrpc/ -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_class.c -o ov_class.o
+i686-w64-mingw32-gcc -g -m32 -Wall -Wno-attributes -Wstrict-aliasing=2 -fno-strict-aliasing -O0  -DWIN32 -DFD_SETSIZE=128 -DPLT_SYSTEM_NT=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG -DOV_V2SERVER -DOV_SYNC_NTMUTEX=1 -DOV_SYSTEM_NT=1   -I../../../../oncrpc/ -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_construction.c -o ov_construction.o
+i686-w64-mingw32-gcc -g -m32 -Wall -Wno-attributes -Wstrict-aliasing=2 -fno-strict-aliasing -O0  -DWIN32 -DFD_SETSIZE=128 -DPLT_SYSTEM_NT=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG -DOV_V2SERVER -DOV_SYNC_NTMUTEX=1 -DOV_SYSTEM_NT=1   -I../../../../oncrpc/ -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_containment.c -o ov_containment.o
+i686-w64-mingw32-gcc -g -m32 -Wall -Wno-attributes -Wstrict-aliasing=2 -fno-strict-aliasing -O0  -DWIN32 -DFD_SETSIZE=128 -DPLT_SYSTEM_NT=1 -DPLT_USE_BUFFERED_STREAMS=1 -DPLT_SERVER_TRUNC_ONLY=1 -DNDEBUG -DOV_DEBUG -DOV_V2SERVER -DOV_SYNC_NTMUTEX=1 -DOV_SYSTEM_NT=1   -I../../../../oncrpc/ -I../../../plt/include/ -I../../../ks/include/ -I../../include/ -I../../model/ -I../../source/codegen/ -I../../source/builder/ -I../../source/example/ -I../../source/kshist/ -I../../source/dynov/ -I../../source/tasklib/ -I../../source/dbparse/ -I../../source/dbdump/ -I../../include/libml/ -I../../include/runtimeserver/ -I. -c ../../source/libov/ov_database.c -o ov_database.o
+../../source/libov/ov_database.c:45:26: fatal error: sys/resource.h: No such file or directory
+ #include <sys/resource.h>
+                          ^
+compilation terminated.
+make: *** [ov_database.o] Error 1
+make: Leaving directory `/home/travis/build/acplt/rte/build/acplt.build/base/ov/build/cygwin'
